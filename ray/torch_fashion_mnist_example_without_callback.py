@@ -13,6 +13,7 @@ from ray.train.torch import TorchTrainer, TorchCheckpoint
 from ray.air import Checkpoint
 from ray.air.config import ScalingConfig, RunConfig
 from ray.air.integrations.mlflow import MLflowLoggerCallback, setup_mlflow
+import pickle
 import mlflow
 # Download training data from open datasets.
 training_data = datasets.FashionMNIST(
@@ -30,7 +31,7 @@ test_data = datasets.FashionMNIST(
     transform=ToTensor(),
 )
 
-print(test_data[0][0].detach().cpu().numpy())
+
 # Define model
 class NeuralNetwork(nn.Module):
     def __init__(self):
@@ -89,6 +90,17 @@ def test_epoch(dataloader, model, loss_fn):
 
 
 def train_func(config: Dict):
+    import os
+    user = os.environ.get("USER", "default")
+    cluster = os.environ.get("HOSTNAME", "raycluster").split("-")[0]
+
+    job_id = ray.get_runtime_context().get_job_id()
+    #run_id = active_run().info.run_id
+    tags = { "mlflow.user" : user,
+         "experiment name" : "fashion minst", "job_id":job_id, "ray cluster": cluster }
+    name = f"fashion minst-without-callback-{user}"
+    setup_mlflow(config= config, create_experiment_if_not_exists=True, experiment_name=name, tags=tags )
+
     batch_size = config["batch_size"]
     lr = config["lr"]
     epochs = config["epochs"]
@@ -114,53 +126,25 @@ def train_func(config: Dict):
         checkpoint = Checkpoint.from_dict(
             dict(epoch=epoch, model=model.state_dict())
         )
+        mlflow.log_metrics(dict(loss=test_loss), step=epoch)
+        mlflow.pytorch.log_model(model,f"model")
         session.report(dict(loss=test_loss), checkpoint=checkpoint)
 
-classes = [
-    "T-shirt/top",
-    "Trouser",
-    "Pullover",
-    "Dress",
-    "Coat",
-    "Sandal",
-    "Shirt",
-    "Sneaker",
-    "Bag",
-    "Ankle boot",
-    ]
+
 
 def train_fashion_mnist(num_workers=2, use_gpu=False):
-    import os
-    user = os.environ.get("USER", "default")
-    cluster = os.environ.get("HOSTNAME", "raycluster").split("-")[0]
-
-    job_id = ray.get_runtime_context().get_job_id()
-    #run_id = active_run().info.run_id
-    tags = { "mlflow.user" : user,
-         "experiment name" : "fashion minst", "job_id":job_id, "ray cluster": cluster }
-    name  = f"fashion minst-{user}"
-
     trainer = TorchTrainer(
         train_loop_per_worker=train_func,
-        train_loop_config={"lr": 1e-3, "batch_size": 64, "epochs": 1, "inference_classes": classes, "dataset": "torchvision.FashionMNIST"},
+        train_loop_config={"lr": 1e-3, "batch_size": 64, "epochs": 5},
         scaling_config=ScalingConfig(num_workers=num_workers, use_gpu=use_gpu),
         run_config= RunConfig(
             name="mlflow",
-            callbacks=[
-                MLflowLoggerCallback(
-                    tags=tags,
-                    experiment_name=name,
-                    save_artifact=True,
-                )
-            ],)
+            )
     )
     result = trainer.fit()
     print(result)
-
-    input_example = test_data[0][0].detach().cpu().numpy()
-    setup_mlflow(create_experiment_if_not_exists=True, experiment_name=name, tags=tags, run_name= f"TorchTrainer_{result.metrics['trial_id']}" )
-    model = TorchCheckpoint.from_checkpoint(result.checkpoint).get_model(NeuralNetwork())
-    mlflow.pytorch.log_model(model,f"model", input_example=input_example)
+    #model = TorchCheckpoint.from_checkpoint(result.checkpoint).get_model(NeuralNetwork())
+    #mlflow.pytorch.log_model(model,f"model")
     print(f"Last result: {result.metrics}")
 
 
