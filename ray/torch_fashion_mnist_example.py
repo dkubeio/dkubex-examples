@@ -30,7 +30,6 @@ test_data = datasets.FashionMNIST(
     transform=ToTensor(),
 )
 
-print(test_data[0][0].detach().cpu().numpy())
 # Define model
 class NeuralNetwork(nn.Module):
     def __init__(self):
@@ -158,13 +157,14 @@ def train_fashion_mnist(num_workers=2, use_gpu=False):
     print(result)
 
     input_example = test_data[0][0].detach().cpu().numpy()
-    filter_string=f"tags.job_id = '{job_id}' and user_id = '{user}'and tags.`ray cluster` = '{cluster}' "
+    run_name = f"TorchTrainer_{result.metrics['trial_id']}"
+    filter_string=f"attributes.run_name = '{run_name}' "
     df = mlflow.search_runs(experiment_names=[name], filter_string=filter_string)
     run_id = df.loc[0,'run_id']
-    mlflow.start_run(run_id=run_id)
-    model = TorchCheckpoint.from_checkpoint(result.checkpoint).get_model(NeuralNetwork())
-    mlflow.pytorch.log_model(model,f"model", input_example=input_example)
-    mlflow.end_run()
+    with mlflow.start_run(run_id=run_id) as run :
+        model = TorchCheckpoint.from_checkpoint(result.checkpoint).get_model(NeuralNetwork())
+        mlflow.pytorch.log_model(model,f"model", input_example=input_example)
+        mlflow.end_run()
     print(f"Last result: {result.metrics}")
 
 
