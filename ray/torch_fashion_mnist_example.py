@@ -84,7 +84,7 @@ def test_epoch(dataloader, model, loss_fn):
         f"Accuracy: {(100 * correct):>0.1f}%, "
         f"Avg loss: {test_loss:>8f} \n"
     )
-    return test_loss
+    return test_loss, 100*correct
 
 
 def train_func(config: Dict):
@@ -109,11 +109,11 @@ def train_func(config: Dict):
     optimizer = torch.optim.SGD(model.parameters(), lr=lr)
     for epoch in range(epochs):
         train_epoch(train_dataloader, model, loss_fn, optimizer)
-        test_loss = test_epoch(test_dataloader, model, loss_fn)
+        test_loss, correct = test_epoch(test_dataloader, model, loss_fn)
         checkpoint = Checkpoint.from_dict(
             dict(epoch=epoch, model=model.state_dict())
         )
-        session.report(dict(loss=test_loss), checkpoint=checkpoint)
+        session.report(dict(loss=test_loss, accuracy=correct), checkpoint=checkpoint)
 
 classes = [
     "T-shirt/top",
