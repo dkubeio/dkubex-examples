@@ -1,0 +1,7 @@
+tensorflow
+torchmetrics
+mlflow
+starlette
+torch
+torchvision
+ray[serve]
