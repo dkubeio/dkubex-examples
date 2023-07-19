@@ -1,0 +1,17 @@
+.env
+.env.local
+/node_modules
+test-results
+
+
+# testing
+/coverage
+/test-results
+
+# next.js
+/.next/
+/out/
+/dist
+
+# production
+/build
