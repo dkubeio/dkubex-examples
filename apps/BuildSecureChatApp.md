@@ -31,6 +31,7 @@ Example:
 
   `docker push $DOCKER_REGISTRY/llmapp:qna`
 
+Note: The same docker image works for many qna type apps. You would just need to specify a few run time tunables. Please see `d3x appa create` command below
 
 ## Step 3: Deploy application behind ingress 
 
@@ -52,6 +53,5 @@ Each app must implement two APIs - one for title and one for streaming request.
 Inside the `/stream` api - you can plugin any langchain implementation. You can follow the logic with paperqa in that file.
 
 ## Other useful d3x apps commands
-d3x apps list
-
-d3x apps delete ankitair
+`d3x apps list`
+`d3x apps delete <app name>`
