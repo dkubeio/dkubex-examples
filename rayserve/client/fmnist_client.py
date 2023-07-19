@@ -1,16 +1,17 @@
-# from configparse import ConfigParser
 import configparser
 import requests
-config = configparser.ConfigParser()
 import sys
+import urllib3
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+config = configparser.ConfigParser()
 
 
 # Check if a parameter is provided
 if len(sys.argv) > 2:
     param1 = sys.argv[1]
     param2 = sys.argv[2]
-    print("uuid:", param1)
-    print("path:", param2)
 else:
     print("Please provide uuid & image path.")
     exit(1)
@@ -41,3 +42,4 @@ with open(IMAGE_PATH, "rb") as image:
 headers={'Authorization': SERVING_TOKEN}
 resp = requests.post(SERVING_ENDPOINT, data=image_bytes, headers=headers, verify=False)
 print (resp.json())
+
