@@ -14,17 +14,22 @@ from torchvision import transforms
 
 
 
-@serve.deployment
+@serve.deployment(ray_actor_options={"num_gpus":1})
 class ImageModel:
     def __init__(self):
-        self.model = mlflow.pytorch.load_model(os.environ["MODEL_PATH"])
+        self.logger = logging.getLogger("ray.serve")
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.logger.info(f"devices: {self.device}")
+        self.model = mlflow.pytorch.load_model(os.environ["MODEL_PATH"], map_location=self.device)
+        self.model.to(self.device)
+        self.model.eval()
         self.preprocessor = transforms.Compose(
             [
                 transforms.ToTensor(),
                 transforms.Normalize((0.1307,), (0.3081,))
             ]
         )
-        self.logger = logging.getLogger("ray.serve")
+        
 
     async def __call__(self, starlette_request: Request) -> Dict:
         image_payload_bytes = await starlette_request.body()
@@ -34,7 +39,7 @@ class ImageModel:
         pil_images = [pil_image]  # Our current batch size is one
         input_tensor = torch.cat(
             [self.preprocessor(i).unsqueeze(0) for i in pil_images]
-        )
+        ).to(self.device)
         self.logger.info("[2/3] Images transformed, tensor shape {}".format(input_tensor.shape))
 
         with torch.no_grad():
