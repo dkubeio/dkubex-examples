@@ -41,9 +41,7 @@
         - Select the job based on the submission id
 
 - MlFlow Correlation with Ray Jobs
-    - Getting JOB id using submission id
-        List the jobs for the current active cluster
-        You need <submission id> when you submitted job to Ray.
+    - Getting job id using submission id
         ```
         $ d3x ray job list | grep  <submission id>
         ```
@@ -57,8 +55,8 @@
         You could also use unique names for experiment & run
 
 - Registering the model
-    for registering the model in mlflow do the following
-    Open dkubex web ui
+    For registering the model in mlflow, do the following
+    - Open dkubex web ui
     - Go to mlflow tab
     - Select the experiment name
     - Select the run, the run can be filtered using  tags.job_id = '{job_id}' and user_id = '{user}' and tags.`ray cluster` = '{cluster}'
