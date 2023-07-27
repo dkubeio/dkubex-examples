@@ -27,7 +27,7 @@
         ```
         Example:
 
-        $ d3x serve create -n fashion-mnist12 -r mlflow --model fmnisttest0 --model_version 1 --is_private_repo --access_token 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 --repo_name dkubex-examples --username dkubeio --branch_name mlflow --depfilepath fashion_mnist_gpu.deploy
+        $ d3x serve create -n fashion-mnist12 -r mlflow --model fmnisttest0 --model_version 1 --is_private_repo --access_token XXXX --repo_name dkubex-examples --username dkubeio --branch_name mlflow --depfilepath fashion_mnist_gpu.deploy
         ```
 
     - Deploying from local (user workspace)
