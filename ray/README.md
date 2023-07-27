@@ -1,6 +1,6 @@
-# Ray Trainig 
+# Ray Training 
 
-- Creating Ray Cluster with 
+- Creating Ray Cluster 
     - With CPU
         ```
         $ d3x ray create -n cpu --cpu=4 --memory=8 --hcpu=4 --hmemory=8 
@@ -17,16 +17,30 @@
     ```
     $ d3x ray activate gpu
     ```
-- Submitting training job to ray cluster
-    - Submit to CPU cluster
+- Submitting training job to the ray cluster
+    - Submit to the CPU cluster
         ```
         $ d3x ray job submit --submission-id ray-air --working-dir $PWD --submission-id=test1 --runtime-env-json='{"pip": ["torch", "torchvision"]}' -- python torch_fashion_mnist_example.py
         ```
-    - With GPU
+    - Submit to the GPU cluster
         ```
         d3x ray job submit --submission-id ray-air --working-dir $PWD --runtime-env-json='{"pip": ["torch", "torchvision"]}' -- python torch_fashion_mnist_example.py --use-gpu --num-workers 2
         ```
-- MlFlow Correlation with Jobs
+
+- Viewing Ray job logs 
+    - CLI
+        ```
+        $ d3x ray job logs <submission id>
+        ```
+    - UI
+        for getting job logs in ui do the following
+        - Open dkubex web ui
+        - Go to clusters  tab
+        - Click on the cluster 
+        - In Ray dashboard go to jobs tab
+        - Select the job based on the submission id
+
+- MlFlow Correlation with Ray Jobs
     - Getting JOB id using submission id
         List the jobs for the current active cluster
         You need <submission id> when you submitted job to Ray.
@@ -41,19 +55,6 @@
         ```
     **Note**:
         You could also use unique names for experiment & run
-
-- Viewing job logs 
-    - CLI
-        ```
-        $ d3x ray job logs <submission id>
-        ```
-    - UI
-        for getting job logs in ui do the following
-        - Open dkubex web ui
-        - Go to clusters  tab
-        - Click on the cluster 
-        - In Ray dashboard go to jobs tab
-        - Select the job based on the submission id
 
 - Registering the model
     for registering the model in mlflow do the following
