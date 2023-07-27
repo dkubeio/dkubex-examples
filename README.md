@@ -4,10 +4,6 @@ This repo contains the files required for the examples for the DKubeX platform.
 ## apps
 The apps folder contains the required files for creating custom user applications on DKubeX.
 
-## ray training
-
-The ray folder contains example training program files for Ray training in Dkubex.
-
 ## rayserve
 The rayserve folder contains the required files to deploy models on the DKubeX platform. Currently Hugging-face and MLFlow models can be deployed using DKubeX.
 
