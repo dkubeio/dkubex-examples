@@ -27,7 +27,7 @@
         ```
         Example:
 
-        $ d3x serve create -n hf-biogpt -r hugging_face --hface_repoid microsoft/biogpt --hface_tokenizer BioGptTokenizer --hface_classifier text-completion --repo_name dkubex-examples --username dkubeio --is_private_repo --access_token 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   --branch_name hugging_face --depfilepath biogpt.deploy
+        $ d3x serve create -n hf-biogpt -r hugging_face --hface_repoid microsoft/biogpt --hface_tokenizer BioGptTokenizer --hface_classifier text-completion --repo_name dkubex-examples --username dkubeio --is_private_repo --access_token XXXXXXXX   --branch_name hugging_face --depfilepath biogpt.deploy
         ```
 
     - Deploying from local (user workspace)
