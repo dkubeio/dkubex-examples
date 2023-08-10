@@ -89,12 +89,12 @@ def ingest(source, dataset):
     # Does this dataset already exist?
     schema = weaviate.schema.get()
     all_classes = [c["class"] for c in schema["classes"]]
-    if "D"+dataset+"docs" in all_classes:
-        raise Exception(f"The specified dataset {dataset}  already exists")
 
     docs, chunks = create_paperqa_vector_indexes(weaviate, embeddings, dataset)
     docs_store = Docs(doc_index=docs, texts_index = chunks)
-    #docs_store.build_doc_index()
+    if "D"+dataset+"docs" in all_classes:
+        #raise Exception(f"The specified dataset {dataset}  already exists")
+        docs_store.build_doc_index()
 
     docs_list = glob.glob(os.path.join(source, "**/*.pdf"), recursive=True)
     count = total = 0
