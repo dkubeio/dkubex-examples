@@ -21,3 +21,6 @@ $ d3x ray job submit --working-dir $PWD --runtime-env-json='{"pip": "./requireme
         --num_workers=4 \
 	--no_fp16 \
         --use-gpu
+
+testing 
+ $d3x ray job submit --working-dir $PWD --runtime-env-json='{"pip": "./requirements.txt"}' -- python trainray.py --model_path=bigcode/santacoder --dataset_name=bigcode/the-stack-dedup --subset=data/shell --data_column content --split=train --seq_length 2048 --max_steps 1 --batch_size 1 --gradient_accumulation_steps 1 --learning_rate 5e-5 --num_warmup_steps 1 --eval_freq 1 --save_freq 1 --log_freq 1 --num_workers=1 --no_fp16  --size_valid_set 1
