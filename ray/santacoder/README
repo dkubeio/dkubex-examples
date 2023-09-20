@@ -1,0 +1,23 @@
+create a ray cluster 
+ $d3x ray create -n gpu --cpu=8 --memory=64 --hcpu=4 --hmemory=8 --hgpu=1 --gpu=1
+activate ray cluster
+ $ d3x ray activate
+run the training
+$ d3x ray job submit --working-dir $PWD --runtime-env-json='{"pip": "./requirements.txt"}' -- python trainray.py \
+	--model_path="bigcode/santacoder" \
+        --dataset_name="bigcode/the-stack-dedup" \
+        --subset="data/shell" \
+        --data_column "content" \
+        --split="train" \
+        --seq_length 2048 \
+        --max_steps 30000 \
+        --batch_size 2 \
+        --gradient_accumulation_steps 8 \
+        --learning_rate 5e-5 \
+        --num_warmup_steps 500 \
+        --eval_freq 3000 \
+        --save_freq 3000 \
+        --log_freq 1 \
+        --num_workers=4 \
+	--no_fp16 \
+        --use-gpu
