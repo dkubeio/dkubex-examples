@@ -260,7 +260,7 @@ def run_training(config):
         weight_decay=args.weight_decay,
         run_name=f"santacoder-{args.subset}",
         report_to="wandb",
-        no_cuda=not args.use_gpu, 
+        no_cuda=not args.use_gpu,
     )
 
     trainer = Trainer(
