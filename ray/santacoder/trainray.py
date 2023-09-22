@@ -30,7 +30,7 @@ import ray.train.huggingface.transformers
 from ray.air.config import RunConfig, ScalingConfig, CheckpointConfig
 from ray.air.integrations.mlflow import MLflowLoggerCallback
 import fim
-
+training_args = None
 def chars_token_ratio(dataset, tokenizer, data_column, nb_examples=400):
     """
     Estimate the average number of characters per token in the dataset.
@@ -179,6 +179,9 @@ def get_args():
     parser.add_argument(
         "--use-gpu", action="store_true", default=False, help="enables CUDA training"
     )
+    parser.add_argument(
+        "--push_to_hub", action="store_true", default=False, help="push to huggingface hub"
+    )
     parser.add_argument("--fim_rate", type=float, default=0)
     parser.add_argument("--fim_spm_rate", type=float, default=0)
     return parser.parse_args()
@@ -240,29 +243,6 @@ def run_training(config):
 
     print(f"Starting main loop")
     print("args.max_steps", args.max_steps)
-    training_args = TrainingArguments(
-        output_dir=args.output_dir,
-        dataloader_drop_last=True,
-        evaluation_strategy="steps",
-        max_steps=args.max_steps,
-        eval_steps=args.eval_freq,
-        save_steps=args.save_freq,
-        logging_steps=args.log_freq,
-        per_device_train_batch_size=args.batch_size,
-        per_device_eval_batch_size=args.batch_size,
-        learning_rate=args.learning_rate,
-        lr_scheduler_type=args.lr_scheduler_type,
-        warmup_steps=args.num_warmup_steps,
-        gradient_accumulation_steps=args.gradient_accumulation_steps,
-        gradient_checkpointing=args.no_gradient_checkpointing,
-        fp16=args.no_fp16,
-        bf16=args.bf16,
-        weight_decay=args.weight_decay,
-        run_name=f"santacoder-{args.subset}",
-        report_to="wandb",
-        no_cuda=not args.use_gpu,
-    )
-
     trainer = Trainer(
         model=model, args=training_args, train_dataset=train_dataset, eval_dataset=eval_dataset, tokenizer=tokenizer
     )
@@ -289,9 +269,34 @@ def main(args):
     tags = { "mlflow.user" : user,
          "experiment name" : "santacoder", "job_id":job_id, "ray cluster": cluster }
     name  = f"santacoder-{user}"
-
+    global training_args
+    training_args = TrainingArguments(
+        output_dir=args.output_dir,
+        dataloader_drop_last=True,
+        evaluation_strategy="steps",
+        max_steps=args.max_steps,
+        eval_steps=args.eval_freq,
+        save_steps=args.save_freq,
+        logging_steps=args.log_freq,
+        per_device_train_batch_size=args.batch_size,
+        per_device_eval_batch_size=args.batch_size,
+        learning_rate=args.learning_rate,
+        lr_scheduler_type=args.lr_scheduler_type,
+        warmup_steps=args.num_warmup_steps,
+        gradient_accumulation_steps=args.gradient_accumulation_steps,
+        gradient_checkpointing=args.no_gradient_checkpointing,
+        fp16=args.no_fp16,
+        bf16=args.bf16,
+        weight_decay=args.weight_decay,
+        no_cuda=not args.use_gpu, 
+        push_to_hub=args.push_to_hub,
+        run_name=f"santacoder-{args.subset}",
+        report_to="mlflow",
+    )
+    train_loop_config= training_args.__dict__
     trainer = TorchTrainer(
         run_training,
+        train_loop_config=train_loop_config,
         scaling_config=ScalingConfig(num_workers=args.num_workers, use_gpu=args.use_gpu),
         run_config=RunConfig(
             callbacks=[

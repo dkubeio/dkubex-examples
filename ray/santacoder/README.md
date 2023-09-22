@@ -39,7 +39,7 @@ $ d3x ray job submit --working-dir $PWD --runtime-env-json='{"pip": "./requireme
         --use-gpu
 
 ```
-# Testing with smaller data
+## Testing with smaller data
 ```
 $ d3x ray create -n test   --hcpu 8  --hmemory 64   -i rayproject/ray-ml:2.7.0.d37759-py310-gpu  -v 2.7.0
 $ d3x ray activate test
