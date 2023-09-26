@@ -256,7 +256,7 @@ def run_training(train_dataset, eval_dataset = None, **config):
         bf16=args.bf16,
         weight_decay=args.weight_decay,
         run_name=f"santacoder-{args.subset}",
-        report_to="wandb",
+        report_to="mlflow",
         no_cuda=not args.use_gpu, 
     )
 
