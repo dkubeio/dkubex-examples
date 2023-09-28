@@ -1,6 +1,5 @@
 # Import necessary libraries
 from flytekit import task, workflow, dynamic, Resources
-import optuna
 import numpy as np
 from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
@@ -23,6 +22,7 @@ def train_model(n_estimators: int, max_depth: int, min_samples_split: float) -> 
 # Define a Flyte task for the hyperparameter optimization
 @task(requests=Resources(cpu="2",mem="1Gi"))
 def optimize_hyp() -> float:
+    import optuna
     # Define the objective function
     def objective(trial):
         # Define the search space for hyperparameters
