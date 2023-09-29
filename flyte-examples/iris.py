@@ -59,8 +59,29 @@ def optimize_hyp() -> Tuple[float, Dict[str, Any]]:
     
     return best_accuracy, best_params 
 
+@task(requests=Resources(cpu="2", mem="1Gi"))
+def train_best_model(best_params: Dict[str, Any]) -> str:
+    import mlflow
+    import mlflow.sklearn
+    iris = load_iris()
+    X, y = iris.data, iris.target
+    
+    # Initialize and train a Random Forest Classifier with the best hyperparameters
+    clf = RandomForestClassifier(n_estimators=best_params["n_estimators"], max_depth=best_params["max_depth"], min_samples_split=best_params["min_samples_split"], random_state=42)
+    
+    # Fit the model
+    clf.fit(X, y)
+    
+    # Log the model to MLflow
+    with mlflow.start_run(run_name="BestRandomForestModel"):
+        mlflow.sklearn.log_model(clf, "best_random_forest_model")
+    
+    return "Best model trained and logged to MLflow."
+
+
 @workflow
 def optimize_model():
-    best_accuracy = optimize_hyp()
-    
+    best_accuracy, best_params = optimize_hyp()
+    #train the best model with best hyperparameters
+    train_best_model(best_params=best_params)
     return best_accuracy
