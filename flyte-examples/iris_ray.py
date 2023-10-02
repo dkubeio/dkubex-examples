@@ -94,7 +94,7 @@ def train_best_model(best_params: Dict[str, Any]) -> str:
 
 # Define a Flyte task for inference using Ray
 @task(requests=Resources(cpu="2", mem="1Gi"))
-def ray_inference(model_uri: str, data: List[List[float]]) -> List[int]:
+def ray_inference(model_uri: str, data: List[List[float]]) -> Tuple[List[int], str]:
     import mlflow
     import mlflow.pyfunc
     import ray
@@ -113,13 +113,19 @@ def ray_inference(model_uri: str, data: List[List[float]]) -> List[int]:
     def inference(model, data):
         prediction = model.predict(data)
         return prediction.tolist()  # Pass data as a list
-
+    
     results = ray.get(inference.remote(model, data))
-    return results
+    if results[0] == 0 :
+        iris_type = "Setosa"
+    elif results[0] == 1:
+        iris_type = "Versicolour"
+    else:
+        iris_type = "Virginica"
+    return results, iris_type
 
 
 @workflow
-def optimize_model() -> Tuple[float, List[int]]:
+def optimize_model() -> Tuple[float, List[int], str]:
     best_accuracy, best_params = optimize_hyp()
     # Train the best model with best hyperparameters
     run_id = train_best_model(best_params=best_params)
@@ -128,7 +134,6 @@ def optimize_model() -> Tuple[float, List[int]]:
     # Sample data for inference (for the Iris dataset)
     data = [[5.1, 3.5, 1.4, 0.2]]
     # Perform inference using the ray_inference task
-    inference_results = ray_inference(model_uri=run_id,data=data)
-   
+    inference_results , iris_type = ray_inference(model_uri=run_id,data=data)
 
-    return best_accuracy, inference_results
+    return best_accuracy, inference_results, iris_type
