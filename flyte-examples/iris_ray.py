@@ -2,7 +2,11 @@ from flytekit import task, workflow, Resources, dynamic
 import mlflow.pyfunc
 import time
 from typing import List, Tuple, Dict, Any
+import os 
 
+
+experiment_name = os.environ.get("MLFLOW_EXP_NAME")
+print(experiment_name)
 # Define a Flyte task for model training
 @task(requests=Resources(cpu="2",mem="1Gi"))
 def model_accuracy(n_estimators: int, max_depth: int, min_samples_split: float) -> float:
@@ -31,17 +35,18 @@ def optimize_hyp() -> Tuple[float, Dict[str, Any]]:
     import mlflow
     best_accuracy = 0.0
     best_params = {}
-    
+    import os
+    experiment_name = os.environ.get("MLFLOW_EXP_NAME")
     # Define the objective function
     def objective(trial):
-        nonlocal best_accuracy, best_params
-        
+        nonlocal best_accuracy, best_params, experiment_name
+         
         # Define the search space for hyperparameters
         n_estimators = trial.suggest_int("n_estimators", 50, 200)
         max_depth = trial.suggest_int("max_depth", 2, 32, log=True)
         min_samples_split = trial.suggest_float("min_samples_split", 0.1, 1.0)
-        
         run_name = f"OptunaTrial_{trial.number}"
+        mlflow.set_experiment(experiment_name)
         with mlflow.start_run(run_name=run_name, nested=True):
             # Run the Flyte task with the selected hyperparameters
             accuracy = model_accuracy(n_estimators=n_estimators, max_depth=max_depth, min_samples_split=min_samples_split)
@@ -59,9 +64,14 @@ def optimize_hyp() -> Tuple[float, Dict[str, Any]]:
             }
 
         return -accuracy  # Optuna minimizes, so negate the metric for maximization
+    mlflow.set_experiment(experiment_name)
+    with mlflow.start_run(run_name="HPO_RUN") as parent_run:
+        parent_run_id = parent_run.info.run_id
 
-    study = optuna.create_study(direction="maximize")  # For accuracy maximization
-    study.optimize(objective, n_trials=20)  # You can specify the number of trials
+        # Log the parent run ID as a parameter
+        mlflow.log_param("parent_run_id", parent_run_id)
+        study = optuna.create_study(direction="maximize")  # For accuracy maximization
+        study.optimize(objective, n_trials=20)  # You can specify the number of trials
     
     return best_accuracy, best_params
 
@@ -72,6 +82,8 @@ def train_best_model(best_params: Dict[str, Any]) -> str:
     from sklearn.datasets import load_iris
     from sklearn.ensemble import RandomForestClassifier
     import numpy as np
+    import os
+    experiment_name = os.environ.get("MLFLOW_EXP_NAME")
 
     iris = load_iris()
     X, y = iris.data, iris.target
@@ -82,7 +94,7 @@ def train_best_model(best_params: Dict[str, Any]) -> str:
     
     # Fit the model
     clf.fit(X, y)
-    
+    mlflow.set_experiment(experiment_name) 
     # Log the model to MLflow
     with mlflow.start_run(run_name="BestRandomForestModel") as run:
         mlflow.sklearn.log_model(clf, "best_random_forest_model")
