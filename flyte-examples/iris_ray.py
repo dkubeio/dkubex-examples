@@ -42,7 +42,7 @@ def optimize_hyp() -> Tuple[float, Dict[str, Any]]:
         min_samples_split = trial.suggest_float("min_samples_split", 0.1, 1.0)
         
         run_name = f"OptunaTrial_{trial.number}"
-        with mlflow.start_run(run_name="optuna", nested=True):
+        with mlflow.start_run(run_name=run_name, nested=True):
             # Run the Flyte task with the selected hyperparameters
             accuracy = model_accuracy(n_estimators=n_estimators, max_depth=max_depth, min_samples_split=min_samples_split)
             
@@ -103,7 +103,6 @@ def ray_inference(model_uri: str, data: List[List[float]]) -> Tuple[List[int], s
     # Initialize Ray if it's not already
     if not ray.is_initialized():
         ray.init()
-    time.sleep(20)
     # Load the best-trained model from MLflow
     model = mlflow.pyfunc.load_model(model_uri)
 
