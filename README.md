@@ -24,9 +24,9 @@ mnist.py, iris_ray.py are examples which contain flyte tasks and the workflow on
 
 **Command** 
 
-**pyflyte run --remote --image dkubex123/my_flyte_image:latest --envs '{"MLFLOW_EXP_NAME":"flyte_optuna2","MLFLOW_TRACKING_URI":"http://d3x-controller.d3x.svc.cluster.local:5000"}' iris_ray.py optimize_model**
+**pyflyte run --remote --image dkubex123/my_flyte_image:latest --envs '{"MLFLOW_EXP_NAME":"flyte_optuna","MLFLOW_TRACKING_URI":"http://d3x-controller.d3x.svc.cluster.local:5000"}' iris_ray.py optimize_model**
 
-Instead of flyte_optuna2, replace with your own mlflow experiment name.
+Instead of flyte_optuna, replace with your own mlflow experiment name.
 
 Example command to run the mnist workflow is "pyflyte run --remote --project flytetester --domain development --envs '{"MLFLOW_TRACKING_URI":"http://d3x-controller.d3x.svc.cluster.local:5000"}' --image dkubex123/my_flyte_image:latest mnist.py mnist_workflow"
 
