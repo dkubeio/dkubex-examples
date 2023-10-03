@@ -5,19 +5,19 @@
   
     - Deploying using private repo
         ```
-        $ d3x serve create -n <name> -r hugging_face --hface_repoid <repoid> --hface_tokenizer <tokenizer> --hface_classifier <classifier> --repo_name <repo name> --username <username> --is_private_repo --access_token <personal access token> --branch_name <branch> --depfilepath <deployment filepath> --hardware_type <gpu or cpu> --ngpus <number of gpus>
+        $ d3x serve create -n <name> -r hugging_face --hface_repoid <repoid> --hface_tokenizer <tokenizer> --hface_classifier <classifier> --repo_name <repo name> --username <username> --is_private_repo --access_token <personal access token> --branch_name <branch> --depfilepath <deployment filepath> --ngpus <number of gpus>
         ```
         ```
         Example:
         
-        $ d3x serve create -n hf-biogpt -r hugging_face --hface_repoid microsoft/biogpt --hface_tokenizer BioGptTokenizer --hface_classifier text-completion --repo_name dkubex-examples --username dkubeio --is_private_repo --access_token XXXXXX   --branch_name hugging_face --depfilepath biogpt.deploy --hardware_type gpu --ngpus 1
+        $ d3x serve create -n hf-biogpt -r hugging_face --hface_repoid microsoft/biogpt --hface_tokenizer BioGptTokenizer --hface_classifier text-completion --repo_name dkubex-examples --username dkubeio --is_private_repo --access_token XXXXXX   --branch_name hugging_face --depfilepath biogpt.deploy --ngpus 1
         ```
 
     - Deploying from local directory
         ```
         Example:
 
-        $ d3x serve create -n hf-biogpt -r hugging_face --hface_repoid microsoft/biogpt --hface_tokenizer BioGptTokenizer --hface_classifier text-completion --depfilepath biogpt.deploy --hardware_type gpu --ngpus 1
+        $ d3x serve create -n hf-biogpt -r hugging_face --hface_repoid microsoft/biogpt --hface_tokenizer BioGptTokenizer --hface_classifier text-completion --depfilepath biogpt.deploy --ngpus 1
         ```
         
 
