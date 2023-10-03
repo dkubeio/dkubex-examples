@@ -5,19 +5,19 @@
   
     - Deploying using private repo
         ```
-        $ d3x serve create -n <name> -r mlflow --model <registered model name> --model_version <model version>  --repo_name <repo name> --username <username> --is_private_repo --access_token <personal access token> --branch_name <branch> --depfilepath <deployment filepath> --hardware_type <gpu or cpu> --ngpus <number of gpus>
+        $ d3x serve create -n <name> -r mlflow --model <registered model name> --model_version <model version>  --repo_name <repo name> --username <username> --is_private_repo --access_token <personal access token> --branch_name <branch> --depfilepath <deployment filepath> --ngpus <number of gpus>
         ```
         ```
         Example:
         
-        $ d3x serve create -n fashion-mnist12 -r mlflow --model fmnisttest0 --model_version 1 --is_private_repo --access_token XXXX --repo_name dkubex-examples --username dkubeio --branch_name mlflow --depfilepath fashion_mnist_gpu.deploy --hardware_type gpu --ngpus 1
+        $ d3x serve create -n fashion-mnist12 -r mlflow --model fmnisttest0 --model_version 1 --is_private_repo --access_token XXXX --repo_name dkubex-examples --username dkubeio --branch_name mlflow --depfilepath fashion_mnist_gpu.deploy --ngpus 1
         ```
 
     - Deploying from local directory
         ```
         Example:
 
-        $ d3x serve create -n fmnist -r mlflow --model mnist --model_version 1 --depfilepath fashion_mnist_gpu.deploy --hardware_type gpu --ngpus 1
+        $ d3x serve create -n fmnist -r mlflow --model mnist --model_version 1 --depfilepath fashion_mnist_gpu.deploy --ngpus 1
         ```
         
 
@@ -34,7 +34,7 @@
         ```
         Example:
         
-        $ d3x serve create -n fmnist -r mlflow --model mnist --model_version 1 --depfilepath fashion_mnist_gpu.deploy --hardware_type gpu --ngpus 1
+        $ d3x serve create -n fmnist -r mlflow --model mnist --model_version 1 --depfilepath fashion_mnist_gpu.deploy --ngpus 1
         ```
 
 - **Note**:
