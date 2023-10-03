@@ -7,7 +7,7 @@
         ```
     - With GPU
         ```
-        $ d3x ray create -n gpu --cpu=4 --memory=8 --hcpu=4 --hmemory=8 --hgpu=1 --gpu=1
+        $ d3x ray create -n gpu --cpu=4 --memory=8 --hcpu=4 --hmemory=8 --gpu=1
         ```
 - Activating Ray cluster for Training 
     ```
@@ -24,7 +24,7 @@
         ```
     - Submit to the GPU cluster
         ```
-        d3x ray job submit --submission-id ray-air --working-dir $PWD --runtime-env-json='{"pip": ["torch", "torchvision"]}' -- python torch_fashion_mnist_example.py --use-gpu --num-workers 2
+        d3x ray job submit --submission-id ray-air --working-dir $PWD --runtime-env-json='{"pip": ["torch", "torchvision"]}' -- python torch_fashion_mnist_example.py --use-gpu --num-workers 1
         ```
 
 - Viewing Ray job logs 
