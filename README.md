@@ -23,3 +23,6 @@ mnist.py, iris_ray.py are examples which contain flyte tasks and the workflow on
 
 ## sky
 This folder contains examples to run skypilot jobs
+
+## local
+This folder contains an example training which can be executed locally on your laptop and track experiments in dkubex
