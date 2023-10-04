@@ -6,7 +6,6 @@ name: wine
 workdir: .
 
 envs:
-  CLOUDSDK_CORE_PROJECT: dkubex
   MLFLOW_TRACKING_URI: https://<dkubexip:port>/api/mlflow/
   MLFLOW_TRACKING_INSECURE_TLS: "true"
   MLFLOW_EXPERIMENT_NAME: 'wine-sky'
