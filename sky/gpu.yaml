@@ -1,0 +1,57 @@
+name: wine-gpu
+
+#https://skypilot.readthedocs.io/en/latest/reference/yaml-spec.html#yaml-spec
+
+# Assume your working directory is under `~/transformers`.
+# To make this example work, please run the following command:
+# git clone https://github.com/huggingface/transformers.git ~/transformers -b v4.30.1
+workdir: .
+
+resources:
+  #cloud: aws  # The cloud to use (optional).
+
+  # The region to use (optional). Auto-failover will be disabled
+  # if this is specified.
+  #region: us-east-1
+
+  # The zone to use (optional). Auto-failover will be disabled
+  # if this is specified.
+  #zone: us-east-1a
+
+  # Accelerator name and count per node (optional).
+  #
+  # Use `sky show-gpus` to view available accelerator configurations.
+  #
+  # Format: <name>:<count> (or simply <name>, short for a count of 1).
+  #accelerators: V100:1
+  accelerators: A100:8
+
+  # Number of vCPUs per node (optional).
+  #
+  # Format: <count> (exactly <count> vCPUs) or <count>+
+  # (at least <count> vCPUs).
+  #
+  # E.g., 4+ would first try to find an instance type with 4 vCPUs. If not
+  # found, it will use the next cheapest instance with more than 4 vCPUs.
+  #cpus: 32
+
+  # Instance type to use (optional). If 'accelerators' is specified,
+  # the corresponding instance type is automatically inferred.
+  #instance_type: p3.8xlarge
+
+  # Whether the cluster should use spot instances (optional).
+  # If unspecified, defaults to False (on-demand instances).
+  use_spot: True
+
+envs:
+  MLFLOW_TRACKING_URI: https://<dkube-ip:port>/api/mlflow/
+  MLFLOW_TRACKING_INSECURE_TLS: "true"
+  MLFLOW_EXPERIMENT_NAME: 'wine'
+
+setup: |
+  conda create -n wine python=3.10 -y
+  conda activate wine
+  pip install mlflow==2.4.2 boto3==1.28.47
+run: |
+  conda activate wine
+  python train.py

@@ -1,0 +1,19 @@
+name: wine
+
+# Assume your working directory is under `~/transformers`.
+# To make this example work, please run the following command:
+# git clone https://github.com/huggingface/transformers.git ~/transformers -b v4.30.1
+workdir: .
+
+envs:
+  MLFLOW_TRACKING_URI: https://<dkubexip:port>/api/mlflow/
+  MLFLOW_TRACKING_INSECURE_TLS: "true"
+  MLFLOW_EXPERIMENT_NAME: 'wine-sky'
+
+setup: |
+  conda create -n wine python=3.10 -y
+  conda activate wine
+  pip install mlflow==2.4.2 boto3==1.28.47
+run: |
+  conda activate wine
+  python train.py

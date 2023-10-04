@@ -1,0 +1,21 @@
+Build docker image
+------------------
+
+Note: On EKS clusters, create ~/.docker/config.json with the following content
+{
+ "credsStore": "ecr-login"
+}
+
+1. docker build -t <repo>:<tag> .
+
+2. docker push <repo>:<tag>
+
+Create a project
+----------------
+
+1. flytectl create project --file project.yaml
+
+pyflyte run --remote --project flytedemo --image <repo>:<tag>  --envs '{"MLFLOW_EXP_NAME":"flyte-optuna","MLFLOW_TRACKING_URI":"http://d3x-controller.d3x.svc.cluster.local:5000"}' iris_ray.py optimize_model
+
+datadog logs filter:
+kube_namespace:flytedemo-development service:dkube

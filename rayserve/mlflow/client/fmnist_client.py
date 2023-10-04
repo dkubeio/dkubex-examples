@@ -1,5 +1,5 @@
 # Usage: python fminst_client.py <profile> <name> <image path>
-# Ex: python fmnist_client.py default hf-biogpt /tmp/image.png
+# Ex: python fmnist_client.py default fashion-mnist-deploy ./images/pull-over.png
 import configparser
 import requests
 import sys

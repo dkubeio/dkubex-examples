@@ -1,5 +1,5 @@
-id: "flytetester" #"project-unique-id"
-name: "flytetester" #"Name"
+id: "flytedemo" #"project-unique-id"
+name: "flytedemo" #"Name"
 labels:
    values:
      app: flyte

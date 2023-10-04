@@ -8,7 +8,9 @@ RUN pip --version
 RUN pip install opencv-python
 RUN pip install tensorflow
 RUN pip install tflite
+RUN pip install optuna
 RUN pip install mlflow
+RUN pip install ray
 USER flytekit
 # Set any environment variables if needed
 # ENV MY_VARIABLE=value
