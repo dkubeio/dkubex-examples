@@ -45,9 +45,9 @@ resources:
 
 envs:
   CLOUDSDK_CORE_PROJECT: dkubex
-  MLFLOW_TRACKING_URI: https://44.200.185.154:32443/api/mlflow/
+  MLFLOW_TRACKING_URI: https://<dkube-ip:port>/api/mlflow/
   MLFLOW_TRACKING_INSECURE_TLS: "true"
-  MLFLOW_EXPERIMENT_NAME: 'wine-1'
+  MLFLOW_EXPERIMENT_NAME: 'wine'
 
 setup: |
   conda create -n wine python=3.10 -y
