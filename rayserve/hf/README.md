@@ -42,3 +42,6 @@
       - Make sure you are pointing to 'hugging_face' branch, if you are 'deploying using private repo'.
       - Make sure you are inside HF directory for 'deploying from local'.
     - For public repo, ignore the options --is_private_repo & --access_token from 'deploying using private repo'
+
+- **client** folder contains a python test code for inference test
+   - hf_client.py contains instructions
