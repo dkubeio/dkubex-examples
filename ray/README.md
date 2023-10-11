@@ -20,7 +20,7 @@
 - Submitting training job to the ray cluster
     - Submit to the CPU cluster
         ```
-        $ d3x ray job submit --submission-id ray-air --working-dir $PWD --submission-id=test1 --runtime-env-json='{"pip": ["torch", "torchvision"]}' -- python torch_fashion_mnist_example.py
+        $ d3x ray job submit --submission-id ray-air --working-dir $PWD --runtime-env-json='{"pip": ["torch", "torchvision"]}' -- python torch_fashion_mnist_example.py
         ```
     - Submit to the GPU cluster
         ```
