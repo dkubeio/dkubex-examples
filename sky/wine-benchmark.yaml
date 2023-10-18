@@ -13,12 +13,8 @@ resources:
      - {cpus: '2+'}
      
      
-    #file_mounts:
-    #/checkpoint:
-    #source: s3://skypilot1 # NOTE: Fill in your bucket name
-    #mode: MOUNT
 envs:
-  MLFLOW_TRACKING_URI: https://a1182e8440d4c4d138415baf0d11b362-62d15cf634758ebd.elb.us-west-2.amazonaws.com/api/mlflow/
+  MLFLOW_TRACKING_URI: https://<dkubexip:port>/api/mlflow/
   MLFLOW_TRACKING_INSECURE_TLS: "true"
   MLFLOW_EXPERIMENT_NAME: 'wine-sky2'
 

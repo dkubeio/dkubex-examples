@@ -10,9 +10,8 @@ workdir: .
 
 envs:
   CLOUDSDK_CORE_PROJECT: dkubex
-  MLFLOW_TRACKING_URI: https://afd440d5a4ef44086b6b9029e061d153-4e514556f0bf03dd.elb.us-west-2.amazonaws.com/api/mlflow/
+  MLFLOW_TRACKING_URI: https://<dkubexip:port>/api/mlflow/
   MLFLOW_TRACKING_INSECURE_TLS: "true"
-  MLFLOW_TRACKING_TOKEN: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiaGFyc2hpdGEta2F0aHVyaWEiLCJ0eXBlIjoidXNlciIsImlkIjoiNGJhNGY0MzctZDY5ZS00YWQxLWI4YTMtMGM4NjZmZDcyOWZhIn0.4-JjUg-OkDUM_T_NjOTRkFnWp1zo-KuEnRKiUPFI7cY
   MLFLOW_EXPERIMENT_NAME: 'llama2_t'
 
 setup: |
