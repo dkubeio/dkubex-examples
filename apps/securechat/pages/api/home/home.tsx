@@ -71,6 +71,8 @@ const Home = ({
       selectedConversation,
       prompts,
       temperature,
+      models,
+      
     },
     dispatch,
   } = contextValue;
@@ -187,10 +189,10 @@ const Home = ({
       name: t('New Conversation'),
       messages: [],
       model: lastConversation?.model || {
-        id: OpenAIModels[defaultModelId].id,
-        name: OpenAIModels[defaultModelId].name,
-        maxLength: OpenAIModels[defaultModelId].maxLength,
-        tokenLimit: OpenAIModels[defaultModelId].tokenLimit,
+        id: models[0].id ?? OpenAIModels[defaultModelId].id,
+        name: models[0].id ?? OpenAIModels[defaultModelId].name,
+        maxLength: 5000 ?? OpenAIModels[defaultModelId].maxLength,
+        tokenLimit: 5000 ?? OpenAIModels[defaultModelId].tokenLimit,
       },
       prompt: DEFAULT_SYSTEM_PROMPT,
       temperature: lastConversation?.temperature ?? DEFAULT_TEMPERATURE,
@@ -334,7 +336,7 @@ const Home = ({
           id: uuidv4(),
           name: t('New Conversation'),
           messages: [],
-          model: OpenAIModels[defaultModelId],
+          model: models[0] ?? OpenAIModels[defaultModelId],
           prompt: DEFAULT_SYSTEM_PROMPT,
           temperature: lastConversation?.temperature ?? DEFAULT_TEMPERATURE,
           folderId: null,
