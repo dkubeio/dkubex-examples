@@ -4,6 +4,8 @@ import time
 from typing import List, Tuple, Dict, Any
 import os 
 
+# Set the MLflow tracking URI
+os.environ['MLFLOW_TRACKING_URI'] = "http://d3x-controller.d3x.svc.cluster.local:5000"
 
 experiment_name = os.environ.get("MLFLOW_EXP_NAME")
 print(experiment_name)
@@ -36,7 +38,7 @@ def optimize_hyp() -> Tuple[float, Dict[str, Any]]:
     best_accuracy = 0.0
     best_params = {}
     import os
-    experiment_name = os.environ.get("MLFLOW_EXP_NAME")
+    experiment_name = "flyte_optuna"
     # Define the objective function
     def objective(trial):
         nonlocal best_accuracy, best_params, experiment_name
@@ -83,7 +85,7 @@ def train_best_model(best_params: Dict[str, Any]) -> str:
     from sklearn.ensemble import RandomForestClassifier
     import numpy as np
     import os
-    experiment_name = os.environ.get("MLFLOW_EXP_NAME")
+    experiment_name = "flyte_optuna"
 
     iris = load_iris()
     X, y = iris.data, iris.target

@@ -3,6 +3,11 @@ from flytekit import task, workflow, Resources
 
 from typing import List, Tuple
 import numpy as np
+import os
+
+# Set the MLflow tracking URI
+os.environ['MLFLOW_TRACKING_URI'] = "http://d3x-controller.d3x.svc.cluster.local:5000"
+
 # Define Flyte tasks
 @task(requests=Resources(cpu="2", mem="1Gi"))
 # Import TensorFlow and other necessary libraries
@@ -15,7 +20,7 @@ def download_mnist_data() -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarra
     train_images, test_images = train_images / 255.0, test_images / 255.0
     return (train_images, train_labels, test_images, test_labels)
 
-@task(requests=Resources(cpu="2", mem="2Gi"))
+@task(requests=Resources(cpu="2", mem="1Gi"))
 # Import TensorFlow and other necessary libraries
 def train_model(train_images: np.ndarray, train_labels: np.ndarray,test_images: np.ndarray,test_labels: np.ndarray) -> str:
     import tensorflow as tf
