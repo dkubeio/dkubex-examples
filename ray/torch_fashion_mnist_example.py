@@ -10,7 +10,7 @@ from torchvision.transforms import ToTensor
 import ray
 import ray.train as train
 from ray.train.torch import TorchTrainer, TorchCheckpoint
-from ray.air import Checkpoint
+from ray.train import Checkpoint
 from ray.air.config import ScalingConfig, RunConfig
 from ray.air.integrations.mlflow import MLflowLoggerCallback, setup_mlflow
 import mlflow
