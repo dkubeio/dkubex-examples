@@ -22,7 +22,7 @@ else:
     exit(1)
 
 # get http url & token
-ini_file = "./userdata/.d3x.ini"
+ini_file = "/userdata/.d3x.ini"
 config.read(ini_file)
 url = config.get(param1,"url")
 token = config.get(param1,"auth-token")
