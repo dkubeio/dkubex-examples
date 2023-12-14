@@ -1,3 +1,4 @@
+import os, tempfile
 import argparse
 from typing import Dict
 from ray.air import session
@@ -10,10 +11,12 @@ from torchvision.transforms import ToTensor
 import ray
 import ray.train as train
 from ray.train.torch import TorchTrainer, TorchCheckpoint
-from ray.air import Checkpoint
+from ray.train import Checkpoint
 from ray.air.config import ScalingConfig, RunConfig
 from ray.air.integrations.mlflow import MLflowLoggerCallback, setup_mlflow
 import mlflow
+from mlflow.tracking import MlflowClient
+
 # Download training data from open datasets.
 training_data = datasets.FashionMNIST(
     root="~/data",
@@ -110,10 +113,10 @@ def train_func(config: Dict):
     for epoch in range(epochs):
         train_epoch(train_dataloader, model, loss_fn, optimizer)
         test_loss, correct = test_epoch(test_dataloader, model, loss_fn)
-        checkpoint = Checkpoint.from_dict(
-            dict(epoch=epoch, model=model.state_dict())
-        )
-        session.report(dict(loss=test_loss, accuracy=correct), checkpoint=checkpoint)
+        metrics = dict(loss=test_loss, accuracy=correct)
+        with tempfile.TemporaryDirectory() as tempdir:
+            torch.save(model.state_dict(), os.path.join(tempdir, "model.pt"))
+            train.report(metrics, checkpoint=Checkpoint.from_directory(tempdir))
 
 classes = [
     "T-shirt/top",
@@ -129,6 +132,9 @@ classes = [
     ]
 
 def train_fashion_mnist(num_workers=2, use_gpu=False):
+    device = torch.device('cuda') if use_gpu else torch.device('cpu')
+    print(f'Resource-type: {device}')
+    client = MlflowClient()
     import os
     user = os.environ.get("USER", "default")
     cluster = os.environ.get("HOSTNAME", "raycluster").split("-")[0]
@@ -162,8 +168,11 @@ def train_fashion_mnist(num_workers=2, use_gpu=False):
     df = mlflow.search_runs(experiment_names=[name], filter_string=filter_string)
     run_id = df.loc[0,'run_id']
     with mlflow.start_run(run_id=run_id) as run :
-        model = TorchCheckpoint.from_checkpoint(result.checkpoint).get_model(NeuralNetwork())
+        saved_model_state_dict = torch.load(result.checkpoint.path+'/model.pt', map_location=device)
+        model = TorchCheckpoint.from_state_dict(saved_model_state_dict).get_model(NeuralNetwork())
         mlflow.pytorch.log_model(model,f"model", input_example=input_example)
+        experiment_id = client.get_experiment_by_name(name).experiment_id
+        client.set_experiment_tag(experiment_id, "project", f"fm-project-{user}")
         mlflow.end_run()
     print(f"Last result: {result.metrics}")
 
