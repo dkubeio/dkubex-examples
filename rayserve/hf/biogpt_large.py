@@ -9,7 +9,7 @@ from ray import serve
 from transformers import BioGptTokenizer, BioGptForCausalLM
 
 #@serve.deployment(route_prefix="/biogpt-large", ray_actor_options={"num_gpus": 1})
-@serve.deployment(route_prefix="/biogpt-large", health_check_timeout_s=600)
+@serve.deployment()
 class BioGptLarge:
     def __init__(self):
         self.pipe_biogpt = pipeline("text-generation", model=os.environ["MODEL_PATH"])
