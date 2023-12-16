@@ -1,0 +1,27 @@
+name: wine
+
+
+workdir: .
+
+# Only shows `resources` as other fields do not change.
+resources:
+    cloud: aws # Works as a default value for `cloud`.
+
+    # Added only for SkyPilot Benchmark.
+    candidates:
+     - {cpus: '8+'}
+     - {cpus: '2+'}
+     
+     
+envs:
+  MLFLOW_TRACKING_URI: https://<dkubexip:port>/api/mlflow/
+  MLFLOW_TRACKING_INSECURE_TLS: "true"
+  MLFLOW_EXPERIMENT_NAME: 'wine-sky2'
+
+setup: |
+  conda create -n wine python=3.10 -y
+  conda activate wine
+  pip install mlflow==2.4.2 boto3==1.28.47
+run: |
+  conda activate wine
+  python train.py

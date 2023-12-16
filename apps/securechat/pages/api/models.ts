@@ -12,7 +12,12 @@ const handler = async (req: Request): Promise<Response> => {
       key: string;
     };
 
-    let url = `${OPENAI_API_HOST}/v1/models`;
+    let url = (process?.env?.DKUBEX_DEPLOYMENT && process?.env?.USER)
+    ?
+    `http://${process.env.DKUBEX_DEPLOYMENT}-serve-svc.${process.env.USER}:8000/v1/models`
+    :
+    `${OPENAI_API_HOST}/v1/models`;
+    //let url = `http://${process.env.DKUBEX_DEPLOYMENT}-serve-svc.${process.env.USER}:8000/v1/models`;
     if (OPENAI_API_TYPE === 'azure') {
       url = `${OPENAI_API_HOST}/openai/deployments?api-version=${OPENAI_API_VERSION}`;
     }
@@ -50,16 +55,16 @@ const handler = async (req: Request): Promise<Response> => {
 
     const models: OpenAIModel[] = json.data
       .map((model: any) => {
-        const model_name = (OPENAI_API_TYPE === 'azure') ? model.model : model.id;
-        for (const [key, value] of Object.entries(OpenAIModelID)) {
-          if (value === model_name) {
             return {
-              id: model.id,
-              name: OpenAIModels[value].name,
+              id: model?.id,
+              value: model?.id,
+              name: model?.id,
+              maxLength: 4000, // maximum length of a message
+              tokenLimit: 4000,
+              // name: OpenAIModels[value].name,
             };
           }
-        }
-      })
+      )
       .filter(Boolean);
 
     return new Response(JSON.stringify(models), { status: 200 });
