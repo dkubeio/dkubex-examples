@@ -5,3 +5,4 @@ starlette
 torch
 torchvision
 ray[serve]
+sacremoses
