@@ -1,6 +1,6 @@
 admin:
   # For GRPC endpoints you might want to use dns:///flyte.myexample.com
-  endpoint: dns:///flyte.dev.altoslabs.com:443
+  endpoint: dns:///flyte.dev.myexample.com:443
   authType: Pkce
   insecure: false
 logger:
