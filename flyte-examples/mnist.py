@@ -1,6 +1,8 @@
 import flytekit
 from flytekit import task, workflow, Resources
+import os
 
+os.environ['MLFLOW_TRACKING_URI'] = "http://d3x-controller.d3x.svc.cluster.local:5000"
 from typing import List, Tuple
 import numpy as np
 import os
