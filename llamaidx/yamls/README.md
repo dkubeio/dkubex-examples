@@ -7,7 +7,7 @@ d3x fm docs llamaidx ingest -d <dataset_name> --config <absolute path to your ya
 ```
 
 > [!NOTE]  
-> A. Any of the data loaders are supported and here are some examples of the different types of loaders
+> A. Any of the llamahub data loaders are supported and here are some examples of the different types of loaders
   > 1. txt/simple-pdf file from local directory.
   > 2. simple web pages using url.
   > 3. wikipedia pages
