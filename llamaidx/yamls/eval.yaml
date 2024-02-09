@@ -10,7 +10,7 @@ questions_generator:
     num_questions_per_chunk: 1
     max_chunks: 1
     llm: openai #dkubex
-    llmkey: "**" #provide your Open_AI_Key here
+    llmkey: "hk-hjyiyushgyuiwjkyshyikalkyij" #provide your Open_AI_Key here
     llmurl: ""
     max_tokens: 2048
 retrieval_evaluator:
