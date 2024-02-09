@@ -6,12 +6,6 @@
 d3x fm docs llamaidx ingest -d <dataset_name> --config <absolute path to your yaml-config file>
 ```
 
-_Example:_
-
-```
-d3x fm docs llamaidx ingest -d mydataset --config /home/john
-```
-
 > [!NOTE]  
 > A. Any of the data loaders are supported and here are some examples of the different types of loaders
   > 1. txt/simple-pdf file from local directory.
@@ -29,9 +23,6 @@ d3x fm docs llamaidx ingest -d mydataset --config /home/john
 d3x fm docs llamaidx ingest -d <dataset_name> --config /home/data/ingest.yaml --remote-sky --dkubex-url <dkubex_url> --dkubex-apikey <dkubex_api_key>
 ```
 
-_Example:_
-
-
 > [!NOTE]  
 > Make sure that ingest.yaml file and data-corpus directory are inside "/home/data/"
 
@@ -45,23 +36,17 @@ There are 3 modes of querying - Single question, Batch-question, Interactive mod
 d3x fm query llamaidx rag -d <dataset_name> --config <absolute path to your yaml-config file> -q "<question>"
 ```
 
-Ex.
-
 **B. Batch question mode**
 
 ```
 d3x fm query llamaidx rag -d <dataset_name> -b <path to your batch-que json file> --config <absolute path to your yaml-config file>
 ```
 
-Ex.
-
 **C. Interactive mode**
 
 ```
 d3x fm query llamaidx evaluate -d <dataset-name> --config <absolute path to your yaml-config file>
 ```
-
-Ex.
 
 ## Evaluation
 
@@ -71,7 +56,7 @@ The Eval facilitates the creation of a Synthesia dataset leveraging either open-
 d3x fm query llamaidx evaluate -d <dataset-name> --config <absolute path to your yaml-config file>
 ```
 
-# Securechat app
+## Securechat app
 
 ```
 d3x apps create <securechat.yaml>
