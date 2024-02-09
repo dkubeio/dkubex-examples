@@ -4,7 +4,7 @@ splitter:
     chunk_overlap: 0
 embedder:
     class: HuggingFaceEmbedding
-    model: "BAAI/bge-large-en-v1.5" #name of your ingestion model from Huggingface
+    model: "BAAI/bge-large-en-v1.5"
 metadata:
     class: DKubexFMMetadataExtractor
 vectorstore:
@@ -18,10 +18,41 @@ docstore:
     uri: ""
     textkey: 'paperdocs'
 reader:
+  # Use this "file directory " reader for texts and pdfs
+  # Put absolute path of your data-corpus in input_dir under loader_arg
   - source: file
     description: "https://llamahub.ai/l/file?from=loaders"
     inputs:
       loader_args:
-        input_dir: "/home/username/datafolder" #absolute path to your data folder
+        input_dir: "/absolute/path/to/data/corpus/directory"
         recursive: true
         exclude_hidden: true
+  # Use this "web/simple_web" reader for your data corpus
+  - source: web/simple_web
+    description: "https://llamahub.ai/l/web-simple_web?from=loaders"
+    inputs:
+      data_args:
+        urls: 
+        - 'https://abc.com'
+  # Use this "wikipedia reader" to download your data corpus from wikipedia
+  - source: wikipedia
+    description: "https://llamahub.ai/l/wikipedia?from=loaders"
+    inputs:
+      data_args:
+        pages: 
+        - 'Berlin'
+        - 'Rome'
+  # Use this "microsoft _sharepoint reader" to export the data from the microsoft_sharepoint"
+  # Put your client_id,client_secret and tenant_id under inputs
+  # Provide your site name and folder path under data_args
+  - source: microsoft_sharepoint
+    description: "https://llamahub.ai/l/microsoft_sharepoint?from=loaders"
+    inputs:
+      loader_args:
+        client_id: "**"
+        client_secret: "**"
+        tenant_id: "**"
+      data_args:
+        sharepoint_site_name: "**"
+        sharepoint_folder_path: "**"
+        recursive: true
