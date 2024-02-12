@@ -51,4 +51,5 @@ Tracking:
 ```
 ## Command for evaluation
   d3x fm query llamaidx evaluate -d <dataset-name>  --config <path to your config file>
+  
  You can track the evaluation flow under the experiments tab in mlflow
