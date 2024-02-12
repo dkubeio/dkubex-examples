@@ -1,0 +1,32 @@
+splitter:
+    class: TokenTextSplitter
+    chunk_size: 512
+    chunk_overlap: 0
+
+embedder:
+    class: HuggingFaceEmbedding
+    model: "BAAI/bge-large-en-v1.5"
+
+metadata:   
+    class: DKubexFMMetadataExtractor
+
+vectorstore:
+    class: WeaviateVectorStore
+    provider: dkubex
+    uri: ""
+    textkey: 'paperchunks'
+
+docstore:
+    class: WeaviateDocumentStore
+    provider: dkubex
+    uri: ""
+    textkey: 'paperdocs'
+    
+reader:
+  - source: file
+    description: "https://llamahub.ai/l/file?from=loaders"
+    inputs:
+      loader_args:
+        input_dir: "/absolute/path/to/data/corpus/directory"
+        recursive: true
+        exclude_hidden: true
