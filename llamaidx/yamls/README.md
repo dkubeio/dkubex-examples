@@ -1,4 +1,4 @@
-# Steps and commands for RAG-workflow uisng llama-index
+# Steps and commands for RAG-workflow using llama-index
 
 ## Ingestion of data-corpus from various sources
 
