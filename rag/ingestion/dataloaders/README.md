@@ -2,7 +2,7 @@
 
 Data Loaders are the very first step in ingestion pipeline. For different kind of source data, different data loaders are used. The complete list of these loaders are given at https://llamahub.ai/?tab=loaders. 
 
-Use of these data-loaders are specified on `ingest.yaml` file in the reader section at bottom of the file. Input parameters used in this section are explained here.
+Use of these data-loaders are specified on [ingest.yaml](../ingest.yaml) file in the reader section at bottom of the file. Input parameters used in this section are explained here.
 
 - **source**
 
@@ -36,7 +36,7 @@ Use of these data-loaders are specified on `ingest.yaml` file in the reader sect
 
     Some data loaders require the python object of specific class as an input argument. For example Github repo loaders needs `GithubClient()` object.
     
-    In order to handle such special case, the user needs to write the loader function in separate python file as explained in below code snippet. The path/name of this file should be passed to pyloader parameter in `ingest.yaml` file.
+    In order to handle such special case, the user needs to write the loader function in separate python file as explained in below code snippet. The path/name of this file should be passed to pyloader parameter in [ingest.yaml](../ingest.yaml) file.
 
     ```
     from pathlib import Path
