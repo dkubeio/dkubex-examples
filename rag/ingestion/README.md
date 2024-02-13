@@ -56,7 +56,7 @@ The data ingestion pipeline offers users the flexibility to incorporate their cu
     - `exclude_hidden`: Specifies whether hidden files should be excluded from the loading process.
 
 > [!NOTE]  
-> For additional data loader options and configurations, please refer to the yaml files in `dataloaders` subdirectory.
+> For additional data loader options and configurations, please refer to the yaml files in [dataloaders](./dataloaders) subdirectory.
 
 ## Ingestion of data-corpus from various sources
 
@@ -72,7 +72,7 @@ d3x fm docs llamaidx ingest -d <dataset_name> --config /home/data/ingest.yaml --
 ```
 
 > [!NOTE]  
-> Make sure that `ingest.yaml` file and data-corpus directory are inside `/home/data/` directory.
+> Make sure that [ingest.yaml](./ingest.yaml) file and data-corpus directory are inside `/home/data/` directory on your DKubeX workspace.
 
 ## Tracking the Dataset
 This command will list the dataset the user have ingested.
