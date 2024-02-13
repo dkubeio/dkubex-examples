@@ -27,4 +27,4 @@ This folder contains examples to run skypilot jobs
 This folder contains an example training which can be executed locally on your laptop and track experiments in dkubex
 
 ## rag
-This folder contains files and instructions regarding RAG pipeline workflow with Llamaindex. The data ingestion and evaluation pipeline offers users the flexibility to seamlessly incorporate custom data and perform evaluations on synthetic datasets generated using language models (LLMs). It supports various configurations to tailor the ingestion process and evaluation criteria according to specific user needs.
+This folder contains files and instructions regarding RAG pipeline workflow with Llamaindex. The data ingestion, query and evaluation pipelines offer users the ability to ingest large datasets, perform RAG based queries on datasets and run evaluations using ground truth or synthetic datasets generated using language models (LLMs). Users can customize each pipeline or further extend pipelines to fit their specific needs.
