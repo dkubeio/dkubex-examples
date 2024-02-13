@@ -10,7 +10,7 @@ Use of these data-loaders are specified on `ingest.yaml` file in the reader sect
 
     *Example:*
 
-    For wikipedia loader (https://llamahub.ai/l/wikipedia?from=loaders), take the title from `/wikipedia` as source param.
+    For wikipedia loader (https://llamahub.ai/l/wikipedia?from=loaders), take the title from `/wikipedia` as source parameter.
 
 - **Loader arguments (`loader_args`)**
 
@@ -66,4 +66,4 @@ Use of these data-loaders are specified on `ingest.yaml` file in the reader sect
         # alternatively, load from a specific commit:
         # docs = loader.load_data(commit_sha="a6c89159bf8e7086bea2f4305cff3f0a4102e370")
         return documents
-        ```
+    ```
