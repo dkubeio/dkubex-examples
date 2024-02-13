@@ -5,7 +5,6 @@ This repo contains the files required for the examples for the DKubeX platform.
 The apps folder contains the required files for creating custom user applications on DKubeX.
 
 ## ray training
-
 The ray folder contains example training program files for Ray training in Dkubex.
 
 ## rayserve
@@ -14,7 +13,7 @@ The rayserve folder contains the required files to deploy models on the DKubeX p
 ### hf
 The [HF folder](rayserve/HF) contains the files to deploy Huggging-face models on DKubeX. For specific and detailed instructions for how to deploy, please check out the [README.md file](rayserve/HF/README.md) .
 
-### mlfloW
+### mlflow
 The [MLFLOW folder](rayserve/MLFLOW) contains the files to deploy MLFlow models on DKubeX. For specific and detailed instructions for how to deploy, please check out the [README.md file](rayserve/MLFLOW/README.md) .
 
 ## flyte
@@ -26,3 +25,6 @@ This folder contains examples to run skypilot jobs
 
 ## local
 This folder contains an example training which can be executed locally on your laptop and track experiments in dkubex
+
+## rag
+This folder contains files and instructions regarding RAG pipeline workflow with Llamaindex. The data ingestion and evaluation pipeline offers users the flexibility to seamlessly incorporate custom data and perform evaluations on synthetic datasets generated using language models (LLMs). It supports various configurations to tailor the ingestion process and evaluation criteria according to specific user needs.
