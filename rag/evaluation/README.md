@@ -29,7 +29,12 @@ This pipeline is used for evaluating synthetic datasets generated using language
   - **Prompt Strategy:** Similar to the Questions Generator, it defines the strategy for generating prompts.
   - **LLM:** Specifies the language model (LLM) to use for semantic similarity evaluation, which is `dkubex` in this configuration.
   - **LLM Key:** Although labeled as `dummy`, it might be used for authentication or identification purposes.
-  - **LLM URL:** Indicates the URL where the chosen LLM service is deployed. It's specified as `http://mistral-serve-svc.username:8000`, where `username` needs to be replaced with the workspace name where the deployment was created.
+  - **LLM URL:** Indicates the URL where the chosen LLM service is deployed. It's specified as the following-
+  
+    ```
+     http://<deployment_name>-serve-svc.<workspace_name>:8000
+    ```
+    Here, `<deployment_name>` needs to be replaced with the name of the LLM service deployment, and  `<workspace_name>` needs to be replaced with the workspace name where the deployment was created.
   - **Maximum Tokens:** Specifies the maximum number of tokens allowed in each semantic similarity evaluation prompt.
   - **Metrics:** Specifies the evaluation metric used for semantic similarity evaluation, which is the `similarity_score`.
 
