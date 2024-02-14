@@ -1,5 +1,6 @@
 # Eval Pipeline
-This pipeline is used for evaluating synthetic datasets generated using language models (LLMs), either open-source or utilizing OpenAI's models. The evaluation process involves comparing the generated dataset against other LLMs using metrics such as Mean Reciprocal Rank (MRR), similarity score, and hit rate.
+The evaluation pipeline is useful when you're looking to compare and evaluate key metrics between different language model (LLM) candidates. Users can either pass pre-compiled ground truth data or simply generate synthetic Q&A data from your ingested datasets. Users can evaluate metrics such as Similarity score, MRR and Hit Rate for each Q&A pair. Additional metrics can also be easily extended to include evaluations like Correctness, Faithfulness, etc.
+
 
 ## Pipeline Description:
 
@@ -9,7 +10,7 @@ This pipeline is used for evaluating synthetic datasets generated using language
   - **Properties:** Lists the properties of the Weaviate vectorstore reader, including `paperchunks` and `dkubexfm`.
 
 - **Questions Generator:**
-  - **Prompt Strategy:** Defines the strategy for generating prompts. In this configuration, the default strategy is used.
+  - **Prompt Strategy:** Defines the strategy for generating prompts. In null, the default prompt is used.
   - **Number of Questions per Chunk:** Specifies the number of questions to generate per data chunk.
   - **Maximum Chunks:** Sets the maximum number of data chunks to generate questions for.
   - **LLM:** Determines the language model (LLM) to use for generating questions. The default is `openai` but can be switched to `dkubex`.
@@ -26,15 +27,10 @@ This pipeline is used for evaluating synthetic datasets generated using language
   - **Metrics:** Specifies the evaluation metrics used for retrieval evaluation, which include `mrr` (Mean Reciprocal Rank) and `hit_rate`.
 
 - **Semantic Similarity Evaluator:**
-  - **Prompt Strategy:** Similar to the Questions Generator, it defines the strategy for generating prompts.
+  - **Prompt Strategy:** Similar to the Questions Generator, it defines the strategy for similarity evaluation.
   - **LLM:** Specifies the language model (LLM) to use for semantic similarity evaluation, which is `dkubex` in this configuration.
-  - **LLM Key:** Although labeled as `dummy`, it might be used for authentication or identification purposes.
-  - **LLM URL:** Indicates the URL where the chosen LLM service is deployed. It's specified as the following-
-  
-    ```
-     http://<deployment_name>-serve-svc.<workspace_name>:8000
-    ```
-    Here, `<deployment_name>` needs to be replaced with the name of the LLM service deployment, and  `<workspace_name>` needs to be replaced with the workspace name where the deployment was created.
+  - **LLM Key:** Labeled `dummy` in case of local deployments available within DKubeX or used to pass auth key if using an external endpoint.
+  - **LLM URL:** Indicates the URL where the chosen LLM service is deployed. Available in the deployments tab of DKubeX for local deployments.
   - **Maximum Tokens:** Specifies the maximum number of tokens allowed in each semantic similarity evaluation prompt.
   - **Metrics:** Specifies the evaluation metric used for semantic similarity evaluation, which is the `similarity_score`.
 
