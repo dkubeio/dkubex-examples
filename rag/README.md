@@ -1,4 +1,4 @@
-# Retrieval-Augmented Generation with LlamaIndex
+# Retrieval-Augmented Generation with DKubeX
 The data ingestion, query and evaluation pipelines offer users the ability to ingest large datasets, perform RAG based queries on datasets and run evaluations using ground truth or synthetic datasets generated using language models (LLMs). Users can customize each pipeline or further extend pipelines to fit their specific needs.
 
 ## Key Features
