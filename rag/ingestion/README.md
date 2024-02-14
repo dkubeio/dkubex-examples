@@ -1,11 +1,12 @@
 # Ingestion Pipeline
-The data ingestion pipeline offers users the flexibility to incorporate their custom data seamlessly. Users can tailor the pipeline to their specific needs by selecting their preferred embedding model for generating embeddings and a vector store for storing the resulting vector database. Furthermore, the pipeline supports various data loaders, enabling users to customize the ingestion process according to their chosen data loader.
+Data ingestion is the first step of the RAG workflow. The ingestion pipeline loads and transforms raw data (including but not limited to TXT, PDF, HTML, etc) into embeddings and stores these embeddings in a vector database. The user can load data directly from a local directory within DKubeX or use one or more of the data loaders available to load data from external sources such as Websites, Cloud Storage Drives or Databases. The user can also tweak various parameters relating to transformation and ingestion including choosing a different chunking strategy, embeddings model, vector store etc to achieve the best results for their specific use case. 
+
 
 ## Pipeline Description:
 
 - **Token Text Splitter(`splitter`):**
   
-  The TokenTextSplitter divides the input text into smaller chunks based on tokens. Users can adjust the chunk size and overlap to suit their needs.
+  The TokenTextSplitter divides the input text into smaller chunks based on tokens. Users can adjust the chunk size and chunk overlap to suit their use case.
   
   - **Class:** `TokenTextSplitter`
   - **Parameters:**
@@ -14,7 +15,7 @@ The data ingestion pipeline offers users the flexibility to incorporate their cu
 
 - **Embedding Model Selection (`embedder`):**
 
-  Users can specify the type of embedding model to be used for generating embeddings. Currently supported embedding models include HuggingFace and OpenAI embeddings.
+  Users can specify the type of embedding model to be used for generating embeddings. Currently supported sources include any HuggingFace embedding model or OpenAI based embedding model.
 
   - **Class:** `HuggingFaceEmbedding`
   - **Parameters:**
@@ -58,14 +59,14 @@ The data ingestion pipeline offers users the flexibility to incorporate their cu
 > [!NOTE]  
 > For additional data loader options and configurations, please refer to the yaml files in [dataloaders](./dataloaders) subdirectory.
 
-## Ingestion of data-corpus from various sources
+## Ingestion using local cluster
 
 ```
 d3x fm docs llamaidx ingest -d <dataset_name> --config <absolute path to your yaml-config file>
 ```
 
-## Ingestion using sky-cluster
-This command facilitates data ingestion via Sky, where the default configuration (`default.yaml`) supports T4 accelerator utilization. Users can initiate ingestion through Sky, automatically allocating the T4 accelerator for efficient processing. Tracked datasets are managed using DKubeX, providing seamless monitoring. 
+## Ingestion using remote cluster
+For very large workloads, users can burst to the cloud to leverage accelerators from AWS, GCP, Azure etc. The default configuration (`default.yaml`) uses a T4 accelerator and can easily be configured by the user to use any other accelerator type from across supported clouds.
 
 ```
 d3x fm docs llamaidx ingest -d <dataset_name> --config /home/data/ingest.yaml --remote-sky --dkubex-url <dkubex_url> --dkubex-apikey <dkubex_api_key>
@@ -74,12 +75,12 @@ d3x fm docs llamaidx ingest -d <dataset_name> --config /home/data/ingest.yaml --
 > [!NOTE]  
 > Make sure that [ingest.yaml](./ingest.yaml) file and data-corpus directory are inside `/home/data/` directory on your DKubeX workspace.
 
-## Tracking the Dataset
-This command will list the dataset the user have ingested.
+## Listing Datasets
+This command will list your datasets from the vector store.
 
 ```
 d3x fm docs show datasets
 ```
 
 > [!TIP]
-> The user can also track their datasets under `Experiments` tab on MLFlow. 
+> Data ingestion pipelines automatically record metadata and key metrics under `Experiments` tab in MLFlow within DKubeX. 
