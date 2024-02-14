@@ -1,5 +1,5 @@
-# RAG Pipeline
-The ingestion pipeline provides flexibility to end-users to perform Retrieval-Augmented Generation (RAG) on their ingested datasets using the language model (LLM) of their own choice. Different LLMs are supported, allowing users to deploy them based on their preferences.
+# Query Pipeline
+Once you've ingested your data and created a dataset, you can now run the query pipeline over your dataset. This pipeline facilitates retrival, post processing, response synthesis and finally generates a summarized response from a language model (LLM). Users can configure the pipeline to use locally deployed LLMs on DKubeX or custom external endpoints including Open AI. The pipeline has additional configurable parameters including ability to pass custom prompts, use a reranker model and specify top k for retrival.
 
 ## Pipeline Description:
 
@@ -12,9 +12,9 @@ The ingestion pipeline provides flexibility to end-users to perform Retrieval-Au
     - `provider`: Provider for the vector store retriever.
     - `embedding_class`: Class of embedding used for retrieval (e.g., `HuggingFaceEmbedding`).
     - `embedding_model`: Name of the embedding model from HuggingFace.
-    - `dataset`: Name of the dataset to be ingested.
+    - `dataset`: Name of the ingested dataset.
     - `textkey`: Key identifying the text data within the dataset.
-    - `top_k`: The number of top results to retrieve.
+    - `top_k`: The number of results to retrieve per query.
 
 - **`prompt_builder`:**
     - `prompt_str`: The prompt string used for generation.
@@ -25,13 +25,13 @@ The ingestion pipeline provides flexibility to end-users to perform Retrieval-Au
 
 - **`reranker`:**
     - `model`: Name of the re-ranker model from Hugging Face.
-    - `top_n`: The number of top results to re-rank.
+    - `top_n`: The number of results to re-rank.
 
 - **`contexts_joiner`:**
     - `separator`: Separator used for joining different contexts.
 
 - **`chat_engine`:**
-    - `llm`: Specifies the LLM to be used for generation. Use `dkubex` for dkube deployments.
+    - `llm`: Specifies the LLM to be used for generation. Use `dkubex` for DKubeX deployments.
     - `url`: Service URL for the LLM deployment to be used. 
     - `llmkey`: Authentication key for accessing the LLM service.
     - `window_size`: Size of the window for context generation.
@@ -41,15 +41,15 @@ The ingestion pipeline provides flexibility to end-users to perform Retrieval-Au
     - `experiment`: MLflow experiment name for tracking.
 
 ## Querying the dataset 
-There are 3 modes of querying - Single question, Batch-question, and Interactive mode.
+There are 3 ways to query your dataset - Single question, Batch mode, and Interactive mode.
 
-**A. Single question mode:**
+**A. Single question:**
 
 ```
 d3x fm query llamaidx rag -d <dataset_name> --config <absolute path to your yaml-config file> -q "<question>"
 ```
 
-**B. Batch question mode**
+**B. Batch mode**
 
 ```
 d3x fm query llamaidx rag -d <dataset_name> -b <path to your batch-que json file> --config <absolute path to your yaml-config file>
