@@ -67,3 +67,25 @@ Use of these data-loaders are specified on [ingest.yaml](../ingest.yaml) file in
         # docs = loader.load_data(commit_sha="a6c89159bf8e7086bea2f4305cff3f0a4102e370")
         return documents
     ```
+## Here is an example file for the github loader. 
+  User needs to generate GitHub Personal Access Token, by following below steps.
+On GitHub acc => settings -> Developer Settings ->  Personal Access TOken -> Tokens(classic)
+
+```
+reader:
+  - source: github_repo
+    description: https://llamahub.ai/l/file?from=loaders
+    inputs:
+      loader_args:
+        github_token: <User provided GitHub Personal Access Token>
+        owner: oneconvergence
+        repo: dkubex-fm
+        include_dir:
+          - tools
+        include_file_ext:
+          - .json
+      data_args:
+        branch: data_loader_arg
+        #commit_sha: "a6c89159bf8e7086bea2f4305cff3f0a4102e370"
+    pyloader: ./document_loaders/github.py
+```
