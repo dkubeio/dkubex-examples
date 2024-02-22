@@ -58,5 +58,5 @@ d3x fm query llamaidx rag -d <dataset_name> -b <path to your batch-que json file
 **C. Interactive mode**
 
 ```
-d3x fm query llamaidx evaluate -d <dataset-name> --config <absolute path to your yaml-config file>
+d3x fm query llamaidx rag -d <dataset_name> --config <absolute path to your yaml-config file> --cli
 ```
