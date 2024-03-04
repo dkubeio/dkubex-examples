@@ -40,7 +40,7 @@ The evaluation pipeline is useful when you're looking to compare and evaluate ke
 ## Command for Evaluation
 
 ```
-d3x fm query llamaidx evaluate -d <dataset-name>  --config <path to your config file>
+d3x rag evaluate -d <dataset-name> --config <path to your config file>
 ```
 
 > [!TIP]
