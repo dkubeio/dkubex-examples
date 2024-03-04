@@ -46,17 +46,17 @@ There are 3 ways to query your dataset - Single question, Batch mode, and Intera
 **A. Single question:**
 
 ```
-d3x fm query llamaidx rag -d <dataset_name> --config <absolute path to your yaml-config file> -q "<question>"
+d3x rag query llamaidx rag -d <dataset_name> --config <absolute path to your yaml-config file> -q "<question>"
 ```
 
 **B. Batch mode**
 
 ```
-d3x fm query llamaidx rag -d <dataset_name> -b <path to your batch-que json file> --config <absolute path to your yaml-config file>
+d3x rag query llamaidx rag -d <dataset_name> -b <path to your batch-que json file> --config <absolute path to your yaml-config file>
 ```
 
 **C. Interactive mode**
 
 ```
-d3x fm query llamaidx rag -d <dataset_name> --config <absolute path to your yaml-config file> --cli
+d3x rag query llamaidx rag -d <dataset_name> --config <absolute path to your yaml-config file> --cli
 ```
