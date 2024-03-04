@@ -62,14 +62,14 @@ Data ingestion is the first step of the RAG workflow. The ingestion pipeline loa
 ## Ingestion using local cluster
 
 ```
-d3x fm docs llamaidx ingest -d <dataset_name> --config <absolute path to your yaml-config file>
+d3x dataset ingest -d <dataset_name> --config <absolute path to your yaml-config file>
 ```
 
 ## Ingestion using remote cluster
 For very large workloads, users can burst to the cloud to leverage accelerators from AWS, GCP, Azure etc. The default configuration (`default.yaml`) uses a T4 accelerator and can easily be configured by the user to use any other accelerator type from across supported clouds.
 
 ```
-d3x fm docs llamaidx ingest -d <dataset_name> --config /home/data/ingest.yaml --remote-sky --dkubex-url <dkubex_url> --dkubex-apikey <dkubex_api_key>
+d3x dataset ingest -d contracts --remote-sky --sky-cluster=contracts --sky-accelerator="A10G:1" --dkubex-apikey <api_key> --dkubex-url <dkubex_url> --config <absolute path to your yaml config file
 ```
 
 > [!NOTE]  
@@ -79,7 +79,7 @@ d3x fm docs llamaidx ingest -d <dataset_name> --config /home/data/ingest.yaml --
 This command will list your datasets from the vector store.
 
 ```
-d3x fm docs show datasets
+d3x dataset list
 ```
 
 > [!TIP]
