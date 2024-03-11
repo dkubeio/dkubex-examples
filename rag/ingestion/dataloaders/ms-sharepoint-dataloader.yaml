@@ -1,0 +1,14 @@
+# Use this "microsoft _sharepoint reader" to export the data from the microsoft_sharepoint"
+  # client_id, client_secret and tenant_id of the registered app in Microsoft Azure Portal is required.
+  # Provide your site name and folder path under data_args
+  - source: microsoft_sharepoint
+    description: "https://llamahub.ai/l/microsoft_sharepoint?from=loaders"
+    inputs:
+      loader_args:
+        client_id: "**"
+        client_secret: "**"
+        tenant_id: "**"
+      data_args:
+        sharepoint_site_name: "**"
+        sharepoint_folder_path: "**"
+        recursive: true

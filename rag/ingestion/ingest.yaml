@@ -1,0 +1,28 @@
+splitter:
+    class: TokenTextSplitter
+    chunk_size: 512
+    chunk_overlap: 0
+embedder:
+    class: HuggingFaceEmbedding
+    model: "BAAI/bge-large-en-v1.5"
+metadata:
+    class: DKubexFMMetadataExtractor
+vectorstore:
+    class: WeaviateVectorStore
+    provider: dkubex
+    uri: ""
+    textkey: 'paperchunks'
+docstore:
+    class: WeaviateDocumentStore
+    provider: dkubex
+    uri: ""
+    textkey: 'paperdocs'
+reader:
+  - source: file    # This loads data from local-file system.
+    description: "https://docs.llamaindex.ai/en/stable/module_guides/loading/simpledirectoryreader.html"
+    inputs:
+      loader_args:
+        input_dir: "/absolute/path/to/dataset/folder"
+        recursive: true
+        exclude_hidden: true
+    pyloader: /absolute/path/to/custom_sdr.py/file

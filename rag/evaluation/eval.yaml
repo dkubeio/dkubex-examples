@@ -1,0 +1,39 @@
+# Weaviate is supported as a vectorstore_reader as of now
+vectorstore_reader:
+    kind: weaviate
+    provider: dkubex
+    properties: 
+    - paperchunks
+    - dkubexfm
+
+questions_generator:
+    prompt_str: "default"
+    prompt_file: ""
+    num_questions_per_chunk: 1
+    max_chunks: 1
+    llm: openai #dkubex
+    llmkey: "hk-hjyiyushgyuiwjkyshyikalkyij" #provide your Open_AI_Key here
+    llmurl: ""
+    max_tokens: 2048
+retrieval_evaluator:
+    vector_retriever:
+        kind: weaviate
+        provider: dkubex
+        textkey: paperchunks
+        embedding_model: "BAAI/bge-large-en-v1.5" 
+        similarity_top_k: 3
+    metrics:
+    - mrr
+    - hit_rate
+semantic_similarity_evaluator:
+    prompt_str: "default"
+    prompt_file: ""
+    llm: dkubex #dkubex
+    llmkey: "dummy"
+    llmurl: "http://mistral-serve-svc.username:8000" #service url for the llm deployment tp be used. replace username with workspace name in which deployment was created.
+    max_tokens: 2048
+    metrics:
+    - similarity_score
+tracking:
+    # MLFlow experiment name
+    experiment: dkubexfm-rag-evaluate-sm #provide a unique experiement name

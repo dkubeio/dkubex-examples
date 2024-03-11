@@ -1,0 +1,29 @@
+input:
+    question: ""
+    mode: "cli"
+vectorstore_retriever:
+    kind: weaviate
+    provider: dkubex
+    embedding_class: HuggingFaceEmbedding
+    embedding_model: 'BAAI/bge-large-en-v1.5' 
+    dataset: 'makllamaidx14' #name of your dataset
+    textkey: 'paperchunks'
+    top_k: 3
+prompt_builder:
+    prompt_str: ""
+    prompt_file: ""
+nodes_sorter:
+    max_sources: 3
+reranker:
+    model: 'BAAI/bge-reranker-large' 
+    top_n: 3
+contexts_joiner:
+    separator: "\n\n"
+chat_engine:
+    llm: dkubex #use "dkubex" for dkubex deployments
+    url: "http://mistral-serve-svc.username:8000" 
+    llmkey: "dummy"
+    window_size: 2
+    max_tokens: 1024
+tracking:
+  experiment: rag-demo-sm 
