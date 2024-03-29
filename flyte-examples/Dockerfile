@@ -6,6 +6,9 @@ RUN pip3 --version
 RUN pip --version
 # Install opencv-python
 RUN pip install opencv-python
+RUN pip install flytekitplugins-envd
+RUN pip install flytekitplugins-dask
+RUN pip install dask[complete]
 RUN pip install tensorflow
 RUN pip install tflite
 RUN pip install optuna
