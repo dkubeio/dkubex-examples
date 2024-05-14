@@ -1,0 +1,5 @@
+flytekitplugins-kfmpi
+torch
+torchvision
+filelock
+tensorboardX
