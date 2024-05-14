@@ -1,9 +1,0 @@
-Build Image
-------------
-sudo docker build -t ocdr/flyte-pytorch-mpi:cuda-v8 -f Dockerfile .
-
-Run the workflow from workspace terminal
------------------------------------------
-1. pip install flytekitplugins-kfmpi
-2. Copy the flyte-mpi.py file in the workspace
-3. pyflyte run --remote --image ocdr/flyte-pytorch-mpi:cuda-v8 flyte-mpi.py horovod_training_wf

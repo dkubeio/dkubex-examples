@@ -1,6 +1,7 @@
 Build Image
 ------------
 sudo docker build -t ocdr/flyte-pytorch-mpi:cuda-v8 -f Dockerfile .
+sudo docker push ocdr/flyte-pytorch-mpi:cuda-v8
 
 Run the workflow from workspace terminal
 -----------------------------------------
