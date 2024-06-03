@@ -8,5 +8,5 @@ docker push -t <repo>:<tag>
 
 Run the workflow
 ----------------
-Update NUM_NODES, NUM_DEVICES and CONTAINER_IMAGE in the mnist-lightning-dist.py and run
+Update NUM_NODES, NUM_DEVICES, CONTAINER_IMAGE, MLFLOW_TRACKING_TOKEN and MLFLOW_TRACKING_URI in the mnist-lightning-dist.py and run
 pyflyte run --remote mnist-lightning-dist.py pl_training_wf

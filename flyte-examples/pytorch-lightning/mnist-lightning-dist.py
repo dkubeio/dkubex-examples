@@ -15,20 +15,20 @@ CONTAINER_IMAGE = (
     "dkubex123/flyte-pt:lightning-dist"
 )
 
-experiment_name = "lightning_logs"
-
 # Define the environment variables
 env_vars = [
     V1EnvVar(
         name="MLFLOW_TRACKING_TOKEN",
-        value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoib2NkbGdpdCIsInR5cGUiOiJ1c2VyIiwiaWQiOiI1YzMzZGJiZS1kNThkLTQ2ZWItODE5NC02NTY1OTgzOGRlYTcifQ.y9jJubTpFWic3uqDzEX5QwaFtq7NurRFE7qPr96Ca4g",
+        value="MLFLOW_TRACKING_TOKEN",
     ),
     V1EnvVar(
         name="MLFLOW_TRACKING_URI",
-        value="https://ade50b937ed84478bb1b7e2863f4e422-f7f00e72fb607bdc.elb.us-east-1.amazonaws.com/api/mlflow",
+        value="MLFLOW_TRACKING_URI",
     ),
     V1EnvVar(name="MLFLOW_TRACKING_INSECURE_TLS", value="true"),
 ]
+
+experiment_name = "lightning_logs"
 
 container = V1Container(name="primary", env=env_vars)
 custom_pod_template = PodTemplate(
