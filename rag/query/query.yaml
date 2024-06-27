@@ -4,9 +4,9 @@ input:
 vectorstore_retriever:
     kind: weaviate
     provider: dkubex
-    embedding_class: HuggingFaceEmbedding
-    embedding_model: 'BAAI/bge-large-en-v1.5' 
-    dataset: 'makllamaidx14' #name of your dataset
+    embedding_class: HuggingFaceEmbedding                               # Use 'HuggingFaceEmbedding' for embedding models from HuggingFace, or 'OpenAIEmbedding' for OpenAI embeddings
+    embedding_model: 'BAAI/bge-large-en-v1.5'                           # Embedding model name
+    llmkey: ""                                                          # API key for the embedding model (if required)
     textkey: 'paperchunks'
     top_k: 3
 prompt_builder:
@@ -14,16 +14,16 @@ prompt_builder:
     prompt_file: ""
 nodes_sorter:
     max_sources: 3
-reranker:
-    model: 'BAAI/bge-reranker-large' 
-    top_n: 3
 contexts_joiner:
     separator: "\n\n"
 chat_engine:
-    llm: dkubex #use "dkubex" for dkubex deployments
-    url: "http://mistral-serve-svc.username:8000" 
-    llmkey: "dummy"
+    llm: dkubex                                                         # Use 'dkubex' for DKubeX deployments and 'openai' to use OpenAI API
+    url: "http://<deployment_name>-serve-svc.<username>:8000/v1/"       # Endpoint URL for the DKubeX LLM deployment. Replace <deployment_name> with the created deployment name and <username> with workspace name in which the deployment was created. In case of Skypilot deployment, provide its endpoint URL instead. If using OpenAI, keep blank.
+    llmkey: ""                                                          # If using DKubeX deployment, provide the serving_token for the deployment. If using OpenAI, provide the OpenAI API key
     window_size: 2
-    max_tokens: 1024
+    max_tokens: 2048                                                    # Maximum number of tokens to be used for generating responses
+securellm:                                                              # SecureLLM configuration. Comment out this section if not using SecureLLM
+    appkey: sk-tof*************************qrq                          # Provide SecureLLM Application Key to be used
+    dkubex_url: "https://123.45.67.890:32443"                           # Provide the URL of the DKubeX deployment
 tracking:
-  experiment: rag-demo-sm 
+  experiment: dkubexfm-rag                                              # Provide MLFlow experiment name

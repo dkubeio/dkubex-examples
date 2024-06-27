@@ -10,9 +10,9 @@ Once you've ingested your data and created a dataset, you can now run the query 
 - **`vectorstore_retriever`:**
     - `kind`: Specifies the type of vector store retriever. Currently, only `WeaviateVectorStore` is supported.
     - `provider`: Provider for the vector store retriever.
-    - `embedding_class`: Class of embedding used for retrieval (e.g., `HuggingFaceEmbedding`).
-    - `embedding_model`: Name of the embedding model from HuggingFace.
-    - `dataset`: Name of the ingested dataset.
+    - `embedding_class`: Class of embedding used for retrieval (e.g. `HuggingFaceEmbedding` or `OpenAIEmbedding`).
+    - `embedding_model`: Name of the embedding model.
+    - `llmkey`: API key for the embedding model (if required).
     - `textkey`: Key identifying the text data within the dataset.
     - `top_k`: The number of results to retrieve per query.
 
@@ -31,11 +31,15 @@ Once you've ingested your data and created a dataset, you can now run the query 
     - `separator`: Separator used for joining different contexts.
 
 - **`chat_engine`:**
-    - `llm`: Specifies the LLM to be used for generation. Use `dkubex` for DKubeX deployments.
-    - `url`: Service URL for the LLM deployment to be used. 
+    - `llm`: Specifies the LLM to be used for generation. Use `dkubex` for DKubeX deployments or `openai` to use OpenAI API.
+    - `url`: Service URL for the LLM deployment to be used. If using OpenAI, keep blank.
     - `llmkey`: Authentication key for accessing the LLM service.
     - `window_size`: Size of the window for context generation.
     - `max_tokens`: Maximum number of tokens for generation.
+
+- **`securellm`**: (SecureLLM configuration. Comment out this section if not using SecureLLM)
+    - `appkey`: SecureLLM Application Key to be used.
+    - `dkubex_url`: URL of the DKubeX setup.
 
 - **`tracking`:**
     - `experiment`: MLflow experiment name for tracking.
@@ -46,17 +50,17 @@ There are 3 ways to query your dataset - Single question, Batch mode, and Intera
 **A. Single question:**
 
 ```
-d3x rag query llamaidx rag -d <dataset_name> --config <absolute path to your yaml-config file> -q "<question>"
+d3x dataset query -d <dataset_name> --config <absolute path to your yaml-config file> -q "<question>"
 ```
 
 **B. Batch mode**
 
 ```
-d3x rag query llamaidx rag -d <dataset_name> -b <path to your batch-que json file> --config <absolute path to your yaml-config file>
+d3x dataset query -d <dataset_name> -b <path to your batch-que json file> --config <absolute path to your yaml-config file>
 ```
 
 **C. Interactive mode**
 
 ```
-d3x rag query llamaidx rag -d <dataset_name> --config <absolute path to your yaml-config file> --cli
+d3x dataset query -d <dataset_name> --config <absolute path to your yaml-config file> -i
 ```

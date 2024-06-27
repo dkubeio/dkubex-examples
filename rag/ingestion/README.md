@@ -1,11 +1,11 @@
 # Ingestion Pipeline
-Data ingestion is the first step of the RAG workflow. The ingestion pipeline loads and transforms raw data (including but not limited to TXT, PDF, HTML, etc) into embeddings and stores these embeddings in a vector database. The user can load data directly from a local directory within DKubeX or use one or more of the data loaders available to load data from external sources such as Websites, Cloud Storage Drives or Databases. The user can also tweak various parameters relating to transformation and ingestion including choosing a different chunking strategy, embeddings model, vector store etc to achieve the best results for their specific use case. 
 
+Data ingestion is the first step of the RAG workflow. The ingestion pipeline loads and transforms raw data (including but not limited to TXT, PDF, HTML, etc) into embeddings and stores these embeddings in a vector database. The user can load data directly from a local directory within DKubeX or use one or more of the data loaders available to load data from external sources such as Websites, Cloud Storage Drives or Databases. The user can also tweak various parameters relating to transformation and ingestion including choosing a different chunking strategy, embeddings model, vector store etc to achieve the best results for their specific use case. 
 
 ## Pipeline Description:
 
-- **Token Text Splitter(`splitter`):**
-  
+- **Token Text Splitter (`splitter`):**
+
   The TokenTextSplitter divides the input text into smaller chunks based on tokens. Users can adjust the chunk size and chunk overlap to suit their use case.
   
   - **Class:** `TokenTextSplitter`
@@ -17,9 +17,10 @@ Data ingestion is the first step of the RAG workflow. The ingestion pipeline loa
 
   Users can specify the type of embedding model to be used for generating embeddings. Currently supported sources include any HuggingFace embedding model or OpenAI based embedding model.
 
-  - **Class:** `HuggingFaceEmbedding`
+  - **Class:** `HuggingFaceEmbedding` or `OpenAIEmbedding`
   - **Parameters:**
     - `model`: Specifies the name or identifier of the embedding model to be used. For HuggingFace embeddings, any model from the HuggingFace model hub can be used.
+    - `llmkey`: Specifies the API key for the embedding model (If the embedding model requires one).
 
 - **Metadata Extraction (`metadata`):**
 
@@ -61,15 +62,23 @@ Data ingestion is the first step of the RAG workflow. The ingestion pipeline loa
 
 ## Ingestion using local cluster
 
+To ingest documents using local cluster resources, use the following command. Replace the `<dataset_name>` part with the name of the dataset to be created, and `<config_path>` with the absolute path to the ingestion configuration file ([ingest.yaml](ingest.yaml)).
 ```
-d3x dataset ingest -d <dataset_name> --config <absolute path to your yaml-config file>
+d3x dataset ingest -d <dataset_name> --config <config_path>
 ```
 
 ## Ingestion using remote cluster
-For very large workloads, users can burst to the cloud to leverage accelerators from AWS, GCP, Azure etc. The default configuration (`default.yaml`) uses a T4 accelerator and can easily be configured by the user to use any other accelerator type from across supported clouds.
+For very large workloads, users can leverage accelerators from AWS, GCP, Azure etc by using the capabilities of SkyPilot. The default ingestion configuration uses a T4 accelerator and can easily be configured by the user to use any other accelerator type from across supported clouds.
+- `-d`: Name of the dataset to be created
+- `--remote-sky`: To use remote accelerators using SkyPilot
+- `--sky-cluster` (OPTIONAL): Name of the SkyPilot cluster to be created/used. Can be also used to reuse existing SkyPilot cluster.
+- `--sky-accelerator` (OPTIONAL): Type and number of remote accelerators to be used. e.g. `"A10G:1"`. If not mentioned, `"T4:1"` is used by default.
+- `--dkubex-apikey`: DKubeX API key. Can be found on the `About` section of the dropdown list in the upper-right corner of the DKubeX UI, or running `d3x apikey get` on the DKubeX CLI.
+- `--dkubex-url`: URL of your DKubeX setup.
+- `--config`: Absolute path for the ingestion configuration file ([ingest.yaml](ingest.yaml)).
 
 ```
-d3x dataset ingest -d contracts --remote-sky --sky-cluster=contracts --sky-accelerator="A10G:1" --dkubex-apikey <api_key> --dkubex-url <dkubex_url> --config <absolute path to your yaml config file
+d3x dataset ingest -d <dataset_name> --remote-sky --sky-cluster=<sky_cluster_name> --sky-accelerator="<accelerator_type>:<number_of_accelerators>" --dkubex-apikey <api_key> --dkubex-url <dkubex_url> --config <config_path>
 ```
 
 > [!NOTE]  

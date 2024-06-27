@@ -1,10 +1,7 @@
 from pathlib import Path
-# from llama_index import download_loader
-from llama_index.core import SimpleDirectoryReader
-
+from llama_index import download_loader
+from llama_index import SimpleDirectoryReader
 import os
-
-#from llamaidx_gai import document_loader_func
 from document_loaders import document_loader_func
 
 def get_meta(file_path):

@@ -3,8 +3,9 @@ splitter:
     chunk_size: 512
     chunk_overlap: 0
 embedder:
-    class: HuggingFaceEmbedding
-    model: "BAAI/bge-large-en-v1.5"
+    class: HuggingFaceEmbedding                             # Use 'HuggingFaceEmbedding' for embedding models from HuggingFace, or 'OpenAIEmbedding' for OpenAI embedding models
+    model: "BAAI/bge-large-en-v1.5"                         # The embedding model from HuggingFace or OpenAI
+    llmkey: ""                                              # API key for the embedding model (if required)
 metadata:
     class: DKubexFMMetadataExtractor
 vectorstore:
@@ -18,11 +19,11 @@ docstore:
     uri: ""
     textkey: 'paperdocs'
 reader:
-  - source: file    # This loads data from local-file system.
+  - source: file                                            # Llamaindex dataloader to be used for ingesting data
     description: "https://docs.llamaindex.ai/en/stable/module_guides/loading/simpledirectoryreader.html"
     inputs:
-      loader_args:
-        input_dir: "/absolute/path/to/dataset/folder"
+      loader_args:                                          # Arguments to be passed to the dataloader
+        input_dir: "/absolute/path/to/dataset/folder"       # Absolute path to the directory containing the fields to be ingested by 'file' dataloader
         recursive: true
         exclude_hidden: true
-    pyloader: /absolute/path/to/custom_sdr.py/file
+    pyloader: /absolute/path/to/pyloader/file               # Absolute path to the custom pyloader file
