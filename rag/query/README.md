@@ -9,7 +9,7 @@ Once you've ingested your data and created a dataset, you can now run the query 
 
 - **`vectorstore_retriever`:**
     - `kind`: Specifies the type of vector store retriever. Currently, only `WeaviateVectorStore` is supported.
-    - `provider`: Provider for the vector store retriever.
+    - `vectorstore_provider`: Provider for the vector store retriever.
     - `embedding_class`: Class of embedding used for retrieval (e.g. `HuggingFaceEmbedding` or `OpenAIEmbedding`).
     - `embedding_model`: Name of the embedding model.
     - `llmkey`: API key for the embedding model (if required).

@@ -10,13 +10,13 @@ questions_generator:                                        # Generates the ques
     num_questions_per_chunk: 1                              # Number of questions to be generated per chunk
     max_chunks: 100                                         # Maximum number of chunks to be used for question generation
     llm: openai                                             # Language model to be used for question generation. To use OpenAI to generate questions, use 'openai'. To use DKubeX LLM deployment, use 'dkubex'
-    llmkey: "sk-4aY*************************LQe"            # If using DKubeX deployment, provide the serving_token for the deployment. If using OpenAI, provide the OpenAI API key
-    llmurl: ""                                              # Endpoint URL for the DKubeX LLM deployment which will be used for generating questions. Replace <deployment_name> with the created deployment name and <username> with workspace name in which the deployment was created. In case of Skypilot deployment, provide its endpoint URL instead. If using OpenAI, keep blank.
+    llmkey: "sk-4aYW**********************ZRLQe"            # If using DKubeX deployment, provide the serving_token for the deployment. If using OpenAI, provide the OpenAI API key
+    llmurl: ""                                              # Endpoint URL for the DKubeX LLM deployment which will be used for generating responses. If using OpenAI, keep blank.
     max_tokens: 2048                                        # Maximum number of tokens to be used for generating questions
 retrieval_evaluator:
     vector_retriever:
         kind: weaviate
-        provider: dkubex
+        vectorstore_provider: dkubex
         textkey: paperchunks
         embedding_class: HuggingFaceEmbedding               # Use 'HuggingFaceEmbedding' for embedding models from HuggingFace, or 'OpenAIEmbedding' for OpenAI embeddings
         embedding_model: "BAAI/bge-large-en-v1.5"           # Embedding model name
@@ -29,8 +29,8 @@ semantic_similarity_evaluator:
     prompt_str: "default"
     prompt_file: ""
     llm: openai                                             # Language model to be used for generating groundtruth responses for semantic similarity evaluation. To use DKubeX LLM deployment, use 'dkubex'. To use OpenAI, use 'openai'
-    llmkey: "sk-4aY*****************************LQe"        # If using DKubeX deployment for generating groundtruth responses, provide the serving_token for the deployment. If using OpenAI, provide the OpenAI API key
-    llmurl: ""                                              # Endpoint URL for the DKubeX LLM deployment which will be used for generating groundtruth responses. Replace <deployment_name> with the created deployment name and <username> with workspace name in which the deployment was created. In case of Skypilot deployment, provide its endpoint URL instead. If using OpenAI, keep blank
+    llmkey: "eyJh******************************dJSg"        # If using DKubeX deployment for generating groundtruth responses, provide the serving_token for the deployment. If using OpenAI, provide the OpenAI API key
+    url: ""                                                 # Endpoint URL for the DKubeX LLM deployment which will be used for generating groundtruth responses. If using OpenAI, keep blank
     max_tokens: 2048                                        # Maximum number of tokens to be used for generating groundtruth responses
     rag_configuration: "/absolute/path/to/rag/config"       # Absolute path to the RAG config (query.yaml) file. This file contains the details of the LLM which is to be evaluated against the groundtruth responses.
     metrics:

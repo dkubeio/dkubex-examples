@@ -1,4 +1,4 @@
-image: dkubex123/llmapp:securechat-081
+image: "dkubex123/llmapp:securechat-083"
 name: "chatbot"             # Unique name of the chat application
 cpu: 1
 gpu: 0 
@@ -8,12 +8,10 @@ dockeruser: "docker123"
 dockerpsw: "dckr_pat_dE90DkE9bzttBinnniexlHdPPgI"
 publish: "true"             # "True" if the application will be accessible by any user, otherwise "false". Default="true"
 env:
-  OPENAI_API_KEY: ""
   SECUREAPP_ACCESS_KEY: "allow"
-  FMQUERY_ARGS: "llm --dataset ragdata -e http://<deployment_name>-serve-svc.<username>:8000/v1/ --config /absolute/path/to/rag/config"
+  FMQUERY_ARGS: "llm --dataset ragdata --config /absolute/path/to/rag/config"
                             # Use 'llm' if using DKubeX LLM deployment for generating response, else use 'openai' if using OpenAI
                             # --dataset: Name of the dataset to be queried
-                            # -e: # Endpoint URL for the DKubeX LLM deployment. Replace <deployment_name> with the created deployment name and <username> with workspace name in which the deployment was created. In case of Skypilot deployment, provide its endpoint URL instead. If using OpenAI, keep blank.
                             # --config: Absolute path to the RAG config (query.yaml) file
 port: "3000"
 description: "Chatbot Application"
@@ -21,3 +19,4 @@ rewritetarget: "false"
 configsnippet: ""
 ingressprefix: "chatbot"    # Provide unique ingress prefix for the application. This will be used in the application URL. e.g. https://123.45.67.890:32443/chatbot
 output: "yaml"
+mount_home: "all"
