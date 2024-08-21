@@ -30,7 +30,7 @@ semantic_similarity_evaluator:
     prompt_file: ""
     llm: dkubex                                             # Language model to be used for generating responses for semantic similarity evaluation. To use DKubeX LLM deployment, use 'dkubex'. To use OpenAI, use 'openai'
     llmkey: "eyJh******************************dJSg"        # If using DKubeX deployment for generating responses, provide the serving_token for the deployment. If using OpenAI, provide the OpenAI API key
-    url: "https://123.45.67.890/deployment/1/llama27bbase/" # Endpoint URL for the DKubeX LLM deployment which will be used for generating groundtruth responses. If using OpenAI, keep blank
+    url: "https://123.45.67.890/deployment/1/llama27bbase/" # Endpoint URL for the DKubeX LLM deployment which will be used for generating responses. If using OpenAI, keep blank
     max_tokens: 2048                                        # Maximum number of tokens to be used for generating responses
     rag_configuration: "/absolute/path/to/rag/config"       # Absolute path to the RAG config (query.yaml) file.
     metrics:
