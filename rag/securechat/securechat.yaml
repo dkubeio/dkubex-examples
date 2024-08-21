@@ -1,4 +1,4 @@
-image: "dkubex123/llmapp:securechat-083"
+image: "dkubex123/llmapp:noreplicas"
 name: "chatbot"             # Unique name of the chat application
 cpu: 1
 gpu: 0 
