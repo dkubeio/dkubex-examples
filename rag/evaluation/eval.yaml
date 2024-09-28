@@ -1,39 +1,100 @@
-vectorstore_reader:
-    kind: weaviate
-    provider: dkubex
-    properties:
-    - paperchunks
-    - dkubexfm
-questions_generator:                                        # Generates the questions to be used for the dataset evaluation
-    prompt_str: "default"
-    prompt_file: ""
-    num_questions_per_chunk: 1                              # Number of questions to be generated per chunk
-    max_chunks: 100                                         # Maximum number of chunks to be used for question generation
-    llm: openai                                             # Language model to be used for question generation. To use OpenAI to generate questions, use 'openai'. To use DKubeX LLM deployment, use 'dkubex'
-    llmkey: "sk-4aYW**********************ZRLQe"            # If using DKubeX deployment, provide the serving_token for the deployment. If using OpenAI, provide the OpenAI API key
-    llmurl: ""                                              # Endpoint URL for the DKubeX LLM deployment which will be used for generating responses. If using OpenAI, keep blank.
-    max_tokens: 2048                                        # Maximum number of tokens to be used for generating questions
-retrieval_evaluator:
-    vector_retriever:
-        kind: weaviate
-        vectorstore_provider: dkubex
-        textkey: paperchunks
-        embedding_class: HuggingFaceEmbedding               # Use 'HuggingFaceEmbedding' for embedding models from HuggingFace, or 'OpenAIEmbedding' for OpenAI embeddings
-        embedding_model: "BAAI/bge-large-en-v1.5"           # Embedding model name
-        llmkey: ""                                          # API key for the embedding model (if required)
-        similarity_top_k: 3
-    metrics:
-    - mrr
-    - hit_rate
+dataset: demo_dataset       # Provide dataset name to be used. Dataset name provided through CLI will get priority
+
+generate_ground_truth: false    # Provide 'true' if groundtruth needs to be generated with an LLM, else provide 'false' and provide absolute path to groundtruth file
+ground_truth: <path to groundtruth file.csv>
+
+# Provide LLM details to generate questions
+questions_generator:
+   prompt: "default"
+   num_questions_per_chunk: 1
+   max_chunks: 10       # Maximum number of chunks to be used for question generation
+   llm: dkubex          # OPTIONS: dkubex/openai
+   llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"     # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
+   llmkey: eyJhbG*********************r5mJY                        # Provide serving token of LLM deployment in DKubeX. If using OpenAI, provide OpenAI API key
+   max_tokens: 2048
+
+rag_configuration: <path to RAG config>         # Provide absolute path to RAG config file
+
+vectorstore: weaviate_vectorstore
+weaviate_vectorstore:
+   url: ""
+   auth_key: ""
+   provider: dkubex
+   properties:
+   - paperchunks
+   - dkubexfm
+
+evaluator:
+ - semantic_similarity_evaluator       # Vector Similarity
+ - correctness_evaluator               # LLM Similarity
+#   - answer_relevancy_evaluator
+#   - retrieval_evaluator
+
 semantic_similarity_evaluator:
-    prompt_str: "default"
-    prompt_file: ""
-    llm: dkubex                                             # Language model to be used for generating responses for semantic similarity evaluation. To use DKubeX LLM deployment, use 'dkubex'. To use OpenAI, use 'openai'
-    llmkey: "eyJh******************************dJSg"        # If using DKubeX deployment for generating responses, provide the serving_token for the deployment. If using OpenAI, provide the OpenAI API key
-    url: "https://123.45.67.890/deployment/1/llama27bbase/" # Endpoint URL for the DKubeX LLM deployment which will be used for generating responses. If using OpenAI, keep blank
-    max_tokens: 2048                                        # Maximum number of tokens to be used for generating responses
-    rag_configuration: "/absolute/path/to/rag/config"       # Absolute path to the RAG config (query.yaml) file.
-    metrics:
-    - similarity_score
+   prompt: "default"
+   metrics:
+   - similarity_score
+
+correctness_evaluator:
+   # Prompt to be used in the evaluation process
+   prompt: |
+       You are an expert evaluation system for a question answering chatbot.
+
+       You are given the following information:
+       - a user query, and
+       - a generated answer
+
+       You may also be given a reference answer to use for reference in your evaluation.
+
+       Your job is to judge the relevance and correctness of the generated answer.
+       Output a single score that represents a holistic evaluation.
+       You must return your response in a line with only the score.
+       Do not return answers in any other format.
+       On a separate line provide your reasoning for the score as well.
+
+       Please act as an impartial judge and evaluate the similarity of the response provided by
+       an assistant against the reference answer for user question below.
+       You will be given a reference answer and the assistant's answer.
+       Your job is to compare the assistant's answer with the reference answer for similarity
+       in the context of the user's question.
+       Provide a score between 1 and 10 with an interval of 1
+       Do not allow the length of the response to influence your evaluation.
+   llm: dkubex  # OPTIONS: dkubex/openai
+   llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"     # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
+   llmkey: eyJhbG*********************r5mJY                        # Provide serving token of LLM deployment in DKubeX. If using OpenAI, provide OpenAI API key
+   max_tokens: 2048
+
+# cross_vector_similarity_evaluator:
+#     prompt: "default"
+#     llm: openai         # dkubex
+#     llmkey: "sk-4aY***********************OZRLQe" # <llmkey>
+#     llm_url: ""             # http://xxx.xxx.xxx.xxx/v1/
+#     max_tokens: 2048
+#     rag_configuration: "/home/demo/simple_rag.yaml"
+
+answer_relevancy_evaluator:
+   prompt: "default"
+   llm: dkubex      # OPTIONS: dkubex/openai
+   llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"     # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
+   llmkey: eyJhbG*********************r5mJY                        # Provide serving token of LLM deployment in DKubeX. If using OpenAI, provide OpenAI API key
+   max_tokens: 2048
+
+retrieval_evaluator:
+   weaviate_vectorstore:
+       kind: weaviate
+       vectorstore_provider: dkubex
+       textkey: paperdocs
+       # Choose embedding model type to be used. Once done, provide details in the appropriate section below.
+       embedding_provider: "sky"    # OPTIONS: dkubex, sky, huggingface, openai
+       embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"            # Provide service endpoint of local/skypilot embedding model deployment in DKubeX
+       embedding_key: eyJhbG*********************r5mJY                         # Provide serving token of local/skypilot embeddding model deployment in DKubeX
+       llmkey: ""                                                              # Provide OpenAI API key if using OpenAI, else keep blank
+       similarity_top_k: 3
+   metrics:
+   - mrr
+   - hit_rate
+
+# Provide MLFlow Experiment Name
 tracking:
-    experiment: dkubexfm-rag-evaluate                       # Provide MLFlow experiment name
+   experiment: demo-eval
+

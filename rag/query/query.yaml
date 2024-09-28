@@ -1,29 +1,99 @@
-input:
-    question: ""
-    mode: "cli"
-vectorstore_retriever:
-    kind: weaviate
-    vectorstore_provider: dkubex
-    embedding_class: HuggingFaceEmbedding                       # Use 'HuggingFaceEmbedding' for embedding models from HuggingFace, or 'OpenAIEmbedding' for OpenAI embeddings
-    embedding_model: 'BAAI/bge-large-en-v1.5'                   # Embedding model name
-    llmkey: ""                                                  # API key for the embedding model (if required)
-    textkey: 'paperchunks'
-    top_k: 3
-prompt_builder:
-    prompt_str: ""
-    prompt_file: ""
-nodes_sorter:
-    max_sources: 3
-contexts_joiner:
-    separator: "\n\n"
-chat_engine:
-    llm: dkubex                                                 # Use 'dkubex' for DKubeX deployments and 'openai' to use OpenAI API
-    url: "https://123.45.67.890/deployment/1/llama27bbase/"     # Endpoint URL for the DKubeX LLM deployment which will be used for generating responses. If using OpenAI, keep blank
-    llmkey: "eyJh***********************JSg"                    # If using DKubeX deployment, provide the serving_token for the deployment. If using OpenAI, provide the OpenAI API key
-    window_size: 2
-    max_tokens: 2048                                            # Maximum number of tokens to be used for generating responses
-securellm:                                                      # SecureLLM configuration. Comment out this section if not using SecureLLM
-    appkey: sk-zxr**************************ya                  # Provide SecureLLM Application Key to be used
-    dkubex_url: "https://123.45.67.890:32443"                   # Provide the URL of the DKubeX deployment
-tracking:
-  experiment: dkubexfm-rag                                      # Provide MLFlow experiment name
+dataset: demo_dataset       # Provide dataset name to be used. Dataset name provided through CLI or Securechat application will get priority
+vectorstore: weaviate_vectorstore
+
+# Choose embedding deployment type to be used. Once done, provide config in the appropriate section below.
+embedding: sky   # OPTIONS: dkubex, sky, huggingface, openai
+
+search: vector_search
+
+# -------------------------Comment out this section if an acronym expander is not being used. Otherwise, provide appropriate config------------
+query:
+  post_processor:
+    - acronym_expander
+
+acronym_expander:
+  acr_file: "<path to acronym.json>"    # Provide absolute path to file containing list of expandable acronyms
+#-----------------------------------------------------------------------------------------------------------------------------------------------
+
+# Enable/disable questions cache. While enabling cache make sure the dataset has cache enabled.
+faq:
+ enabled: true
+ threshold: 0.90
+
+# LLM Answer Synthesizer config
+synthesizer:
+  llm: dkubex           # OPTIONS: dkubex/openai
+  llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                     # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
+  llmkey: eyJhbG*********************r5mJY                        # Provide serving token of LLM deployment in DKubeX. If using OpenAI, provide OpenAI API key
+  # Prompt to be used in the RAG pipeline. You can use your custom prompt in the same template provided below.
+  prompt: |
+      "You are a Retrieval Augmented Generation chatbot. "
+      "Think step by step and answer in a direct and concise tone. "
+      "You are an expert Call Center Agent Assist in the public healthcare insurance marketplace. "
+      "Your job is to extract relevant context for the user's question. "
+      "Never directly answer yes or no, but only provide policy or procedural information from relevant sections "
+      "If the context doesn't provide answer, but provides policy for a part of the question, state the policy. "
+      "Do not assume anything. Use the context and not any prior learnings. "
+      "Write an elaborate answer"
+      "Please do not include any explanatory logic or notes. "
+      "Include confidence score of the generated summary on the scale of 1 to 10 \n"
+      "Do not explain Confidence score. \n"
+      "If the context provides sufficient information reply strictly in the format; Answer: ...\n Confidence score: ... "
+      "If the context provides insufficient information reply `I cannot answer, Please escalte to supervisor or rephrase the question` and don't provide any logic for deriving this conclusion. "
+      "Context (with relevance scores):\n {context_str}\n"
+      "Question: {query_str}\n"
+
+  window_size: 2
+  max_tokens: 1024          # Maximum number of tokens to be used
+
+# Enable/disable use of adjacent chunks in the context. Make sure that during ingestion, adjacent_chunks property was enabled.
+context_combiner:
+  use_adj_chunks: true           # true/false
+
+# Provide MLFlow Experiment Name
+mlflow:
+  experiment: demo-ragquery
+
+
+########################################################################################################################################
+# -------------------- Provide appropriate config. Uncomment if your selected option's section is commented below. --------------------
+########################################################################################################################################
+
+#########################
+# Embedding Model config
+#########################
+sky:
+  embedding_key: "eyJhbGc**************V5s3b0"                              # Provide serving token of SkyPilot embedding model deployment
+  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                           # Provide service endpoint of Skypilot embedding model deployment
+
+# dkubex:         
+#   embedding_key: eyJhbG*********************r5mJY                         # Provide serving token of local embeddding model deployment in DKubeX
+#   embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                       # Provide service endpoint of local embedding model deployment in DKubeX
+
+# huggingface:
+#   model: "BAAI/bge-large-en-v1.5"                                         # Provide Huggingface embedding model name
+
+# openai:
+#   model: "text-embedding-ada-002"                                         # Provide OpenAI Embedding Model Name
+#   llmkey: "sk-TM6c9*****************EPnG"                                 # Provide OpenAI API key
+
+#######################################
+# Vector Search and Vectorstore config
+#######################################
+vector_search:
+  top_k: 3
+  rerank: true
+  rerank_topk: 5
+  max_sources: 3
+
+weaviate_vectorstore:
+  vectorstore_provider: dkubex
+  url: ""
+  auth_key: ""
+  textkey: 'paperchunks'                # Make sure the dataset is also ingested with the same key.
+
+# -------------------If using SecureLLM, provide SecureLLM config, else comment out this section------------------------
+securellm:
+   appkey: "<securellm combined key for all the models>"        # Create a combined application key with both the embedding model and the LLM. Provide the key here.
+   dkubex_url: "https://xxx.xxx.xxx.xxx:xxxxx/"                 # Your DKubeX URL
+# -----------------------------------------------------------------------------------------------------------------------

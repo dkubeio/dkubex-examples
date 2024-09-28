@@ -1,29 +1,149 @@
-splitter:
-    class: TokenTextSplitter
-    chunk_size: 512
-    chunk_overlap: 0
-embedder:
-    class: HuggingFaceEmbedding                             # Use 'HuggingFaceEmbedding' for embedding models from HuggingFace, or 'OpenAIEmbedding' for OpenAI embedding models
-    model: "BAAI/bge-large-en-v1.5"                         # Embedding model name
-    llmkey: ""                                              # API key for the embedding model (if required)
+# Choose your preferred text splitter. Once done, provide details in the appropriate section below.
+splitter: sentence_text_splitter_LC     # OPTIONS: sentence_text_splitter_LC, sentence_text_splitter, token_text_splitter
+
+# Choose embedding model type to be used in ingestion. Once done, provide details in the appropriate section below.
+embedding: sky   # OPTIONS: dkubex, sky, huggingface, openai
+
+# Uncomment 'custom' and comment out 'default' here if you want to provide additional metadata. Once done, provide details in the appropriate section below.
 metadata:
-    class: DKubexFMMetadataExtractor
-vectorstore:
-    class: WeaviateVectorStore
-    provider: dkubex
-    uri: ""
-    textkey: 'paperchunks'
-docstore:
-    class: WeaviateDocumentStore
-    provider: dkubex
-    uri: ""
-    textkey: 'paperdocs'
+  - default
+#   - custom
+
+# Uncomment the Llamaindex data reader that you want to be used to extract data from your files and comment the other ones. Once done, provide details in the appropriate section below.
 reader:
-  - source: file                                            # Llamaindex dataloader to be used for ingesting data
-    description: "https://docs.llamaindex.ai/en/stable/module_guides/loading/simpledirectoryreader.html"
-    inputs:
-      loader_args:                                          # Arguments to be passed to the dataloader
-        input_dir: "/absolute/path/of/dataset/folder"       # Absolute path to the directory containing the fields to be ingested by 'file' dataloader
-        recursive: true
-        exclude_hidden: true
-    pyloader: /absolute/path/of/pyloader/file               # Absolute path to the custom pyloader file
+#   - file
+  - scrapeddatareader
+#   - confluence
+#   - scrapyreader
+#   - sharepointreader
+
+# Enable or disable use of previous and next chunks while storing current chunk
+adjacent_chunks: true #true/false
+
+########################################################################################################################################
+# -------------------- Provide appropriate details. Uncomment if your selected option's section is commented below. --------------------
+########################################################################################################################################
+
+#######################
+# Text Splitter Details
+#######################
+sentence_text_splitter_LC:
+  chunk_size: 256
+  chunk_overlap: 0
+
+# sentence_text_splitter:
+#   chunk_size: 256
+#   chunk_overlap: 0
+
+# token_text_splitter:
+#   chunk_size: 256
+#   chunk_overlap: 0
+
+################################
+# Provide MLFlow Experiment Name
+################################
+mlflow:
+  experiment: demo-ingestion
+
+
+#########################
+# Embedding Model Details
+#########################
+sky:
+  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                           # Provide service endpoint of Skypilot deployment
+  embedding_key: "eyJhbGc**************V5s3b0"                                # Provide serving token of SkyPilot deployment
+  batch_size: 10
+
+# dkubex:
+#   embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                         # Provide serving url of local deployment in DKubeX
+#   embedding_key: "eyJhbGc**************V5s3b0"                              # Provide service token of local deployment in DKubeX
+#   batch_size: 10
+
+# huggingface:
+#   model: "BAAI/bge-large-en-v1.5"                                         # Provide Huggingface embedding model name
+
+# openai:
+#   model: "text-embedding-ada-002"                                         # Provide OpenAI Embedding Model Name
+#   llmkey: "sk-TM6c9*****************EPnG"                                 # Provide OpenAI API key
+
+#########################
+# Custom Metadata Details
+#########################
+# custom:                                               # Provide absolute path of custom script to add additional metadata
+#   adjacent_chunks: False                              # True/False
+#   extractor_path: <absolute path to .py file>
+
+#####################
+# Data Reader Details
+#####################
+# file:
+#   inputs:
+#     loader_args:
+#       input_dir: <path to directory containing docs>    # Provide absolute path to the folder containing documents to be ingested
+#       recursive: true 
+#       exclude_hidden: true 
+#       raise_on_error: true 
+
+scrapeddatareader:
+  inputs:
+    loader_args:
+      input_dir: <path to directory containing docs>        # Provide absolute path to the folder containing documents to be ingested. Make sure the folder has a mapping file named "url_file_name_map.json" for links of pdf files.
+      exclude_hidden: true 
+      raise_on_error: true 
+    data_args:
+      doc_source: gi
+      state_category: NV 
+      designation_category: Consumer 
+      topic_category: general 
+      num_workers: 4
+
+# confluence:
+#   inputs:
+#     loader_args:
+#       base_url: <confluence page URL>                     # Provide Confluence URL
+#       # api_token: ATATT3*********************3EA         # Provide API token for Confluence
+#       user_name: demo@dkube.io                            # Provide Confluence user ID
+#       password: Abc@123                                   # Provide Confluence Password
+#     data_args:
+#       include_attachments: True                           # 'True' if attachments in the Confluence site needs to be downloaded, else 'false'
+#       space_key: llamaindex
+
+# scrapyreader:   # ----------TODO- Discuss with Pralhad--------------
+#   inputs:
+#     loader_args:
+#       test1: ""
+#     data_args:
+#       spiders:
+#         # myspider:
+#         # - path: /home/configs/spiders/quotess.py
+#         #   url: 
+#         #     - "https://quotes.toscrape.com/page/1/"
+#         #     - "https://quotes.toscrape.com/page/2/"
+#         # Acasignspider:
+#         #   - url: "https://acasignups.net"
+#         # irs:
+#         #   - url: "https://www.irs.gov/affordable-care-act"
+#         # pennie:                                                           
+#         #  - url: "https://agency.pennie.com/about-us/"
+#          nevadaa:                                                            
+#            - url: "https://www.nevadahealthlink.com/sshix/"
+#         # va:                                                                 
+#         #   - url: "https://www.marketplace.virginia.gov/"
+#         # penniefaq:
+#         #   - url: "https://help.pennie.com/hc/en-us/sections/360008569673-Customer"
+
+# sharepointreader:
+#   inputs:
+#     loader_args:
+#       client_id: 
+#       client_secret: 
+#       tenant_id: 
+#       sharepoint_site_id: 
+#       drive_id: 
+#       sharepoint_site_name: ""
+#       sharepoint_folder_path: ""
+#     data_args:     
+#       doc_source: 
+#       state_category: 
+#       designation_category: 
+#       topic_category:
