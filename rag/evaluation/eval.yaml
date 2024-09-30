@@ -1,6 +1,6 @@
 dataset: demo_dataset       # Provide dataset name to be used. Dataset name provided through CLI will get priority
 
-generate_ground_truth: false    # Provide 'true' if groundtruth needs to be generated with an LLM, else provide 'false' and provide absolute path to groundtruth file
+generate_ground_truth: true    # Provide 'true' if groundtruth needs to be generated with an LLM, else provide 'false' and provide absolute path to groundtruth file
 ground_truth: <path to groundtruth file.csv>
 
 # Provide LLM details to generate questions
