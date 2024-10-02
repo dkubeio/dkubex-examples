@@ -88,6 +88,7 @@ retrieval_evaluator:
        embedding_provider: "sky"    # OPTIONS: dkubex, sky, huggingface, openai
        embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"            # Provide service endpoint of local/skypilot embedding model deployment in DKubeX
        embedding_key: eyJhbG*********************r5mJY                         # Provide serving token of local/skypilot embeddding model deployment in DKubeX
+       embedding_model: "BAAI/bge-large-en-v1.5"                               # Embedding model name
        llmkey: ""                                                              # Provide OpenAI API key if using OpenAI, else keep blank
        similarity_top_k: 3
    metrics:
