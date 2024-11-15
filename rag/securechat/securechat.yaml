@@ -1,4 +1,4 @@
-image: "dkubex123/llmapp:gi-llamaindex-4"
+image: "dkubex123/llmapp:gi-llamaindex-7"
 ingressprefix: "/demoapp"           # Provide unique ingress prefix for the application.
 name: "demoapp"                     # Unique name of the chat application
 cpu: 1                              # default= -1

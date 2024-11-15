@@ -27,11 +27,15 @@ weaviate_vectorstore:
 evaluator:
  - semantic_similarity_evaluator       # Vector Similarity
  - correctness_evaluator               # LLM Similarity
-#   - answer_relevancy_evaluator
+ - answer_relevancy_evaluator
 #   - retrieval_evaluator
 
 semantic_similarity_evaluator:
    prompt: "default"
+   llm: dkubex #openai#dkubex
+   llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"     # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
+   llmkey: eyJhbG*********************r5mJY                        # Provide serving token of LLM deployment in DKubeX. If using OpenAI, provide OpenAI API key
+   max_tokens: 2048
    metrics:
    - similarity_score
 
