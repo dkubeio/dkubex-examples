@@ -1,0 +1,37 @@
+deployment_config:
+  autoscaling_config:
+    min_replicas: 0
+    max_replicas: 2
+    target_num_ongoing_requests_per_replica: 10
+    downscale_delay_s: 3600.0
+    upscale_delay_s: 5.0
+  max_concurrent_queries: 1
+engine_config:
+  model_id: BAAI/bge-large-en-v1.5
+  hf_model_id: BAAI/bge-large-en-v1.5
+  type: EmbeddingEngine
+  image: "ghcr.io/huggingface/text-embeddings-inference:cpu-1.2"
+  #command: 
+  #- "python3"
+  #- "-m"
+  #- "vllm.entrypoints.openai.api_server"
+  engine_kwargs:
+    #trust-remote-code: true
+    #max_num_batched_tokens: 4096
+    #max_num_seqs: 64
+    #gpu_memory_utilization: 0.85
+    revision: "refs/pr/5"
+  #engine_flags:
+  #- trust-remote-code
+  #engine_envs:
+    #PYTORCH_CUDA_ALLOC_CONF: "caching_allocator"
+  max_total_tokens: 512
+  # max_batch_size: 10
+scaling_config:
+  num_workers: 1
+  num_gpus_per_worker: 0
+  num_cpus_per_worker: 4
+  memory_per_worker: "30G"
+  placement_strategy: "STRICT_PACK"
+  resources_per_worker:
+    accelerator_type_a10: 0
