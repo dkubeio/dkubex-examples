@@ -1,7 +1,8 @@
 dataset: demo_dataset       # Provide dataset name to be used. Dataset name provided through CLI will get priority
 
 generate_ground_truth: true    # Provide 'true' if groundtruth needs to be generated with an LLM, else provide 'false' and provide absolute path to groundtruth file
-ground_truth: <path to groundtruth file.csv>
+extract_ground_truth: false
+ground_truth: ""               # Provide absolute path to groundtruth file if 'generate_ground_truth' is set to 'false' and 'extract_ground_truth' is set to 'true'
 
 # Provide LLM details to generate questions
 questions_generator:
@@ -21,23 +22,20 @@ weaviate_vectorstore:
    auth_key: ""
    provider: dkubex
    properties:
-   - paperchunks
+   - paperdocs
    - dkubexfm
 
 evaluator:
  - semantic_similarity_evaluator       # Vector Similarity
  - correctness_evaluator               # LLM Similarity
- - answer_relevancy_evaluator
-#   - retrieval_evaluator
+#  - answer_relevancy_evaluator
+#  - retrieval_evaluator
 
 semantic_similarity_evaluator:
    prompt: "default"
-   llm: dkubex #openai#dkubex
-   llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"     # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
-   llmkey: eyJhbG*********************r5mJY                        # Provide serving token of LLM deployment in DKubeX. If using OpenAI, provide OpenAI API key
-   max_tokens: 2048
-   metrics:
-   - similarity_score
+   embedding_provider: sky    # OPTIONS: dkubex, sky
+   embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"           # Provide service endpoint of local/skypilot embedding model deployment in DKubeX
+   embedding_key: eyJhbG**********************DJ26vc            # Provide serving token of local/skypilot embeddding model deployment in DKubeX
 
 correctness_evaluator:
    # Prompt to be used in the evaluation process
@@ -67,6 +65,7 @@ correctness_evaluator:
    llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"     # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
    llmkey: eyJhbG*********************r5mJY                        # Provide serving token of LLM deployment in DKubeX. If using OpenAI, provide OpenAI API key
    max_tokens: 2048
+   output_parser: fetch_llm_score
 
 # cross_vector_similarity_evaluator:
 #     prompt: "default"
@@ -76,28 +75,28 @@ correctness_evaluator:
 #     max_tokens: 2048
 #     rag_configuration: "/home/demo/simple_rag.yaml"
 
-answer_relevancy_evaluator:
-   prompt: "default"
-   llm: dkubex      # OPTIONS: dkubex/openai
-   llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"     # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
-   llmkey: eyJhbG*********************r5mJY                        # Provide serving token of LLM deployment in DKubeX. If using OpenAI, provide OpenAI API key
-   max_tokens: 2048
+# answer_relevancy_evaluator:
+#    prompt: "default"
+#    llm: dkubex      # OPTIONS: dkubex/openai
+#    llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"     # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
+#    llmkey: eyJhbG*********************r5mJY                        # Provide serving token of LLM deployment in DKubeX. If using OpenAI, provide OpenAI API key
+#    max_tokens: 2048
 
-retrieval_evaluator:
-   weaviate_vectorstore:
-       kind: weaviate
-       vectorstore_provider: dkubex
-       textkey: paperdocs
-       # Choose embedding model type to be used. Once done, provide details in the appropriate section below.
-       embedding_provider: "sky"    # OPTIONS: dkubex, sky, huggingface, openai
-       embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"            # Provide service endpoint of local/skypilot embedding model deployment in DKubeX
-       embedding_key: eyJhbG*********************r5mJY                         # Provide serving token of local/skypilot embeddding model deployment in DKubeX
-       embedding_model: "BAAI/bge-large-en-v1.5"                               # Embedding model name
-       llmkey: ""                                                              # Provide OpenAI API key if using OpenAI, else keep blank
-       similarity_top_k: 3
-   metrics:
-   - mrr
-   - hit_rate
+# retrieval_evaluator:
+#    weaviate_vectorstore:
+#        kind: weaviate
+#        vectorstore_provider: dkubex
+#        textkey: paperdocs
+#        # Choose embedding model type to be used. Once done, provide details in the appropriate section below.
+#        embedding_provider: "sky"    # OPTIONS: dkubex, sky, huggingface, openai
+#        embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"            # Provide service endpoint of local/skypilot embedding model deployment in DKubeX
+#        embedding_key: eyJhbG*********************r5mJY                         # Provide serving token of local/skypilot embeddding model deployment in DKubeX
+#        embedding_model: "BAAI/bge-large-en-v1.5"                               # Embedding model name
+#        llmkey: ""                                                              # Provide OpenAI API key if using OpenAI, else keep blank
+#        similarity_top_k: 3
+#    metrics:
+#    - mrr
+#    - hit_rate
 
 # Provide MLFlow Experiment Name
 tracking:

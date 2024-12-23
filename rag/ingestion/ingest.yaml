@@ -64,6 +64,7 @@ sky:
 
 # openai:
 #   model: "text-embedding-ada-002"                                         # Provide OpenAI Embedding Model Name
+#   embedding_model: "text-embedding-ada-002"                               # Provide OpenAI Embedding Model Name
 #   llmkey: "sk-TM6c9*****************EPnG"                                 # Provide OpenAI API key
 
 #########################
