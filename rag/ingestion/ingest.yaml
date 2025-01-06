@@ -1,8 +1,8 @@
 # Choose your preferred text splitter. Once done, provide details in the appropriate section below.
-splitter: sentence_text_splitter_LC     # OPTIONS: sentence_text_splitter_LC, sentence_text_splitter, token_text_splitter
+splitter: sentence_text_splitter     # OPTIONS: sentence_text_splitter, sentence_text_splitter_LC, token_text_splitter
 
 # Choose embedding model type to be used in ingestion. Once done, provide details in the appropriate section below.
-embedding: sky   # OPTIONS: dkubex, sky, huggingface, openai
+embedding: dkubex   # OPTIONS: dkubex, sky, openai
 
 # Uncomment 'custom' and comment out 'default' here if you want to provide additional metadata. Once done, provide details in the appropriate section below.
 metadata:
@@ -20,6 +20,10 @@ reader:
 # Enable or disable use of previous and next chunks while storing current chunk
 adjacent_chunks: true #true/false
 
+#Provide MLFlow Experiment Name
+mlflow:
+  experiment: demo-ingestion
+
 ########################################################################################################################################
 # -------------------- Provide appropriate details. Uncomment if your selected option's section is commented below. --------------------
 ########################################################################################################################################
@@ -27,11 +31,11 @@ adjacent_chunks: true #true/false
 #######################
 # Text Splitter Details
 #######################
-sentence_text_splitter_LC:
+sentence_text_splitter:
   chunk_size: 256
   chunk_overlap: 0
 
-# sentence_text_splitter:
+# sentence_text_splitter_LC:
 #   chunk_size: 256
 #   chunk_overlap: 0
 
@@ -39,28 +43,18 @@ sentence_text_splitter_LC:
 #   chunk_size: 256
 #   chunk_overlap: 0
 
-################################
-# Provide MLFlow Experiment Name
-################################
-mlflow:
-  experiment: demo-ingestion
-
-
 #########################
 # Embedding Model Details
 #########################
-sky:
-  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                           # Provide service endpoint of Skypilot deployment
-  embedding_key: "eyJhbGc**************V5s3b0"                                # Provide serving token of SkyPilot deployment
+dkubex:
+  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                         # Provide serving url of local deployment in DKubeX
+  embedding_key: "eyJhbGc**************V5s3b0"                              # Provide service token of local deployment in DKubeX
   batch_size: 10
 
-# dkubex:
-#   embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                         # Provide serving url of local deployment in DKubeX
-#   embedding_key: "eyJhbGc**************V5s3b0"                              # Provide service token of local deployment in DKubeX
+# sky:
+#   embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                           # Provide service endpoint of Skypilot deployment
+#   embedding_key: "eyJhbGc**************V5s3b0"                                # Provide serving token of SkyPilot deployment
 #   batch_size: 10
-
-# huggingface:
-#   model: "BAAI/bge-large-en-v1.5"                                         # Provide Huggingface embedding model name
 
 # openai:
 #   model: "text-embedding-ada-002"                                         # Provide OpenAI Embedding Model Name
@@ -109,7 +103,7 @@ file:
 #       include_attachments: True                           # 'True' if attachments in the Confluence site needs to be downloaded, else 'false'
 #       space_key: llamaindex
 
-# scrapyreader:   # ----------TODO- Discuss description--------------
+# scrapyreader:
 #   inputs:
 #     loader_args:
 #       test1: ""
