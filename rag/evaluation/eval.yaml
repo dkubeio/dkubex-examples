@@ -41,25 +41,21 @@ correctness_evaluator:
    # Prompt to be used in the evaluation process
    prompt: |
        You are an expert evaluation system for a question answering chatbot.
-
        You are given the following information:
        - a user query, and
-       - a generated answer
-
+       - a generated answer.
        You may also be given a reference answer to use for reference in your evaluation.
-
        Your job is to judge the relevance and correctness of the generated answer.
        Output a single score that represents a holistic evaluation.
        You must return your response in a line with only the score.
        Do not return answers in any other format.
        On a separate line provide your reasoning for the score as well.
-
        Please act as an impartial judge and evaluate the similarity of the response provided by
        an assistant against the reference answer for user question below.
        You will be given a reference answer and the assistant's answer.
        Your job is to compare the assistant's answer with the reference answer for similarity
        in the context of the user's question.
-       Provide a score between 1 and 10 with an interval of 1
+       Provide a score between 1 and 10 with an interval of 1.
        Do not allow the length of the response to influence your evaluation.
    llm: dkubex  # OPTIONS: dkubex/openai
    llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"     # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
