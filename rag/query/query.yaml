@@ -2,7 +2,7 @@ dataset: demo_dataset       # Provide dataset name to be used. Dataset name prov
 vectorstore: weaviate_vectorstore
 
 # Choose embedding deployment type to be used. Once done, provide config in the appropriate section below.
-embedding: sky   # OPTIONS: dkubex, sky, huggingface, openai
+embedding: dkubex   # OPTIONS: dkubex, sky, openai
 
 search: vector_search
 
@@ -19,6 +19,9 @@ search: vector_search
 faq:
  enabled: true
  threshold: 0.90
+
+parallel_query:
+  batch_size: 1
 
 # LLM Answer Synthesizer config
 synthesizer:
@@ -38,7 +41,6 @@ context_combiner:
 mlflow:
   experiment: demo-ragquery
 
-
 ########################################################################################################################################
 # -------------------- Provide appropriate config. Uncomment if your selected option's section is commented below. --------------------
 ########################################################################################################################################
@@ -46,16 +48,13 @@ mlflow:
 #########################
 # Embedding Model config
 #########################
-sky:
-  embedding_key: "eyJhbGc**************V5s3b0"                              # Provide serving token of SkyPilot embedding model deployment
-  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                           # Provide service endpoint of Skypilot embedding model deployment
+dkubex:         
+  embedding_key: eyJhbG*********************r5mJY                         # Provide serving token of local embeddding model deployment in DKubeX
+  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                       # Provide service endpoint of local embedding model deployment in DKubeX
 
-# dkubex:         
-#   embedding_key: eyJhbG*********************r5mJY                         # Provide serving token of local embeddding model deployment in DKubeX
-#   embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                       # Provide service endpoint of local embedding model deployment in DKubeX
-
-# huggingface:
-#   model: "BAAI/bge-large-en-v1.5"                                         # Provide Huggingface embedding model name
+# sky:
+#   embedding_key: "eyJhbGc**************V5s3b0"                              # Provide serving token of SkyPilot embedding model deployment
+#   embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                           # Provide service endpoint of Skypilot embedding model deployment
 
 # openai:
 #   model: "text-embedding-ada-002"                                         # Provide OpenAI Embedding Model Name
