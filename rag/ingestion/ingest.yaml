@@ -20,7 +20,7 @@ reader:
 # Enable or disable use of previous and next chunks while storing current chunk
 adjacent_chunks: true #true/false
 
-#Provide MLFlow Experiment Name
+# Provide MLFlow Experiment Name
 mlflow:
   experiment: demo-ingestion
 
