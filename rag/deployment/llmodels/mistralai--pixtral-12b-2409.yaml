@@ -17,11 +17,11 @@ engine_config:
   - "vllm.entrypoints.openai.api_server"
   engine_kwargs:
     gpu-memory-utilization: 0.9
-    max-model-len: 8192
+    max-model-len: 4096
     tokenizer-mode: mistral
     config-format: mistral
     load_format: mistral
-    tensor-parallel-size: 2
+    tensor-parallel-size: 4
   engine_flags:
   - trust-remote-code
   - disable-log-requests
@@ -31,7 +31,7 @@ engine_config:
   max_total_tokens: 4096
 scaling_config:
   num_workers: 1
-  num_gpus_per_worker: 2
+  num_gpus_per_worker: 1
   num_cpus_per_worker: 8
   memory_per_worker: "50G"
   placement_strategy: "STRICT_PACK"
