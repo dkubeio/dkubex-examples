@@ -20,5 +20,3 @@ rewritetarget: "false"
 configsnippet: ""                       #default=""
 output: "yaml"
 mount_home: "all"
-metrics:
- port: 8877
