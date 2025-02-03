@@ -1,0 +1,90 @@
+- accelerator: A10G
+  catalogue_enabled: true
+  config: 'nums_gpus: 2'
+  gpus_per_worker: '2'
+  image: nvcr.io/nim/meta/llama-3.1-8b-base:latest
+  model_id: meta/llama-3.1-8b-base
+  name: meta--llama-3.1-8b-base
+  org: meta
+  provider: nim
+- accelerator: A10G
+  catalogue_enabled: true
+  config: 'nums_gpus: 2'
+  gpus_per_worker: '2'
+  image: nvcr.io/nim/meta/llama-3.1-8b-instruct:latest
+  model_id: meta/llama-3.1-8b-instruct
+  name: meta--llama-3.1-8b-instruct
+  org: meta
+  provider: nim
+- accelerator: A100
+  catalogue_enabled: true
+  config: 'nums_gpus: 4'
+  gpus_per_worker: '4'
+  image: nvcr.io/nim/meta/llama-3.1-70b-instruct:latest
+  model_id: meta/llama-3.1-70b-instruct
+  name: meta--llama-3.1-70b-instruct
+  org: meta
+  provider: nim
+- accelerator: A100
+  catalogue_enabled: true
+  config: 'nums_gpus: 16'
+  gpus_per_worker: '16'
+  image: nvcr.io/nim/meta/llama-3.1-405b-instruct:latest
+  model_id: meta/llama-3.1-405b-instruct
+  name: meta--llama-3.1-405b-instruct
+  org: meta
+  provider: nim
+- accelerator: A10G
+  catalogue_enabled: true
+  config: 'nums_gpus: 1'
+  gpus_per_worker: '1'
+  image: nvcr.io/nim/meta/llama3-8b-instruct:latest
+  model_id: meta/llama3-8b-instruct
+  name: meta--llama3-8b-instruct
+  org: meta
+  provider: nim
+- accelerator: A100
+  catalogue_enabled: true
+  config: 'nums_gpus: 4'
+  gpus_per_worker: '4'
+  image: nvcr.io/nim/meta/llama3-70b-instruct:latest
+  model_id: meta/llama3-70b-instruct
+  name: meta--llama3-70b-instruct
+  org: meta
+  provider: nim
+- accelerator: A100
+  catalogue_enabled: true
+  config: 'nums_gpus: 1'
+  gpus_per_worker: '1'
+  image: nvcr.io/nim/mistralai/mistral-7b-instruct-v03:latest
+  model_id: mistralai/mistral-7b-instruct-v03
+  name: mistralai--mistral-7b-instruct-v03
+  org: mistral
+  provider: nim
+- accelerator: A100
+  catalogue_enabled: true
+  config: 'nums_gpus: 4'
+  gpus_per_worker: '4'
+  image: nvcr.io/nim/mistralai/mixtral-8x7b-instruct-v01:latest
+  model_id: mistralai/mixtral-8x7b-instruct-v01
+  name: mistralai--mixtral-8x7b-instruct-v01
+  org: mistral
+  provider: nim
+- accelerator: A100
+  catalogue_enabled: true
+  config: 'nums_gpus: 8'
+  gpus_per_worker: '8'
+  image: nvcr.io/nim/mistralai/mixtral-8x22b-instruct-v01:latest
+  model_id: mistralai/mixtral-8x22b-instruct-v01
+  name: mistralai--mixtral-8x22b-instruct-v01
+  org: mistral
+  provider: nim
+- accelerator: A100
+  catalogue_enabled: true
+  config: 'nums_gpus: 16'
+  gpus_per_worker: '16'
+  image: nvcr.io/nim/nvidia/nemotron-4-340b-instruct:latest
+  model_id: nvidia/nemotron-4-340b-instruct
+  name: nvidia--nemotron-4-340b-instruct
+  org: nvidia
+  provider: nim
