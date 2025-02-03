@@ -7,8 +7,8 @@ deployment_config:
     upscale_delay_s: 5.0
   max_concurrent_queries: 1
 engine_config:
-  model_id: BAAI/bge-large-en-v1.5
-  hf_model_id: BAAI/bge-large-en-v1.5
+  model_id: BAAI/bge-m3
+  hf_model_id: BAAI/bge-m3
   type: EmbeddingEngine
   image: "ghcr.io/huggingface/text-embeddings-inference:cpu-1.2"
   #command: 
@@ -20,7 +20,7 @@ engine_config:
     #max_num_batched_tokens: 4096
     #max_num_seqs: 64
     #gpu_memory_utilization: 0.85
-    revision: "refs/pr/5"
+    revision: "main"
   #engine_flags:
   #- trust-remote-code
   #engine_envs:
@@ -30,7 +30,7 @@ engine_config:
 scaling_config:
   num_workers: 1
   num_gpus_per_worker: 0
-  num_cpus_per_worker: 4
+  num_cpus_per_worker: 8
   memory_per_worker: "30G"
   placement_strategy: "STRICT_PACK"
   resources_per_worker:

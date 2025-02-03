@@ -10,7 +10,7 @@ engine_config:
   model_id: google/gemma-7b
   hf_model_id: google/gemma-7b
   type: VLLMEngine
-  image: "vllm/vllm-openai:v0.5.4"
+  image: "vllm/vllm-openai:v0.6.4"
   command: 
   - "python3"
   - "-m"
@@ -22,8 +22,10 @@ engine_config:
     max-model-len: 4096
   engine_flags:
   - trust-remote-code
+  - disable-log-requests
   #engine_envs:
-    #PYTORCH_CUDA_ALLOC_CONF: "caching_allocator"
+    #VLLM_LOGGING_LEVEL: "DEBUG"
+    #NCCL_DEBUG: "TRCAE"
   max_total_tokens: 2048 #4096
 scaling_config:
   num_workers: 1

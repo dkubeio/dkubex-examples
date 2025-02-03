@@ -7,10 +7,10 @@ deployment_config:
     upscale_delay_s: 15.0
   max_concurrent_queries: 64
 engine_config:
-  model_id: microsoft/phi-2
-  hf_model_id: microsoft/phi-2
+  model_id: casperhansen/mixtral-instruct-awq
+  hf_model_id: casperhansen/mixtral-instruct-awq
   type: VLLMEngine
-  image: "vllm/vllm-openai:v0.5.4"
+  image: "vllm/vllm-openai:v0.6.4"
   command: 
   - "python3"
   - "-m"
@@ -18,15 +18,17 @@ engine_config:
   engine_kwargs:
     max-num-batched-tokens: 8192
     max-num-seqs: 64
-    gpu-memory-utilization: 0.85
+    gpu-memory-utilization: 0.9
     max-model-len: 4096
   engine_flags:
   - trust-remote-code
+  - disable-log-requests
   #engine_envs:
-    #PYTORCH_CUDA_ALLOC_CONF: "caching_allocator"
-  max_total_tokens: 2048
+    #VLLM_LOGGING_LEVEL: "DEBUG"
+    #NCCL_DEBUG: "TRCAE"
+  max_total_tokens: 4096
 scaling_config:
-  num_workers: 1
+  num_workers: 4
   num_gpus_per_worker: 1
   num_cpus_per_worker: 8
   placement_strategy: "STRICT_PACK"
