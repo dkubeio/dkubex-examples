@@ -17,11 +17,12 @@ search: vector_search
 
 # Enable/disable questions cache. While enabling cache make sure the dataset has cache enabled.
 faq:
- enabled: true
+ enabled: false
  threshold: 0.90
+ cache_suggestion_threshold: 0.85
 
 parallel_query:
-  batch_size: 1
+  batch_size: 16
 
 # LLM Answer Synthesizer config
 synthesizer:
