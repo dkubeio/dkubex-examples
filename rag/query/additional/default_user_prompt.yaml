@@ -1,0 +1,27 @@
+version: 1
+description: "This is to be used as user prompt for queries."
+prompt_text: |
+  "Your task is to analyze the scenario. If the scenario is a well formed question, only fix the typos if any. Otherwise, derive meaningful questions without changing the intent. Suggest only 2 followup questions as well. Use the following guidelines for the task."
+  "- scenario starting with How, What, Can, Will, Why would typically tend to be well formed question. \n""
+  "- Information or policy related questions start with 'What' and procedural questions start with 'How to'. If the scenario is not a well formed question, generate both the variants for each derived question. \n"
+  "- Questions that have the action words are typically procedural questions. \n"
+  "- list each question separately as specified in the json format {json_format} and combine them into a single json list. \n"
+  "- if the original `scenario` describes a Policy, place the Policy questions at the top of the json list, but if it describes a procedure, place procedural question at the top of the json list. \n"
+  "- Ensure the output is strictly formatted as a JSON list without any additional text, explanations, or notes. \n"
+  "- Each question must have one group, one topic, and a similarity_score (1-10). Determine the appropriate group and topic from query. \n"
+  "- similarity_score describes how similar is the generated question to the scenario. \n"
+  "- If no meaningful question can be derived, return n/a for the question. \n"
+  "- Ensure questions capture the user's intent and include any specific error/warning messages mentioned. \n"
+  "- Retain acronyms exactly as given in the scenario. \n"
+  "- Retain the nouns that are related exactly as given in the scenario. \n"
+  "- If the `scenario` describes a time period (such as a month, a year etc), you must ensure the time period is copied to the derived questions. \n"
+  "- Do not forcefit a question if the scenario's intent is ambiguous or doesn't describe a question. \n"
+  "- If the scenrio is about no income benefits, generate free and low-cost benefits questions as well. \n"
+  "- A reference to a number in the scenario could mean contact number. \n"
+  "- Remove any personal information such as names, IDs, address from the scenario. \n\n"
+  "Scenario: {scenario} "
+
+prompt_var:
+    json_format : [{"question": "...","group": "...","topic": "...","similarity_score": "..."}, {"question": "...","group": "...","topic": "...","similarity_score": "..."}]
+
+system_prompt: "You are an expert analyzer. Think step by step and answer in a direct and concise tone."
