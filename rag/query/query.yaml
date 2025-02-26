@@ -6,22 +6,19 @@ embedding: dkubex   # OPTIONS: dkubex, sky, openai
 
 search: vector_search
 
-# -------------------------Comment out this section if an acronym expander is not being used. Otherwise, provide appropriate config------------
-# query:
-#   post_processor:
-#     - acronym_expander
-#     - query_rewrite
+query:
+  post_processor:
+    # - acronym_expander
+    - query_rewrite
 
 # acronym_expander:
-#   acr_file: "<path to acronym.json>"    # Provide absolute path to file containing list of expandable acronyms
+  # acr_file: "<path to acronym.json>"    # Provide absolute path to file containing list of expandable acronyms
 
-# query_rewrite:
-#   confidence_threshold: 1
-#   prompt: default            # default/custom
-#   system_prompt: "<path to system_prompt.txt>"    # Provide absolute path to file containing system prompt for query rewrite
-#   user_prompt: "<path to user_prompt.yaml>"       # Provide absolute path to file containing user prompt for query rewrite
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------
+query_rewrite:
+  confidence_threshold: 1
+  prompt: default            # default/custom
+  system_prompt: "<path to system_prompt.txt>"    # Provide absolute path to file containing system prompt for query rewrite
+  user_prompt: "<path to user_prompt.yaml>"       # Provide absolute path to file containing user prompt for query rewrite
 
 # Enable/disable questions cache. While enabling cache make sure the dataset has cache enabled.
 faq:
