@@ -1,88 +1,95 @@
-dataset: demo_dataset       # Provide dataset name to be used. Dataset name provided through CLI or Securechat application will get priority
-vectorstore: weaviate_vectorstore
+# Provide dataset name to be used. Dataset name provided through CLI or Securechat application will get priority.
+dataset: demo_dataset
+
+##################################################
 
 # Choose embedding deployment type to be used. Once done, provide config in the appropriate section below.
-embedding: dkubex   # OPTIONS: dkubex, sky, openai
+embedding: dkubex                                         # OPTIONS: dkubex, sky, openai
 
-search: vector_search
+dkubex:         
+  embedding_key: eyJhbG*********************r5mJY         # Provide serving token of local embeddding model deployment
+  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"       # Provide service endpoint of local embedding model deployment
 
-query:
-  post_processor:
-    # - acronym_expander
-    - query_rewrite
+sky:
+  embedding_key: "eyJhbGc**************V5s3b0"            # Provide serving token of SkyPilot embedding model deployment
+  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"       # Provide service endpoint of Skypilot embedding model deployment
 
-# acronym_expander:
-  # acr_file: "<path to acronym.json>"    # Provide absolute path to file containing list of expandable acronyms
+openai:
+  model: "text-embedding-ada-002"                         # Provide OpenAI Embedding Model Name
+  embedding_model: "text-embedding-ada-002"               # Provide OpenAI Embedding Model Name
+  llmkey: "sk-TM6c9*****************EPnG"                 # Provide OpenAI API key
 
-query_rewrite:
-  confidence_threshold: 1
-  prompt: default            # default/custom
-  system_prompt: "<path to system_prompt.txt>"    # Provide absolute path to file containing system prompt for query rewrite
-  user_prompt: "<path to user_prompt.yaml>"       # Provide absolute path to file containing user prompt for query rewrite
+##################################################
+
+# Choose LLM deployment type to be used for answer generation. Once done, provide config in the appropriate section below.
+synthesizer:
+  llm: dkubex                                             # OPTIONS: dkubex/openai. For sky LLM deployments also, use dkubex.
+  llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"             # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
+  llmkey: eyJhbG*********************r5mJY                # Provide serving token of LLM deployment in DKubeX. If using OpenAI, provide OpenAI API key
+  prompt: "default"                                       # Prompt to be used in the RAG pipeline. You can use your custom prompt in the same template provided below.
+  window_size: 2                                          
+  max_tokens: 1024                                        # Maximum number of tokens to be used
+
+##################################################
+
+# If using SecureLLM, provide SecureLLM config, else comment out this section.
+securellm:
+  appkey: "<securellm combined key for all the models>"   # Provide combined SecureLLM application key with both LLM and Embedding models 
+  dkubex_url: "https://xxx.xxx.xxx.xxx:xxxxx/"            # Your DKubeX URL
+
+##################################################
 
 # Enable/disable questions cache. While enabling cache make sure the dataset has cache enabled.
 faq:
- enabled: false
- threshold: 0.90
- cache_suggestion_threshold: 0.85
+  enabled: false                                          # OPTIONS: true/false
+  threshold: 0.90                                         # cache question similarity threshold
+  cache_suggestion_threshold: 0.85                        # 
 
+##################################################
+
+# Choose query post-processor options by uncommenting them. Once done, provide appropriate details in their respective sections below.
+query:
+  post_processor:
+#     - acronym_expander                                  # Replaces acronyms with their full forms
+#     - query_rewrite                                     # Rewrites the query based on system/user prompt
+
+acronym_expander:
+  acr_file: <path to acronym.json>                        # Provide absolute path to file containing list of expandable acronyms
+
+query_rewrite:
+  confidence_threshold: 1                                 # Minimum confidence score for rewritten question to be passed (range: 0-10)
+  prompt: default                                         # OPTIONS: default/custom. If chosen custom, provide the system_prompt and user_prompt details below
+  system_prompt: <path to system_prompt.txt>              # Provide absolute path to file containing system prompt for query rewrite
+  user_prompt: <path to user_prompt.yaml>                 # Provide absolute path to file containing user prompt for query rewrite
+
+##################################################
+
+# Choose vectorstore and vector search options. Once done, provide appropriate details in their respective sections below.
+vectorstore: weaviate_vectorstore
+search: vector_search
+
+weaviate_vectorstore:
+  vectorstore_provider: dkubex                            # 
+  url: ""                                                 # 
+  auth_key: ""                                            # 
+  textkey: 'paperdocs'                                    # Make sure the dataset is also ingested with the same key.
+
+vector_search:
+  top_k: 3                                                # 
+  rerank: true                                            # 
+  rerank_topk: 5                                          # 
+  max_sources: 3                                          # 
+
+##################################################
+
+# 
 parallel_query:
   batch_size: 16
 
-# LLM Answer Synthesizer config
-synthesizer:
-  llm: dkubex           # OPTIONS: dkubex/openai
-  llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                     # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
-  llmkey: eyJhbG*********************r5mJY                        # Provide serving token of LLM deployment in DKubeX. If using OpenAI, provide OpenAI API key
-  # Prompt to be used in the RAG pipeline. You can use your custom prompt in the same template provided below.
-  prompt: "default"
-  window_size: 2
-  max_tokens: 1024          # Maximum number of tokens to be used
-
 # Enable/disable use of adjacent chunks in the context. Make sure that during ingestion, adjacent_chunks property was enabled.
 context_combiner:
-  use_adj_chunks: true           # true/false
+  use_adj_chunks: true                                    # true/false
 
 # Provide MLFlow Experiment Name
 mlflow:
   experiment: demo-ragquery
-
-########################################################################################################################################
-# -------------------- Provide appropriate config. Uncomment if your selected option's section is commented below. --------------------
-########################################################################################################################################
-
-#########################
-# Embedding Model config
-#########################
-dkubex:         
-  embedding_key: eyJhbG*********************r5mJY                         # Provide serving token of local embeddding model deployment in DKubeX
-  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                       # Provide service endpoint of local embedding model deployment in DKubeX
-
-# sky:
-#   embedding_key: "eyJhbGc**************V5s3b0"                              # Provide serving token of SkyPilot embedding model deployment
-#   embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                           # Provide service endpoint of Skypilot embedding model deployment
-
-# openai:
-#   model: "text-embedding-ada-002"                                         # Provide OpenAI Embedding Model Name
-#   llmkey: "sk-TM6c9*****************EPnG"                                 # Provide OpenAI API key
-
-#######################################
-# Vector Search and Vectorstore config
-#######################################
-vector_search:
-  top_k: 3
-  rerank: true
-  rerank_topk: 5
-  max_sources: 3
-
-weaviate_vectorstore:
-  vectorstore_provider: dkubex
-  url: ""
-  auth_key: ""
-  textkey: 'paperdocs'                # Make sure the dataset is also ingested with the same key.
-
-# -------------------If using SecureLLM, provide SecureLLM config, else comment out this section------------------------
-securellm:
-   appkey: "<securellm combined key for all the models>"        # Create a combined application key with both the embedding model and the LLM. Provide the key here.
-   dkubex_url: "https://xxx.xxx.xxx.xxx:xxxxx/"                 # Your DKubeX URL
-# -----------------------------------------------------------------------------------------------------------------------

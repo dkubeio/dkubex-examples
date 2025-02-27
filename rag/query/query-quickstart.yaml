@@ -1,0 +1,42 @@
+dataset: contracts
+
+embedding: dkubex
+dkubex:         
+  embedding_key: eyJhbG*********************r5mJY                 # Provide serving token of local embeddding model deployment in DKubeX
+  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"               # Provide service endpoint of local embedding model deployment in DKubeX
+
+synthesizer:
+  llm: dkubex
+  llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                     # Provide service endpoint of LLM deployment in DKubeX.
+  llmkey: eyJhbG*********************r5mJY                        # Provide serving token of LLM deployment in DKubeX.
+  prompt: "default"
+  window_size: 2
+  max_tokens: 1024
+
+faq:
+  enabled: false
+  threshold: 0.90
+  cache_suggestion_threshold: 0.85
+
+vectorstore: weaviate_vectorstore
+weaviate_vectorstore:
+  vectorstore_provider: dkubex
+  url: ""
+  auth_key: ""
+  textkey: 'paperdocs'
+
+search: vector_search
+vector_search:
+  top_k: 3
+  rerank: true
+  rerank_topk: 5
+  max_sources: 3
+
+parallel_query:
+  batch_size: 16
+
+context_combiner:
+  use_adj_chunks: true
+
+mlflow:
+  experiment: demo-ragquery-quickstart
