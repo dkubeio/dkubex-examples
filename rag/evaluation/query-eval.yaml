@@ -24,7 +24,7 @@ openai:
 # Choose LLM deployment type to be used for answer generation. Once done, provide config in the appropriate section below.
 synthesizer:
   llm: dkubex                                             # OPTIONS: dkubex/openai. For sky LLM deployments also, use dkubex.
-  llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"             # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
+  llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/"             # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
   llmkey: eyJhbG*********************r5mJY                # Provide serving token of LLM deployment in DKubeX. If using OpenAI, provide OpenAI API key
   prompt: "default"                                       # Prompt to be used in the RAG pipeline. You can use your custom prompt in the same template provided below.
   window_size: 2                                          
@@ -47,20 +47,20 @@ faq:
 
 ##################################################
 
-# # Choose query post-processor options by uncommenting them. Once done, provide appropriate details in their respective sections below.
-# query:
-#   post_processor:
-# #     - acronym_expander                                  # Replaces acronyms with their full forms
-# #     - query_rewrite                                     # Rewrites the query based on system/user prompt
+# Choose query post-processor options by uncommenting them. Once done, provide appropriate details in their respective sections below.
+query:
+  post_processor:
+#     - acronym_expander                                  # Replaces acronyms with their full forms
+#     - query_rewrite                                     # Rewrites the query based on system/user prompt
 
-# acronym_expander:
-#   acr_file: <path to acronym.json>                        # Provide absolute path to file containing list of expandable acronyms
+acronym_expander:
+  acr_file: <path to acronym.json>                        # Provide absolute path to file containing list of expandable acronyms
 
-# query_rewrite:
-#   confidence_threshold: 1                                 # Minimum confidence score for rewritten question to be passed (range: 0-10)
-#   prompt: default                                         # OPTIONS: default/custom. If chosen custom, provide the system_prompt and user_prompt details below
-#   system_prompt: <path to system_prompt.txt>              # Provide absolute path to file containing system prompt for query rewrite
-#   user_prompt: <path to user_prompt.yaml>                 # Provide absolute path to file containing user prompt for query rewrite
+query_rewrite:
+  confidence_threshold: 1                                 # Minimum confidence score for rewritten question to be passed (range: 0-10)
+  prompt: default                                         # OPTIONS: default/custom. If chosen custom, provide the system_prompt and user_prompt details below
+  system_prompt: <path to system_prompt.txt>              # Provide absolute path to file containing system prompt for query rewrite
+  user_prompt: <path to user_prompt.yaml>                 # Provide absolute path to file containing user prompt for query rewrite
 
 ##################################################
 
