@@ -92,4 +92,4 @@ context_combiner:
 
 # Provide MLFlow Experiment Name
 mlflow:
-  experiment: demo-ragquery
+  experiment: demo-ragquery-eval
