@@ -1,0 +1,21 @@
+name: "ndabase"
+ingressprefix: "/ndabase"
+env:
+ SECUREAPP_ACCESS_KEY: "allow"      
+ FMQUERY_ARGS: "llm --dataset contracts --config /home/<username>/query-quickstart.yaml"    # Replace <username> with your DKubeX username
+image: "dkubex123/llmapp:securechat-0.8.7.1"
+cpu: 1
+gpu: 0
+memory: 4
+dockerserver: "DOCKER_SERVER"
+dockeruser: "dkubex123"
+dockerpsw: "dckr_pat_dE90DkE9bzttBinnniexlHdPPgI"
+publish: "false"
+port: "3000"
+description: "Chat Application"
+rewritetarget: "false"
+configsnippet: ""
+output: "yaml"
+mount_home: "all"
+metrics:
+ port: 8877
