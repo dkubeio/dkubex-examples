@@ -8,11 +8,11 @@ embedding: dkubex                                         # OPTIONS: dkubex, sky
 
 dkubex:         
   embedding_key: eyJhbG*********************r5mJY         # Provide serving token of local embeddding model deployment
-  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"       # Provide service endpoint of local embedding model deployment
+  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/"  # Provide service endpoint of local embedding model deployment
 
 sky:
   embedding_key: "eyJhbGc**************V5s3b0"            # Provide serving token of SkyPilot embedding model deployment
-  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"       # Provide service endpoint of Skypilot embedding model deployment
+  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/"  # Provide service endpoint of Skypilot embedding model deployment
 
 openai:
   model: "text-embedding-ada-002"                         # Provide OpenAI Embedding Model Name
@@ -42,8 +42,8 @@ securellm:
 # Enable/disable questions cache. While enabling cache make sure the dataset has cache enabled.
 faq:
   enabled: false                                          # OPTIONS: true/false
-  threshold: 0.90                                         # cache question similarity threshold
-  cache_suggestion_threshold: 0.85                        # 
+  threshold: 0.90                                         # Similarity threshold above which query will be pulled from cache (Range: 0-1)
+  cache_suggestion_threshold: 0.85                        # Similarity threshold below which neither query nor followup questions will be pulled from cache (Range: 0-1)
 
 ##################################################
 
@@ -69,22 +69,22 @@ vectorstore: weaviate_vectorstore
 search: vector_search
 
 weaviate_vectorstore:
-  vectorstore_provider: dkubex                            # 
-  url: ""                                                 # 
-  auth_key: ""                                            # 
-  textkey: 'paperdocs'                                    # Make sure the dataset is also ingested with the same key.
+  vectorstore_provider: dkubex                            # Vectorstore provider to be used.
+  url: ""                                                 # Vectorstore URL. In case of dkubex provider, keep blank
+  auth_key: ""                                            # Vectorstore authentication key. In case of dkubex provider, keep blank
+  textkey: 'paperdocs'                                    # Textkey for dataset to be used. Make sure the dataset is also ingested with the same key.
 
 vector_search:
-  top_k: 3                                                # 
-  rerank: true                                            # 
-  rerank_topk: 5                                          # 
-  max_sources: 3                                          # 
+  top_k: 3                                                # Number of closest matching chunks to retrieve from vectorstore
+  rerank: true                                            # Whether to use reranking for selected contexts. OPTIONS: true/false
+  rerank_topk: 5                                          # Number of top chunks to be reranked
+  max_sources: 3                                          # Number of matching chunks to pick as context for LLM
 
 ##################################################
 
-# 
+# Provide parallel query configuration.
 parallel_query:
-  batch_size: 16
+  batch_size: 16                                          # Number of queries to be processed in parallel
 
 # Enable/disable use of adjacent chunks in the context. Make sure that during ingestion, adjacent_chunks property was enabled.
 context_combiner:

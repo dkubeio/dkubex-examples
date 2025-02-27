@@ -22,26 +22,26 @@ questions_generator:
    llmkey: eyJhbG*********************r5mJY                 # Provide serving token of LLM deployment. If using OpenAI, provide OpenAI API key
    max_tokens: 1024
 
-# # Groundtruth extraction from SecureLLM. Use if generate_ground_truth is false and extract_ground_truth is true.
-# groundtruth_extractor:
-#    date_start: "2025-01-01"                                 # Provide starting date on SecureLLM for groundtruth extraction
-#    date_end: "2025-01-31"                                   # Provide ending date on SecureLLM for groundtruth extraction
-#    email: <SecureLLM admin email>                           # Provide SecureLLM admin email
-#    password: <SecureLLM admin password>                     # Provide SecureLLM admin password
-#    deployment_url: "http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/"  # Provide service endpoint of LLM deployment
-#    deployment_key: "eyJhbG*********************r5mJY"       # Provide serving token of LLM deployment
-#    state: XYZ                                               # Provide state category
-#    filter_user: ''                                          # Provide username if you want to only extract queries from a specific user. Else keep blank
-#    no_of_rows: 5                                            # Number of queries ot be extracted from the date range
-#    supabase_url: https://xxx.xxx.xxx.xxx:xxxxx/supabase     # Provide supabase URL
-#    sllmbase_url: https://xxx.xxx.xxx.xxx:xxxxx/securellm    # Provide SecureLLM URL
-#    supabase_key: "eyJhbG***********************yZO88"       # Provide supabase key
-#    extract_all: True                                        # OPTIONS: True/False
-#    # If True, both rows with and without user feedback will be extracted.
-#    # If False, only rows containing user feedback will be extracted.
-#    dev_team:                                                # Add or remove usernames whose queries are to be excluded from the groundtruth extraction
-#    - "john-doe"
-#    - "jane-doe"
+# Groundtruth extraction from SecureLLM. Use if generate_ground_truth is false and extract_ground_truth is true.
+groundtruth_extractor:
+   date_start: "2025-01-01"                                 # Provide starting date on SecureLLM for groundtruth extraction
+   date_end: "2025-01-31"                                   # Provide ending date on SecureLLM for groundtruth extraction
+   email: <SecureLLM admin email>                           # Provide SecureLLM admin email
+   password: <SecureLLM admin password>                     # Provide SecureLLM admin password
+   deployment_url: "http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/"  # Provide service endpoint of LLM deployment
+   deployment_key: "eyJhbG*********************r5mJY"       # Provide serving token of LLM deployment
+   state: XYZ                                               # Provide state category
+   filter_user: ''                                          # Provide username if you want to only extract queries from a specific user. Else keep blank
+   no_of_rows: 5                                            # Number of queries ot be extracted from the date range
+   supabase_url: https://xxx.xxx.xxx.xxx:xxxxx/supabase     # Provide supabase URL
+   sllmbase_url: https://xxx.xxx.xxx.xxx:xxxxx/securellm    # Provide SecureLLM URL
+   supabase_key: "eyJhbG***********************yZO88"       # Provide supabase key
+   extract_all: True                                        # OPTIONS: True/False
+   # If True, both rows with and without user feedback will be extracted.
+   # If False, only rows containing user feedback will be extracted.
+   dev_team:                                                # Add or remove usernames whose queries are to be excluded from the groundtruth extraction
+   - "john-doe"
+   - "jane-doe"
 
 ##################################################
 
@@ -86,8 +86,8 @@ correctness_evaluator:
    llm: dkubex                                                 # OPTIONS: dkubex/openai. If using sky deployments, provide dkubex
    llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/"            # Provide service endpoint of LLM deployment. If using OpenAI, keep blank
    llmkey: eyJhbG*********************r5mJY                    # Provide serving token of LLM deployment. If using OpenAI, provide OpenAI API key
-   max_tokens: 1024                                            # 
-   output_parser: fetch_llm_score                              #
+   max_tokens: 1024                                            # Maximum number of tokens to be used
+   output_parser: fetch_llm_score
 
 ##################################################
 
