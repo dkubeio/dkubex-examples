@@ -1,42 +1,68 @@
-dataset: demo_dataset       # Provide dataset name to be used. Dataset name provided through CLI will get priority
+# Provide dataset name to be used. Dataset name provided through CLI will get priority.
+dataset: demo_dataset
 
-generate_ground_truth: true    # Provide 'true' if groundtruth needs to be generated with an LLM, else provide 'false' and provide absolute path to groundtruth file
-extract_ground_truth: false
-ground_truth: ""               # Provide absolute path to groundtruth file if 'generate_ground_truth' is set to 'false' and 'extract_ground_truth' is set to 'true'
+##################################################
 
-# Provide LLM details to generate questions
+# Provide details of groundtruth to be used for evaluation
+generate_ground_truth: true                                 # OPTIONS: true/false
+# If true, provide LLM details with which groundtruth will be generated in questions_generator.
+# If false, you can provide your groundtruth file (ground_truth)or extract groundtruth from SecureLLM (extract_ground_truth: true)
+extract_ground_truth: false                                 # OPTIONS: true/false. If true, provide SecureLLM details in groundtruth_extractor
+
+# Custom groundtruth file. Use if both generate_ground_truth and extract_ground_truth is false.
+ground_truth: ""                                            # Provide absolute path to your groundtruth file.
+
+# Groundtruth generation by LLM. Use if generate_ground_truth is true and extract_ground_truth is false.
 questions_generator:
    prompt: "default"
    num_questions_per_chunk: 1
-   max_chunks: 10       # Maximum number of chunks to be used for question generation
-   llm: dkubex          # OPTIONS: dkubex/openai
-   llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"     # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
-   llmkey: eyJhbG*********************r5mJY                        # Provide serving token of LLM deployment in DKubeX. If using OpenAI, provide OpenAI API key
-   max_tokens: 2048
+   max_chunks: 10                                           # Maximum number of chunks to be used for question generation
+   llm: dkubex                                              # OPTIONS: dkubex/openai
+   llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/"         # Provide service endpoint of LLM deployment. If using OpenAI, keep blank
+   llmkey: eyJhbG*********************r5mJY                 # Provide serving token of LLM deployment. If using OpenAI, provide OpenAI API key
+   max_tokens: 1024
 
-rag_configuration: <path to RAG config>         # Provide absolute path to RAG config file
+# # Groundtruth extraction from SecureLLM. Use if generate_ground_truth is false and extract_ground_truth is true.
+# groundtruth_extractor:
+#    date_start: "2025-01-01"                                 # Provide starting date on SecureLLM for groundtruth extraction
+#    date_end: "2025-01-31"                                   # Provide ending date on SecureLLM for groundtruth extraction
+#    email: <SecureLLM admin email>                           # Provide SecureLLM admin email
+#    password: <SecureLLM admin password>                     # Provide SecureLLM admin password
+#    deployment_url: "http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/"  # Provide service endpoint of LLM deployment
+#    deployment_key: "eyJhbG*********************r5mJY"       # Provide serving token of LLM deployment
+#    state: XYZ                                               # Provide state category
+#    filter_user: ''                                          # Provide username if you want to only extract queries from a specific user. Else keep blank
+#    no_of_rows: 5                                            # Number of queries ot be extracted from the date range
+#    supabase_url: https://xxx.xxx.xxx.xxx:xxxxx/supabase     # Provide supabase URL
+#    sllmbase_url: https://xxx.xxx.xxx.xxx:xxxxx/securellm    # Provide SecureLLM URL
+#    supabase_key: "eyJhbG***********************yZO88"       # Provide supabase key
+#    extract_all: True                                        # OPTIONS: True/False
+#    # If True, both rows with and without user feedback will be extracted.
+#    # If False, only rows containing user feedback will be extracted.
+#    dev_team:                                                # Add or remove usernames whose queries are to be excluded from the groundtruth extraction
+#    - "john-doe"
+#    - "jane-doe"
 
-vectorstore: weaviate_vectorstore
-weaviate_vectorstore:
-   url: ""
-   auth_key: ""
-   provider: dkubex
-   properties:
-   - paperdocs
-   - dkubexfm
+##################################################
 
+# RAG Config
+rag_configuration: <path to RAG config>                      # Provide absolute path of RAG config file to be used in eval
+
+##################################################
+
+# Choose which evaluators are to be used in the eval pipeline. Once done, provide appropriate details in their respective sections below.
 evaluator:
- - semantic_similarity_evaluator       # Vector Similarity
- - correctness_evaluator               # LLM Similarity
-#  - answer_relevancy_evaluator
-#  - retrieval_evaluator
+ - semantic_similarity_evaluator
+ - correctness_evaluator
 
+# Provide details of semantic similarity evaluator
 semantic_similarity_evaluator:
    prompt: "default"
-   embedding_provider: sky    # OPTIONS: dkubex, sky
-   embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"           # Provide service endpoint of local/skypilot embedding model deployment in DKubeX
-   embedding_key: eyJhbG**********************DJ26vc            # Provide serving token of local/skypilot embeddding model deployment in DKubeX
+   embedding_provider: sky                                   # OPTIONS: dkubex, sky
+   embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/"    # Provide service endpoint of local/skypilot embedding model deployment
+   embedding_key: eyJhbG**********************DJ26vc         # Provide serving token of local/skypilot embeddding model deployment
 
+# Provide details of correctness evaluator
 correctness_evaluator:
    # Prompt to be used in the evaluation process
    prompt: |
@@ -57,44 +83,23 @@ correctness_evaluator:
        in the context of the user's question.
        Provide a score between 1 and 10 with an interval of 1.
        Do not allow the length of the response to influence your evaluation.
-   llm: dkubex  # OPTIONS: dkubex/openai
-   llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"     # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
-   llmkey: eyJhbG*********************r5mJY                        # Provide serving token of LLM deployment in DKubeX. If using OpenAI, provide OpenAI API key
-   max_tokens: 2048
-   output_parser: fetch_llm_score
+   llm: dkubex                                                 # OPTIONS: dkubex/openai. If using sky deployments, provide dkubex
+   llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/"            # Provide service endpoint of LLM deployment. If using OpenAI, keep blank
+   llmkey: eyJhbG*********************r5mJY                    # Provide serving token of LLM deployment. If using OpenAI, provide OpenAI API key
+   max_tokens: 1024                                            # 
+   output_parser: fetch_llm_score                              #
 
-# cross_vector_similarity_evaluator:
-#     prompt: "default"
-#     llm: openai         # dkubex
-#     llmkey: "sk-4aY***********************OZRLQe" # <llmkey>
-#     llm_url: ""             # http://xxx.xxx.xxx.xxx/v1/
-#     max_tokens: 2048
-#     rag_configuration: "/home/demo/simple_rag.yaml"
+##################################################
 
-# answer_relevancy_evaluator:
-#    prompt: "default"
-#    llm: dkubex      # OPTIONS: dkubex/openai
-#    llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"     # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
-#    llmkey: eyJhbG*********************r5mJY                        # Provide serving token of LLM deployment in DKubeX. If using OpenAI, provide OpenAI API key
-#    max_tokens: 2048
-
-# retrieval_evaluator:
-#    weaviate_vectorstore:
-#        kind: weaviate
-#        vectorstore_provider: dkubex
-#        textkey: paperdocs
-#        # Choose embedding model type to be used. Once done, provide details in the appropriate section below.
-#        embedding_provider: "sky"    # OPTIONS: dkubex, sky, huggingface, openai
-#        embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"            # Provide service endpoint of local/skypilot embedding model deployment in DKubeX
-#        embedding_key: eyJhbG*********************r5mJY                         # Provide serving token of local/skypilot embeddding model deployment in DKubeX
-#        embedding_model: "BAAI/bge-large-en-v1.5"                               # Embedding model name
-#        llmkey: ""                                                              # Provide OpenAI API key if using OpenAI, else keep blank
-#        similarity_top_k: 3
-#    metrics:
-#    - mrr
-#    - hit_rate
+vectorstore: weaviate_vectorstore
+weaviate_vectorstore:
+   url: ""
+   auth_key: ""
+   provider: dkubex
+   properties:
+   - paperdocs
+   - dkubexfm
 
 # Provide MLFlow Experiment Name
 tracking:
    experiment: demo-eval
-
