@@ -58,7 +58,7 @@ evaluator:
 # Provide details of semantic similarity evaluator
 semantic_similarity_evaluator:
    prompt: "default"
-   embedding_provider: sky                                   # OPTIONS: dkubex, sky
+   embedding_provider: dkubex                                # OPTIONS: dkubex/sky
    embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/"    # Provide service endpoint of local/skypilot embedding model deployment
    embedding_key: eyJhbG**********************DJ26vc         # Provide serving token of local/skypilot embeddding model deployment
 
