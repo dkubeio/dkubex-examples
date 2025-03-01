@@ -47,19 +47,19 @@ sentence_text_splitter:
 # Embedding Model Details
 #########################
 dkubex:
-  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                         # Provide serving url of local deployment in DKubeX
-  embedding_key: "eyJhbGc**************V5s3b0"                              # Provide service token of local deployment in DKubeX
+  embedding_url: http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/                         # Provide serving url of local deployment in DKubeX
+  embedding_key: eyJhbGc**************V5s3b0                              # Provide service token of local deployment in DKubeX
   batch_size: 10
 
 # sky:
-#   embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                           # Provide service endpoint of Skypilot deployment
-#   embedding_key: "eyJhbGc**************V5s3b0"                                # Provide serving token of SkyPilot deployment
+#   embedding_url: http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/                           # Provide service endpoint of Skypilot deployment
+#   embedding_key: eyJhbGc**************V5s3b0                                # Provide serving token of SkyPilot deployment
 #   batch_size: 10
 
 # openai:
 #   model: "text-embedding-ada-002"                                         # Provide OpenAI Embedding Model Name
 #   embedding_model: "text-embedding-ada-002"                               # Provide OpenAI Embedding Model Name
-#   llmkey: "sk-TM6c9*****************EPnG"                                 # Provide OpenAI API key
+#   llmkey: sk-TM6c9*****************EPnG                                 # Provide OpenAI API key
 
 #########################
 # Custom Metadata Details

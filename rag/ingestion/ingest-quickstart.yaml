@@ -1,14 +1,14 @@
 embedding: dkubex 
 dkubex:
-  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                         # Provide serving url of local embedding model deployment
-  embedding_key: "eyJhbGc**************V5s3b0"                              # Provide service token of local embedding model deployment
+  embedding_url: http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/                    # Provide serving url of local embedding model deployment
+  embedding_key: eyJhbGc**************V5s3b0                              # Provide service token of local embedding model deployment
   batch_size: 10
 reader:
   - file
 file:
   inputs:
     loader_args:
-      input_dir: /home/<username>/contract-nli                              # Replace <username> with your DKubeX username
+      input_dir: /home/<username>/contract-nli                            # Replace <username> with your DKubeX username
       recursive: true 
       exclude_hidden: true 
       raise_on_error: true 

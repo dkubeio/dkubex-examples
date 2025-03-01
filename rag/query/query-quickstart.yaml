@@ -2,12 +2,12 @@ dataset: contracts
 
 embedding: dkubex
 dkubex:         
+  embedding_url: http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/            # Provide service endpoint of local embedding model deployment in DKubeX
   embedding_key: eyJhbG*********************r5mJY                 # Provide serving token of local embeddding model deployment in DKubeX
-  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"               # Provide service endpoint of local embedding model deployment in DKubeX
 
 synthesizer:
   llm: dkubex
-  llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/v1/"                     # Provide service endpoint of LLM deployment in DKubeX.
+  llm_url: http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/                  # Provide service endpoint of LLM deployment in DKubeX.
   llmkey: eyJhbG*********************r5mJY                        # Provide serving token of LLM deployment in DKubeX.
   prompt: "default"
   window_size: 2

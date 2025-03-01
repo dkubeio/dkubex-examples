@@ -7,24 +7,24 @@ dataset: demo_dataset
 embedding: dkubex                                         # OPTIONS: dkubex, sky, openai
 
 dkubex:         
+  embedding_url: http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/    # Provide service endpoint of local embedding model deployment
   embedding_key: eyJhbG*********************r5mJY         # Provide serving token of local embeddding model deployment
-  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/"  # Provide service endpoint of local embedding model deployment
 
 sky:
-  embedding_key: "eyJhbGc**************V5s3b0"            # Provide serving token of SkyPilot embedding model deployment
-  embedding_url: "http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/"  # Provide service endpoint of Skypilot embedding model deployment
+  embedding_url: http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/    # Provide service endpoint of Skypilot embedding model deployment
+  embedding_key: eyJhbGc**************V5s3b0              # Provide serving token of SkyPilot embedding model deployment
 
 openai:
   model: "text-embedding-ada-002"                         # Provide OpenAI Embedding Model Name
   embedding_model: "text-embedding-ada-002"               # Provide OpenAI Embedding Model Name
-  llmkey: "sk-TM6c9*****************EPnG"                 # Provide OpenAI API key
+  llmkey: sk-TM6c9*****************EPnG                   # Provide OpenAI API key
 
 ##################################################
 
 # Choose LLM deployment type to be used for answer generation. Once done, provide config in the appropriate section below.
 synthesizer:
   llm: dkubex                                             # OPTIONS: dkubex/openai. For sky LLM deployments also, use dkubex.
-  llm_url: "http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/"             # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
+  llm_url: http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/          # Provide service endpoint of LLM deployment in DKubeX. If using OpenAI, keep blank
   llmkey: eyJhbG*********************r5mJY                # Provide serving token of LLM deployment in DKubeX. If using OpenAI, provide OpenAI API key
   prompt: "default"                                       # Prompt to be used in the RAG pipeline. You can use your custom prompt in the same template provided below.
   window_size: 2                                          
@@ -34,8 +34,8 @@ synthesizer:
 
 # If using SecureLLM, provide SecureLLM config, else comment out this section.
 securellm:
-  appkey: "<securellm combined key for all the models>"   # Provide combined SecureLLM application key with both LLM and Embedding models 
-  dkubex_url: "https://xxx.xxx.xxx.xxx:xxxxx/"            # Your DKubeX URL
+  appkey: <securellm combined key for all the models>     # Provide combined SecureLLM application key with both LLM and Embedding models 
+  dkubex_url: https://xxx.xxx.xxx.xxx:xxxxx/              # Your DKubeX URL
 
 ##################################################
 
@@ -51,7 +51,7 @@ faq:
 query:
   post_processor:
 #     - acronym_expander                                  # Replaces acronyms with their full forms
-    - query_rewrite                                     # Rewrites the query based on system/user prompt
+    - query_rewrite                                       # Rewrites the query based on system/user prompt
 
 acronym_expander:
   acr_file: <path to acronym.json>                        # Provide absolute path to file containing list of expandable acronyms
