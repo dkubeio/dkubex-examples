@@ -1,5 +1,10 @@
 # Usage: python fminst_client.py <profile> <name> <image path>
-# Ex: python fmnist_client.py default fashion-mnist-deploy ./images/pull-over.png
+# Ex: python fmnist_client.py default fashion-mnist-deploy ./images/pull-over.pn
+# Usage: python hf_client.py <uuid> <text to be completed>
+# Usage: python hf_client.py <profile> <name> <text to be completed>
+# Ex: python hf_client.py default hf-biogpt "dog is "
+
+
 import configparser
 import requests
 import sys
@@ -11,12 +16,15 @@ config = configparser.ConfigParser()
 
 
 # Check if a parameter is provided
-if len(sys.argv) > 2:
+if len(sys.argv) > 3:
     param1 = sys.argv[1]
     param2 = sys.argv[2]
     param3 = sys.argv[3]
+    param4 = None
+    if len(sys.argv)>4:
+        param4 = sys.argv[4]
 else:
-    print("Please provide uuid & image path.")
+    print("Please provide name.")
     exit(1)
 
 # get http url & token
@@ -28,9 +36,17 @@ token = config.get(param1,"auth-token")
 
 # get deployment details
 headers = {'Authorization': token}
-r = requests.get(f"{url}/llm/api/deployments/{param2}", headers=headers, verify=False)
-deployment = r.json()['deployment']
-
+if len(sys.argv)>4:
+    if param4 == "published":
+        r = requests.get(f"{url}/llm/api/deployments/{param2}", headers=headers, params={"namespace": param4}, verify=False)
+        deployment = r.json()['deployment']
+    else:
+        r = requests.get(f"{url}/llm/api/deployments/{param2}", headers=headers, params={"namespace": param4} ,verify=False)
+        deployment = r.json()['deployment']
+else:
+    r = requests.get(f"{url}/llm/api/deployments/{param2}", headers=headers, verify=False)
+    deployment = r.json()['deployment']
+    
 # get serving details
 SERVING_TOKEN = deployment['serving_token']
 SERVING_ENDPOINT = f"{url}{deployment['endpoint']}"
@@ -45,4 +61,5 @@ with open(IMAGE_PATH, "rb") as image:
 headers={'Authorization': SERVING_TOKEN}
 resp = requests.post(SERVING_ENDPOINT, data=image_bytes, headers=headers, verify=False)
 print (resp.json())
+
 
