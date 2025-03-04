@@ -24,7 +24,7 @@ if len(sys.argv) > 3:
     if len(sys.argv)>4:
         param4 = sys.argv[4]
 else:
-    print("Please provide name.")
+    print("Please provide proper arguments\n, it should be : python <filename> <profile_name> <deployment_name> <image path> \n IF it is published or under any other namespace, please give 4th argument as the namespace\n example : python3 fmnist_client.py dkubex cputrained ./images/pull-over.png\n OR \n example : python3 fmnist_client.py dkubex cputrained ./images/pull-over.png published\n OR \n example : python3 fmnist_client.py dkubex cputrained ./images/pull-over.png <namespace>\n")
     exit(1)
 
 # get http url & token
@@ -37,12 +37,8 @@ token = config.get(param1,"auth-token")
 # get deployment details
 headers = {'Authorization': token}
 if len(sys.argv)>4:
-    if param4 == "published":
-        r = requests.get(f"{url}/llm/api/deployments/{param2}", headers=headers, params={"namespace": param4}, verify=False)
-        deployment = r.json()['deployment']
-    else:
-        r = requests.get(f"{url}/llm/api/deployments/{param2}", headers=headers, params={"namespace": param4} ,verify=False)
-        deployment = r.json()['deployment']
+    r = requests.get(f"{url}/llm/api/deployments/{param2}", headers=headers, params={"namespace": param4}, verify=False)
+    deployment = r.json()['deployment']
 else:
     r = requests.get(f"{url}/llm/api/deployments/{param2}", headers=headers, verify=False)
     deployment = r.json()['deployment']
@@ -50,7 +46,7 @@ else:
 # get serving details
 SERVING_TOKEN = deployment['serving_token']
 SERVING_ENDPOINT = f"{url}{deployment['endpoint']}"
-IMAGE_PATH =  param3 #"/home/<user>/workspaces/default-workspace/ray/images/pull-over.png"
+IMAGE_PATH =  param3
 
 # convert image to bytes
 with open(IMAGE_PATH, "rb") as image:
