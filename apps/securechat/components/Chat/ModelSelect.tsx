@@ -22,7 +22,7 @@ export const ModelSelect = () => {
         key: 'model',
         value: models.find(
           (model) => model.id === e.target.value,
-        ) as OpenAIModel,
+        ),
       });
   };
 
@@ -45,8 +45,8 @@ export const ModelSelect = () => {
               className="dark:bg-[#343541] dark:text-white"
             >
               {model.id === defaultModelId
-                ? `Default (${model.name})`
-                : model.name}
+                ? `Default (${model.name ?? model?.value})`
+                : model.name ?? model?.value}
             </option>
           ))}
         </select>
