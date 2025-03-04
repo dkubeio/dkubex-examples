@@ -1,0 +1,8 @@
+# Use this "wikipedia reader" to download your data corpus from wikipedia
+  - source: wikipedia
+    description: "https://llamahub.ai/l/wikipedia?from=loaders"
+    inputs:
+      data_args:
+        pages: 
+        - 'Berlin'
+        - 'Rome'

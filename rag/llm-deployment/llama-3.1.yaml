@@ -1,0 +1,53 @@
+deployment_config:
+autoscaling_config:
+min_replicas: 0
+initial_replicas: 1
+max_replicas: 8
+target_num_ongoing_requests_per_replica: 24
+metrics_interval_s: 10.0
+look_back_period_s: 30.0
+smoothing_factor: 0.5
+downscale_delay_s: 300.0
+upscale_delay_s: 15.0
+max_concurrent_queries: 64
+ray_actor_options:
+resources:
+accelerator_type_a10: 0.01
+engine_config:
+model_id: meta-llama/Meta-Llama-3.1-8B-Instruct
+hf_model_id: meta-llama/Meta-Llama-3.1-8B-Instruct
+type: VLLMEngine
+engine_kwargs:
+trust_remote_code: true
+max_num_batched_tokens: 8192
+max_num_seqs: 64
+gpu_memory_utilization: 0.85
+max_total_tokens: 8192
+generation:
+# Format to convert user API input into prompts to feed into the LLM engine. {instruction} refers to user-supplied input.
+prompt_format:
+system: "{instruction}\n" # System message. Will default to default_system_message
+# assistant: false # Past assistant message. Used in chat completions API.
+assistant: " {instruction} </s><s> "
+trailing_assistant: false # New assistant message. After this point, model will generate tokens.
+user: "### Instruction:\n{instruction}\n" # User message.
+default_system_message: "Below is an instruction that describes a task. Write a response that appropriately completes the request." # Default system message.
+system_in_user: false # Whether the system prompt is inside the user prompt. If true, the user field should include '{system}'
+add_system_tags_even_if_message_is_empty: false # Whether to include the system tags even if the user message is empty.
+strip_whitespace: false # Whether to automaticall strip whitespace from left and right of user supplied messages for chat completions
+# Stopping sequences. The generation will stop when it encounters any of the sequences, or the tokenizer EOS token.
+# Those can be strings, integers (token ids) or lists of integers.
+# Stopping sequences supplied by the user in a request will be appended to this.
+stopping_sequences: ["### Response:", "### End"]
+scaling_config:
+num_workers: 1
+num_gpus_per_worker: 1
+num_cpus_per_worker: 8
+memory_per_worker: "16G"
+placement_strategy: "STRICT_PACK"
+resources_per_worker:
+accelerator_type_a10: 0.01
+dkubex:
+needs_token: true
+catalogue_enabled: true
+

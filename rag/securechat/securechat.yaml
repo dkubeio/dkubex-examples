@@ -1,0 +1,22 @@
+image: "dkubex123/llmapp:gi-llamaindex-4"
+ingressprefix: "/demoapp"           # Provide unique ingress prefix for the application.
+name: "demoapp"                     # Unique name of the chat application
+cpu: 1                              # default= -1
+gpu: 0                              # default= 0
+memory: 4                           # default= -1
+dockerserver: "DOCKER_SERVER"       # default=DOCKER_SERVER
+dockeruser: "docker123"             # default=DOCKER_USER
+dockerpsw: "dckr_pat_dE90DkE9bzttBinnniexlHdPPgI"             # default=DOCKER_PASSWORD
+publish: "true"                     # default="true"
+env:
+ SECUREAPP_ACCESS_KEY: "allow"      
+ FMQUERY_ARGS: "llm --dataset demo_dataset --config <path to RAG config>"
+                            # Use 'llm' if using DKubeX LLM deployment for generating response, else use 'openai' if using OpenAI
+                            # --dataset: Name of the dataset to be queried
+                            # --config: Absolute path to the RAG config (query.yaml) file
+port: "3000"                            # default="8080"
+description: "Chat Application"
+rewritetarget: "false"
+configsnippet: ""                       #default=""
+output: "yaml"
+mount_home: "all"
