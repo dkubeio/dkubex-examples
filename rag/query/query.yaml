@@ -48,8 +48,8 @@ faq:
 ##################################################
 
 # # Choose query post-processor options by uncommenting them. Once done, provide appropriate details in their respective sections below.
-query:
-  post_processor:
+# query:
+#   post_processor:
 #     - acronym_expander                                  # Replaces acronyms with their full forms
 #     - query_rewrite                                     # Rewrites the query based on system/user prompt
 
