@@ -1,0 +1,2604 @@
+﻿PESTICIDE USAGE
+IN THE
+LATIN AMERICA AND CARIBBEAN REGION
+VOLUME JTE
+Environment Division
+Technical Department
+LAC Region
+The World Bank
+St~.fE-7"
+
+
+﻿D. COUNTRY PROFILES
+The eight country profiles of pest management practices in this section
+are included at this point to provide access to the studies that have been
+completed up to now. Additional profiles are to be completed during the
+coming year.
+Although practices vary substantially from country to country, each of
+the studies attempts to cover, in more or less the same order, the following
+basic points: (1) Background, (2) Pest Management Practices, (3) Pesticide
+Usage, (4) Pesticide Regulation-Legal and Institutional, (5) Pesticide
+Importation and Production, (6) Distribution, Transportation and Storage, (7)
+Crop/Pest/Pesticide Analysis, (8) Recommendations for Action.
+The authors of the individual profiles acknowledge the assistance of a
+large number of in-country specialists directly involved in pesticide usage and
+control in compiling these reports. The authors also point out that no report
+on pesticide usage will stay up to date very long. It is a field in rapid change-
+-not only in the products used and government measures for their control,
+but also in the very role of pesticides in more integrated approaches to pest
+management.
+Therefore, in using these country profiles as guidance on current pest
+management practices and pesticide usage in individual countries,
+the reader should take into account the date at which the profile was
+completed (given near the beginning of each profile) and the dates of data
+collection given in many of the tables. The older profiles will almost surely
+have to be up-daed before placing heavy reliance on present accuracy.
+With these limitations, we think that the profiles can be useful in providing
+basic country data and background on the pest management practices and
+products. The profiles may be especially useful at the early stages of project
+identification and preparation to anticipate potential environmental impact
+problems.
+The author will welcome comments and suggestions for strengthening
+and improving up-coming country profiles, and for up-dating the ones
+included here.
+
+
+﻿COUNTRY PROFILE 2: COLOMBIA
+
+
+﻿COUNTRY PROFILE 2: COLOMBIA
+CONTENTS
+2.1. Background
+2.2. Pest Management Practices
+2.2.1. General
+2.2.2. Main Crops
+2.3. Pesticide Usage
+2.3.1. General Analysis
+2.3.2. Main Pesticides Used
+2.3.3. Acceptability of Pesticides in Use
+2.3.4. Problems of Pesticide Usage
+2.3.4.1. Residues in Harvested Crops
+2.3.4.2. Environmental Hazards
+2.3.4.3. Pesticide Poisonings
+2.3.4.4. Pesticide Resistance
+2.3.4.5. Use of Undesirable Pesticides
+2.3.4.6. Misuse & Mishandling of Pesticides
+2.3.5. Conclusions on Pesticide Usage
+2.4. Pesticide Regulation
+2.4.1. The Existing System
+2.4.2. Restricted or Banned Products
+2.4.3. Issues Concerning Pesticide Regulation
+continued ....
+
+
+﻿2.5. Pesticide Production
+2.5.1. Producers' Association
+2.5.2. Manufacture of Active Ingredients
+2.5.3. Problems with Manufacture of Active Ingredients
+2.5.4. Formulation of Products
+2.5.5. Problems with Formulation of Products
+2.5.6. Adulteration and False Labelling
+2.6. Distribution, Transportation & Storage of Pesticides
+2.7. Crop/Pest/Pesticide Analysis
+2.7.1. Potatoes
+2.7.2. Various Vegetables
+2.7.3. Maize
+2.7.4. Rice
+2.7.5. Sorghum
+2.7.6. Cereals
+2.7.7. Bananas
+2.7.8. Various Fruit Crops
+2.7.9. Coffee
+2.7i.10. Oil Palm
+2.7.11. Cotton
+2.7.12. Oramewntal Plowers
+2.7.13. Pasture
+2.7.14. Soya
+2.7.15. Sugar Cane
+2.7.16. Tobacco
+2.7.17. Cocoa
+2.7.18. Industrial & Roadside
+2.7.19. Additional Crops
+
+
+﻿2.1. Background
+Of Colombia's total land area of 104 m ha, nearly 5.4 m ha is
+used for crop production and of this about 1.6 m ha is under
+permanent crops. Less than 10% of the cropped area is irrigated.
+Permanent pasture occupies 40 m ha, especially in the north, and
+50 m ha is covered with forests or woodland.
+Nearly 9 m people, or 27% of the economically active population,
+are involved in agriculture.   During the 60's, 70's and 80's
+there was a major shift in population away from rural areas and
+towards the cities, driven by underemployment and low wages in
+the countryside and the threat of political violence. However
+the trend has recently slowed due to improved agricultural
+earnings.
+Reform of landholding has not yet been carried through on a
+significant scale. A third of all farming land is held by <1%
+of landowners, while 78% of farmers own plots of 10 ha or less.
+This has implications for the safe and effective use of
+pesticides (see Section 2.2).
+For a long time the economy was heavily based on the export of
+coffee.  During the 1980's it was successfully diversified so
+that by the end of the decade coffee accounted for only one third
+of exports as opposed to a half.    This is still a dangerous
+proportion  because, quite apart    from  fluctuations in the
+international coffee price, uncontrollable outbreaks of e.g.
+disease can occur.    Other major agricultural exports include
+bananas at US$300m, fresh flowers at US$250m, plus sugar,
+tobacco, grain, potatoes and cocoa.       The authorities and
+producers are keenly aware of the need for pesticide residues to
+be at acceptable levels in export crops (see Section 2.3.4.1).
+In discussing pesticide usage and problems in Colombia it is
+important to distinguish between two different sectors of the
+agricultural production. There is the so-called "technified"
+market for pesticides, consisting of established farms of
+significant size on which the farmers utilise measurable levels
+of inputs. This market is accessible, quantifiable and can be
+assessed in terms of its efficiency, environmental performance
+etc.
+The other sector is "non-technified" peasant farming, which is
+often on small, shifting plots cultivated by illiterate or semi-
+illiterate farmers. A wide range of crops is grown in this way
+but e.g. potatoes and maize would be typical. The farmers may
+use inputs such as pesticides, especially on potatoes, but
+generally the market is not accessible and is difficult to
+quantify. Hard data about efficiency, environmental and human
+safety etc. do not exist but it can truthfully be said that
+recognisable standards do not exist either.
+Most of the information in this report refers to the technified
+sector of the market.    Data on the non-technified sector are
+included where they are obtainable, e.g. estimates of granular
+insecticide use on potatoes.
+
+
+﻿2.2.  Pest Management Practices
+2.2.1. General
+The major crops have 'national growers' federations" which are
+in fact government-run organisations.   They include Fedecafe
+(coffee), Federalgodon (cotton) and Fedearroz (rice).    These
+associations have staffs of agronomists who are available to
+advise growers on technical matters including pest management.
+However their expertise and effectiveness, both in the field and
+in the work of farmer training, is a matter of controversial
+debate.
+It is possible to find larger farms and plantations where the
+overall level of pest management is satisfactory, with pesticides
+being use safely and effectively in a reasonable programme of
+crop protection.   Even here, however, there are some serious
+short-comings.   For example flagmen are routinely used in the
+aerial spraying of highly toxic organophosphate insecticides on
+cotton (see Section 2.3.4.3).
+On most farms, and certainly on all the non-technif ied area, pest
+management is a matter of pesticide application with little or
+no attention to the practices required for safe and effective
+use.  The large multinational pesticide companies have farmer
+training programmes to improve standards in this area but, while
+they deserve praise for this effort, it is not able to make much
+of an impact, especially in non-technified crops. An exception
+is Ln aerial application, where such training programmes have led
+to i-mprcved performance generally.
+Overall and with few exceptions it may be said that pest
+management practices, especially the use of pesticides, range
+from poor to very bad.
+For specific information on farmer practice in the handling and
+use of pesticides see Sections 2.3.4 and 2.3.4.6.
+2.2.2. Main Crops
+Coffee
+Coffee is grown in both the technified and non-technified
+sectors. Over the country as a whole, the distribution of cof f ee
+plantation sizes is as follows:
+1-10 ha             11-20 ha            > 20 ha
+35%                 38%                 26%
+In general, out of the total area of 1.1 m ha, about 300,000 ha
+is regarded as technified with some level of expertise in
+management and the use of inputs. The rest is run on very poor
+technical standards.
+
+
+﻿Formerly there was very little use of herbicides and weed control
+was largely done using hoes and machetes, even in the technified
+area. For many years Fedecafe discouraged the use of herbicides
+in order to protect farm labourers' Jobs and keep them on the
+land. However in the mid 1980's coffee rust (Hemileia vastatrix)
+appeared and every farmer needed a knapsack sprayer to control
+it with fungicides.     Copper fungicides were   given away by
+Fedecafe and they also trained the farmers in their use. With
+the universal availability of spray equipment and the general
+comprehension  of  the pesticide concept the     use of   total
+herbicides became more common. Usage has now increased to the
+point where 72% of technified farmers use glyphosate (Roundup)
+and 36% use paraquat (Gramoxone).
+A recent survey has shown that growers inspect their plantations
+for signs of the main disease problem, rust, as follows:
+daily               34%
+weekly              31%
+fortnightly         15%
+monthly             14%
+other times          6%
+However, in timing their sprays against rust, 88% of growers
+relied on the Technical Committee of Fedecafe.     Most farmers
+apply fungicides at 2-4 monthly intervals; almost half of them
+use a 3 month interval.
+At first, with the availability of free copper oxychloride
+fungicides from Fedecafe, the modern systemic fiungicides were not
+used in significant amount (they are more effective but cost
+more). However the subsidy has now been withdrawn and they are
+coming much more into use, at least in the techxLified area.
+Potatoes
+This crop is grown largely by smallholder farmexs. In the non-
+technified area plots of 1-2 ha or less are commcn. Over 80% of
+the farms are <10 ha and the country mean size is 7.4 ha.
+There is very little use of herbicides and weeds are controlled
+manually. However these farmers literally satu2rate their crop
+with insecticidal soil drenches or granules (mainly carbofuran)
+against the white grub Premnotrypes vorax.     Ix terms of pest
+management there is no attempt to do anything other than apply
+insecticides.
+The common, and undesirable, practice is to apply granules using
+the bare hands.
+
+
+﻿Rice
+The following is a summary only;   a great deal more detail is
+available if required.
+80% of rice farms are <10 ha and the mean size for the whole
+country is <8 ha.
+The national rice growers' association, Fedearroz, gives a lot
+of credit to farmers and tends to dictate the varieties grown and
+the programmes for fertilisers and pesticides.
+In 1990 usage of pesticides in rice averaged over $170/ha which
+is not unusually high for technified rice growing. An analysis
+in 1986 (which is likely to be still roughly valid) showed that
+pest control accounted for 29% of the tctal costs of rice
+production. Of this, weed control accounted for nearly 14% and
+insect and disease control for a little over 7% each; the other
+minor component was rodent control.
+Insect control is almost exclusively done by the intensive,
+blanket use of broad spectrum insecticides applied by air. At
+farmer level there is little or no attempt to develop integrated
+programmes of pest management, despite the usual interest in
+research institutes and lip service within Fedearroz. Parasites,
+pred4tors and diseases of the insect pests are well known but
+although various attempts have been made to use them they have
+not had any commercial impact.    Farmers and their agronomist
+advisers prefer to use insecticides when damage thresholds are
+passed.   In general, though claims are made about IPH and
+reducing pesticide inputs, these carry little weight with
+farmers.
+Control of fungal diseases is by the use of fungicides, since
+existing varieties of rice do not have sufficient resistance.
+The White Leaf Disease, which is caused by a virus or similar
+micro-organism   transmitted  by   the  planthopper   Soga todes
+oryzicola, is controlled by using insecticides.
+Weed control is also heavily pesticide-dependent.    In general
+soil preparation is not good and its contribution to weed control
+is minimal.    However, unlike the use of insecticides, the
+herbicide programmes are usually fairly sophisticated and well
+put together.
+Research in rice comes under the Rice National Programme. This
+is handled by Fedearroz, ICA and CIAT (Centro Internacional de
+Agricultura Tropical) and is funded by the Rice Promotion
+Tranche, a levy on farmers for each kilogram of rice produced.
+The Rice National Programme includes resistance to insects and
+diseases among the objectives of its breeding programme.     It
+appears that these efforts have met with little success, since
+the three most prevalent varieties IR-22, CICA 8 and ORYZICA 1
+all require high pesticide inputs.
+
+
+﻿Cotton
+The following is a summary only;   a great deal more detail is
+available if required.
+An good IPM programme has been developed by the National Cotton
+Growers Federation, Federalgxdon. It includes:
+*    Timely destruction of previous cotton crop residues.
+*    Weed control, mainly with herbicides.
+*    Correct use of fertilisers.
+*    Careful selection and use of vesticides so as to
+preserve beneficial predators and parasites Use of
+microbial insecticides, insect growth regulators etc.
+and release of artificially reared parasites.
+*    Control of the boll weevil by the use of dry islands,
+trap crops, pheromones, and other techniques; these
+approaches have in some areas reduced the need for
+boll weevil sprays from 11 to 1.
+*    Use  of economic   damage  thresholds  to  determine
+spraying times.
+*    Legal measures including quarantine, sowing and fallow
+periods, etc.
+However the extent to which farmers adopt all or part of the
+programme varies greatly according to their degree of sophis-
+tication and other factors.      There is a tendency towards
+preserving beneficial parasites and predators early in the season
+by delaying the use of broad-spectrum insecticides, using them
+at lower doses, and to using insect growth regulators for early
+season pests where possible. There is also a certain amount of
+interest in the use of sex-attractant pheromones for control of
+e.g. the pink bollworm, Pectinophora gossypiella. This tendency
+is best seen, if anywhere, in the Valle del Cauca area where boll
+weevil is not yet much of a problem arvJd it is easier to avoid
+early seasoi- use of broad-spectrum compounds.
+However pest management at farmer level is still almost totally
+dependent on pesticides.   Insect control has been a long term
+problem, especially for the bollworm Heliothis virescens;
+infestations of this pest can reach levels unknown in other
+cotton growing countries and, largely because of the uncontrolled
+use of insecticides to deal with it, resistance has now developed
+(see Section 2.3.4.4).
+The boll weevil, Anthonomus grandis, first appeared in Colombia
+in 1946. However it did not reach the main cotton growing area
+of Tolima until the 1980's and it was 1992 before it reached the
+Valle del Cauca. It is now the major pest in many areas.
+
+
+﻿The cost of one insecticide application to cotton varies from
+around $15/ha with pyrethroids, to $26/ha with the newer
+carbamates such as thiodicarb, to $32/ha with insect growth
+regulators such as chlorfluazuron.
+Sorghum
+This crop is grown by large-scale farmers. The two main insect
+pests, sorghum midge (Contarinia sorghicola) and tobacco budworm
+(Heliothis zea) cause enormous losses if not controlled. There
+is no attempt at IPM programmes for these pests and blanket
+spraying of insecticides from the air is the rule.
+Maize
+This crop is mainly grown by smallholder farmers. In the non-
+technified area plots of 1-1.5 ha are common. 80% of farms are
+<10 ha and the country mean size is <8 ha. They use paraquat for
+weed control and very little else.
+Various Vegetables
+Among the technified vegetable farmers there is a move towards
+the more targeted use of pesticides than in the past, but pest
+control programmes remain heavily pesticide oriented.
+Bananas
+The crops grown on    the large, technified plantatis are
+saturated with multiple sprays of fungicides applied by air.
+This is not a cause for criticism, since at present there is no
+other means known of controlling the main diseases. If a more
+integrated programme should ever become available it would be
+adopted immediately by these farmers.
+Soya
+This crop tends to be grown in rotation with sorghum and cotton,
+especially in the Valle del Cauca. Before 1990 the production
+of crops such as soya was protected by punitive tariffs on
+imported commodity.    As a result the soya area expanded
+enormously in the late 1980's to a peak of some 120,000 ha by
+1990.  By 1992, with the withdrawal of the tariffs, this had
+shrunk to 35,000 ha;    the highly profitable sugar crop has
+replaced much of the lost soya area.
+The degree of sophistication of the pest management programmes
+varies, as with other crops, according to the area and the type
+of farmer. In the Valle del Cauca, which is the core area and
+has the most advanced farmers, considerable progress has been
+made with IPM and it plays a significant role. In Tolima insect
+pests are controlled mainly with insecticides. In the plains
+
+
+﻿(Los Llanos) the farmers are relatively unsophisticated, insect
+pests are not very serious and insecticides are used less, though
+herbicides are used for weed control.
+Various Fruits
+There is a significant number of small-scale, fairly sophist-
+icated growers producing specialised fruit for export. Although
+their pest management programmes rely heavily on pesticides.,
+these growers are well aware of the need to observe residue
+tolerances in their produce and the overall 3tandards of
+pesticide use are reasonable.
+Oil Palm
+This crop tends to be grown on plantations owned by large multi-
+national companies.   As a result pest management operat,ons,
+though still relying heavily on pesticides, are well carried out.
+They are conscious of the importance -4 the pollinating weevil
+Elaeidobius kamerunicus and of the reed not to kill it, so
+selective insecticides such as Bacillus thuringiensis and insect
+growth regulators are used when overall sprays are necessary.
+Ornamantal Flowers
+These growers, who have some 3,000 ha under protected
+cultivation, are all highly sophisticated and are- geared to the
+USA and other markets.   Although they are intezested in IPM,
+using for example the selective insecticide pirimicarb to control
+aphids, they have to fumigate the soil against nematodes and
+other pests and this interferes with the use of biological
+controls.
+Furthermore, because they are exporting their produce they are
+allowed under the "Plan Vallejo" to import the pesticides they
+need direct, without paying duty. There is thus less incentive
+to minimise pesticide use.
+
+
+﻿2.3. Pesticide Usage
+2.3-1. General Analysis
+The total value of all pesticides used in Colombia in 1990 was
+S231m at first distributor level.   This puts it 18th. in the
+global agrochemical market, equal to Eungary. The usage can be
+broadly broken down by product class as follows:
+Insecticides         Fungicides          Herbicides
+Value   Cum. Area    Value   Cum. Area   Value   Cum. Area
+Sm        m ha   15            m ha      $m       m ha
+76        6.5        50        5.0       105       5.7
+33%       38%        22%       29%       45%       33%
+It can be seen that, as usual, the herbicide component takes up
+a much higher proportion of the value than of the cumulative area
+treated. This is because the cost of treatment per hectare is
+much higher with herbici=s than with fungicides.   Insecticide
+costs generally fall between the two.
+Since 1980 the market has grown at almost 9% p.a., though in 1990
+the expansion was only 6%.; taking inflation into account that
+represents a shrinkage in real terms of about 3%. Nevertheless,
+growth is expected to continue and the market to reach $277m by
+1995.
+The decrease ii pesticide use in 1990 was due mainly to dry
+weather conditions and a reduction in the planted area for major
+crops such as rice, potatoes and soyabeans; instability caused
+by guerrilla threats also played a part. However it is said that
+the growing importance of biological crop protection, and wider
+acceptance of integrated pest management systems, have begun to
+impinge on pesticide sales.
+continued....
+
+
+﻿The split of the 1990 market by crop was:
+Rice                               26%
+Cotton                             19%
+Vegetables, including potatoes      16%
+Pasture                            9%
+Fruit                              5%
+Sugar Cane                         4%
+Coffee                             3%*
+Soya                               3%
+Others, including grains           15%
+*    The large sums spent on subsidising coffee fungicides
+during the late 1980's (see Section 2.2.2) distorted the
+market and caused confusion about the market size and
+split.   A sum of around $20 m used to be included for
+coffee fungicides which were actually given away free to
+farmers.   However the subsidy was stopped and the total
+1990 figure was $6.6 m, i.e. -3%, of which fungicides
+represented $1.4 m. (Section 2.7.9).
+For a detailed analysis of pesticide usage, broken down by crop
+and pest, see Section 2.7.   This analysis shows, for example,
+that cotton insecticides valued at $33m took up 43% of total
+insecticide usage.
+
+
+﻿2.3.2. Main P-sticides Used
+The following analysis is taken from the usage figures given in
+Section 2.7. However those figures are not exhaustive, and where
+it has been possible to establish a more accurate figure for a
+particular ai, that figure is used rather than the summation from
+Section 2.7. lEven so, estimates of usage differ, sometimes
+considerably, and usage varies from year to year. The following
+figures should therefore be regarded as indicative only.
+Products are listed in order of importance by volume (te ai).
+Those marked "!" have some special characteristic as noted in
+Section 2.3.3. and in the relevant Product Profile. The product
+marked *X" is not acceptable to the Bank and Bank finance should
+not be used for its procurement.
+Main Insecticides and Acaricides Used
+Active Ingredient       Usage            Cumulative
+(te/annum)         Area (ha)
+parathion-methyl           940              970,000
+methomyl                   156              620,000
+monocrotophos              350              610,000
+endosulfan                 230              440,000
+chlorpyrifos               250              410,000
+dimethoate                 170              290,000
+methanidophos             170              280,000
+carbofuran                 170              210,000
+trichlorfon                140              170,000
+thiodicarb                  74              150,000
+profenofos                  83              120,000
+! phosphamidon                71              110,000
+! malathion                  120              100,000
+! carbaryl                   160               85,000
+! gauma-HCH                  33               65,000
+! parathion-ethyl             35               50,000
+cypermethrin +              34               50,000
+profenofos
+
+
+﻿Main Fungicides and Bactericides Used
+Active Ingredient       Usage            Cumulative
+(te/annum)         Area (ha)
+mancozeb                 5,400            2,400,000
+benomyl                     60              430,000
+maneb                      660              270,000
+carbendazi-m                61              240,000
+mineral oil              1,300              220,000
+copper oxychloride         300              210,000
+propineb                   160              150,000
+fentin hydroxide            43              150,000
+tridemorph                  64              140,000
+thiabendazole               37              120,000
+-difenphos                  77              100,000
+mancozeb + metalaxyi        94               90,000
+cymoxanil + mancozeb       120               85,000
+thiophanate-methyl          29               83,000
+iprobenfos                  49               69,000
+chlorothalonil             110               60,000
+kasugamycin +               29               37,000
+phosdiphen
+copper oxychloride +        53               27,000
+mancozeb
+captan                      45                N/A*
+* Main use is in seed dressings.
+
+
+﻿Main Herbicides Used
+Active Ingredient       Usage            Cumulative
+(te/annum)         Area (ha)
+2,4-D                      860               890,000
+paraquat                   450               750,000
+2,4-D + picloram           780               700,000
+propanil                 1,100               280,000
+atrazine                   410               260,0 00
+glyphosate                 350               240,000
+diuron                     320               240,000
+2,4-D + ioxynil             54               185,000
+butachlor                  380               180,000
+etolachlor                350               160,000
+ametryn                    220               150,000
+pendimethalin              180               140,000
+trifluralin                210               130,000
+oxadiazon                  110               122,000
+bentazone                   77                83,000
+MSMA                       160                76,000
+2,4-D + dichlorprop        120                69,000
+fluometuron                 68                68,000
+alachlor                   110                57,000
+thiobencarb                140                39,000
+2,4-D + dicamba             61                35,000
+ametryn + atrazine          40                16,000
+
+
+﻿2.3.3. Acceptability of Pesticides in Use
+The following list shows all pesticides (including plant growth
+regulators) registered in Colombia, arranged in alphabetical
+order. It does not include formulation adjuvants or pheromones;
+the latter are referred to in the relevant crop sections (2.7).
+Note that, while the spellings in the list are the accepted
+international versions, local Spanish spellings may differ, e.g.
+fosmet for phosmet, metomilo fcr methomyl.
+Products marked *X- are not eligible for funding by the Bank.
+Such products are usually no longer registered for use in OECD
+countries, because they pose unacceptable hazards to human health
+or the environment.
+Those marked "!" are eligible for funding by the Bank but have
+some special characteristic to which attention needs to be drawn
+(e.g. high toxicity, environmental impact, special constraints
+on manufacture to avoid hazardous contaminants). Notes on this
+aspect will be found in the relevant product profile in Main
+Section 5 of this Compendium.
+Products listed without annotation are in principle eligible for
+Bank funding;   products not listed at all here may still be
+eligible for Bank funding.   In all questions relating to the
+procurement of pesticides with Bank finance, the advice of the
+Regional Environment Division or Environment Department should
+be sought.
+List of Pesticides
+2,4-D                             benzalconium chloride
+AATC                              beta -cypermethrin
+acephate                          bifenox
+acifluorfen                       bifenthrin
+alachlor                          bitertanol
+! aldicarb                        ! blasticidin-S
+alpha-naphthalene acetic        ! brodifacoum
+acid        bromacil
+! aluminium phosphide              bromadiolone
+ametryn                           bromophos-ethyl
+aminotriazole (amitrole)          bromopropylate
+amitraz                           butachlor
+ammonium quaternary salt          butifos
+asulam                            captan
+! atrazine                        ! carbaryl
+avermectin                        carbendazim
+I azinphos-methyl                 ! carbofuran
+azocyclotin                       carboxin
+Bacillus thuringiensis            cartap
+benalaxyl                         chloridazon
+benfurasate                     ! chlorfenvinphos
+benomyl                           chlorfluazuron
+bensulfuron-methyl              ! chloropicrin
+bentazone                         chlorothalonil
+benthiazole (TCMTB)               chlorotoluron
+benthiocarb (thiobencarb)         chlorpyrifos
+
+
+﻿cinmethylin                       flucythrinate
+clethodim                         flumetralin
+clofentezine                      fluometuron
+clomazone (fenoxan)               flurazole
+copper hydroxide                  flurecol (flurenol)
+copper oxide                      flurenol (flurecol)
+copper oxychloride                fluroxypyr
+cyanazine                         flusilazole
+cycloxydim                        flutriafol
+cyfluthrin                        fluvalinate
+cymoxanil                         folic acid
+cypermethrin                      folpet
+cypermethrin high-cis           I fosdifen (phosdiphen)
+cyproconazole                     fosetyl-aluminium
+cyromazine                        fthalide
+cytozyme                          furalaxyl
+dalapon                           futalide (fthalide)
+dazomet                         ! gana-HCH
+deltamethrin                      giberellic acid
+diaz-inon                        glufosinate-ammonium
+dicamba                           glyphosate
+dichlofluanid                   ! haloxyfop-ethoxyethyl
+dichlorprop                     ! haloxyfop-methyl
+! dichlorvos                       hexaconazole
+diclofop-methyl                   hexaflumuron
+dicloran                          hexazinone
+! dicofol                         ! hydrogen cyanide
+dienochlor                        imazapyr
+dif enamid (diphenamid)           imazaquin
+difenzoquat                       indol butyric acid
+diflubenzuron                     iodine
+dimethametryn                     ioxynil
+dimethipin                        IPB (iprobenfos)
+dimethoate                        iprobenfos (IPB)
+diniconazole                      iprodione
+! dinocap                          isazophos
+diphenamid (difenamid)            isoprothiolane
+diquat                          I kasugamycin
+! disulfoton                        lactofen
+diuron                            lamdacyhalothrin
+dodemorph acetate                 linuron
+edifenphos                      ! magnesium phosphide
+endosulfan                      ! malathion
+EPTC                              maleic hydrazide
+ethephon                          mancozeb
+! fenamifos                        maneb
+fenarimol                         MCPA
+! fenitrothion                    ! mephosfolan
+fenoxan (clomazone)               mepiquat chloride
+fenoxaprop-ethyl                  metalaxyl
+fenthion                          metaldehyde
+fentin acetate                    metham (-sodium)
+fentin hydroxide                  metazachlor
+(trifenyltin hydroxide)         methacrifos
+fenvalerate                     ! methamidophos
+! flocounafen                       methiocarb
+fluazifop-butyl                 ! methowyl
+fluazifop-p-butyl               ! methyl bromide
+
+
+﻿methyl-isothiocyanate            propanil
+metolachlor                      propargite
+metribuzin                       propiconazole
+metsulfuron-methyl               propineb
+X mirex                            pyrasulfuron
+molinate                         pyrazophos
+! monocrotophos                   pyre .hrum
+MSMA                             pyridaben
+n-decanol                        pyroquilon
+n-octanol                        quinchlorac
+napropamide                      quizalofop-ethyl
+ofurace                          sethoxydim
+! omethoate                       sulphur
+oxadiazon                        sulprofos
+oxadixyl                         TCMTB (benthiazole)
+! oxamyl                          teflubenzuron
+oxycarboxin                    ! terbufos
+! oxydemeton-methyl                terbuthylazine
+oxyfluorfen                      terbutryn
+paraquat                         tetradifon
+I parathion-ethyl                 thiabendazole
+! parathion-methyl                 thidiazuron
+penconazole                      thiobencarb (benthiocarb)
+pendimethalin                    thiocyclam hydrogenoxalate
+permethrin                       thiodicarb
+phenthoate                       thiometon
+! phorate                          thiophanate-methyl
+phosalone                        thiram
+phosdiphen (fosdifen)            triadimefon
+! phosphamidon                     triadimenol
+phosphoric acid                  triazophos
+phoxim                           trichlorfon
+picloram                         triclopyr
+piperonyl butoxide               tricyclazole
+piperophos                       tridemorph
+pirimicarb                       trifenyltin hydroxide
+pirimiphos-ethyl                         (fentin hydroxide)
+pirimiphos-methyl              ! trifluralin
+pretilachlor                     triforine
+prochloraz                     ! validamycin A
+profenofos                       vernolate
+prometryn                        vinclozolin
+propamocarb hydrochloride      ? xobetrinil
+zineb
+Of these pesticide active ingredients there are 705 formulations
+registered. Roughly one third are insecticides, one third are
+herbicides and one fifth are fungicides.
+In addition there are 20 adjuvants (e.g. wetting agents), 5
+pheromones and 23 -formulations" of the parasitic wasp
+Trichograuna registered.
+For a list of recently banned or withdrawn pesticides see Section
+2.4.2.
+
+
+﻿2.3.4. Problems of Pesticide Usage
+In 1990 a survey" of smallholder farmers of rice, coffee, maize
+and potatoes was carried out by a pesticide company to establish
+farmer practice in the handling and use of paraquat. Its main
+findings are included below and in the following subsections.
+It i-s very likely that they give a good guide to pesticide
+handling practice generally on smallholdings.
+The survey highlights the importance of programmes to train
+farmers in the safe and effective use of pesticides, and
+especially in sprayer maintenance, the proper disposal of
+pesticide containers and improved pesticide storagelu .,l,1,,z
+The agrochemical industry has made a serious effort in this
+direction but a great deal more is needed and outside help will
+be required.
+The survey found that effective literacy rates among smallholders
+are higher than might be expected.    Around 75% can fully or
+partially read pesticide label text, and of those who were
+illiterate or experienced difficulty over 90% had a family member
+or other person who normally helped them read labels.
+2.3.4.1. Residues in Harvested Crops
+No specific data on the scale of this problem have been obtained.
+Considering that the standards of pesticide usage generally range
+from poor to very bad it may be expected that residues exceeding
+internationally-accepted tolerances occur on fresh produce.
+Growers pay little or no attention to the need to observe pre-
+harvest intervals'0 (PHI's) in the use of pesticides. However
+there is no reason to believe that pesticide residues on food
+crops pose a significant threat to public health generally.
+Growers producing crops for export to the USA, Europe etc. are
+well aware of the residue tolerances and take care that they are
+not exceeded. They realise that one scare will result in the
+loss of the market not only for that crop but for others too.
+2.3.4.2. Environmental Hazards
+There has in the past been a huge amount of pollution of the
+environment, including waterways, with persistent pesticides.
+Most of this can be avoided by following good practice with
+pesticides"o,"s.1',2a,1
+The massive usage of copper oxychloride fungicides in coffee has
+undoubtedly led to contamination of soil with copper. In 1989
+alone nearly 2.500 te ai were sprayed over a cumulative area of
+1.7 m ha. The removal of subsidies on the product by Fedecafe
+led to an immediate decline in use to some 300 te ai in 1990.
+While not in itself as serious an environmental threat as some
+other pesticides, copper has unlimited persistence and its use
+on such a massive scale as in the past is undesirable. It is
+
+
+﻿likely to stabilise at a more moderate level now that the modern,
+highly effective fungicides can compete in the marketplace.
+Perhaps 50% of all pesticides used in Colombia are applied by
+air. This causes two serious problems. First, there is not the
+slightest attempt to observe good practice in the avoidance of
+watercourses.   Second, there are very high concentrations of
+pesticides around airstrips, where the washings from aircraft
+spray tanks etc. are allowed to run straight into the nearest
+stream. A further matter for concern is the presence of dumps
+of old pesticide drums around such sites.
+Fortunately DDT is no longer used in Colombian agriculture, and
+the organochlorine camphechlor (Toxaphene) was finally banned in
+1988. Prior to that sales of camphechlor were running at around
+240 te ai per annum.
+2.3.4.3. Pesticide Poisonings
+There is no formal Poison Control Centre to handle cases of
+poisonings, including pesticide-related incidents. Poisonings
+are treated as part of the general acute medical emergency scene.
+As a result there are no official and reliable statistics on
+pesticide poisonings.
+However there is an important recent survey of poisoning cases
+in  Colombia   during  the  period   1989-199033.   Note  that
+"poisonings" does not mean deaths:   please refer to Glossary.
+The main findings of this survey were as follows:
+*    Of all poisonings from all causes during the period,
+40% were attempted suicides.    25% were accidental,
+very  largely caused by medicines.      Within this
+accidental grouping, occupational accidents accounted
+f or only 2%, being due to the mishandling or misuse of
+pesticides.
+*    The Clinica San Pedro Claver del ISS de Bogota
+recorded 1,412 poisonings during the first six months
+of 1990.    Of these 298, or just over 21%, were
+diagnosed as being due to pesticides (carbamate,
+organophosphate and pyretLroid insecticides).   This
+can be attributed to the fact that the large flower
+growing industry is centred in the region and all its
+workforce is registered with the ISS.
+*    The private Clinica de Toxicologia Ltda.in Bogota
+treated 209 poisoning cases during the ten-month
+period July 1989-April 1990.   Of these 7, or 3.4%,
+were due to pesticides within the above insecticide
+classes.
+*    The Centro Asesoramiento Toxicologico "Guillermo Uribe
+Cualla" provides a free telephone advisory service to
+hospitals and health centres nationally and to non-
+medical personnel. During the second half of 1989 it
+
+
+﻿advised in a total of 69 poisoning cases of which 11
+(just under 16%) were due to pesticides -- all
+insecticides.   Of these    8 were due to organo-
+phosphates  and   3  to  organochlorines/carbamates/
+pyrethroids.
+*    The   Servicio  de   Respuesta   Inmediaza  provides
+toxicological advice by telephone to affiliated
+pesticide manufacturers.  During the ten months July
+1989 to April 1990 it recorded 20 cases of pesticide
+poisonings, all due to insecticides:   12 cases from
+organophosphates, 7   from  carbamates  and  1 from
+pyrethroids.
+*    The Laboratorio de Toxicologia de Urgencias, Instituto
+de Medicina Legal, carries out analyses for all State
+hospitals, the Servicio Seccional de Salud de BogGta,
+and private clinics. During the first six months of
+1990 it carried out 942 analyses.   Of these 33, or
+3.5%, were for pesticides but only 11 proved positive.
+I.e.  the  diagnosis  of   pesticide  poisoning  was
+confirmed in only 33% of suspected pesticide cases,
+this being 1.16% of all referred cases.
+*    In the five years 1983-1988 the Hospital San Vicente
+de Paul in Medellin confirmed 9 deaths from paraquat
+poisoning.   Of these 8 were suicides.    The single
+accidental death was due to paraquat having been
+transferred to a nutritional drink bottle and consumed
+unintentionally.   None of the deaths was due to
+occupational exposure.
+*    The Hospital San Juan de Dios in Carmen de Viboral in
+the Departamento de Antioquia recorded 102 poisoning
+patients in a two and a half year period. Of these 65
+were  due to pesticides:      53 to organophosphate
+insecticides, 10 to carbamate insecticides.      The
+remaining two were due to intake of paraquat by mouth:
+1 attempted suicide and 1 accidental, not related to
+occupational exposure.
+*    In a 20 month period     the Centro de Informacion
+Toxicologica del Hospital Universitario del Valle
+recorded 149 cases of pesticide poisoning (28% of all
+cases). Of these only 1.8% were due to occupational
+exposure, the rest being due to accident or attempted
+suicide. By far the greatest proportion was due to
+organophosphate insecticides, alone or in mixture;
+none was due to paraquat.
+*    The Servicio Seccional de Salud de Antioquia recorded
+illness and death due to pesticides over the 12 year
+period up to 1982. The hospitals of the Departamento
+recorded  a   total  of   5,618  poisonings  due   to
+pesticides. These resulted in 660 deaths, 80% of them
+due to organophosphate insecticides.    Another main
+agent was a carbamate insecticide commonly used to
+control household pests, the principal cause being
+
+
+﻿attempted suicide. The most affected sections of the
+population are males between the ages of 15 and 59
+years, and those living in rural areas. The trend is
+erratic but shows a considerable reduction in recent
+years.
+From this survey there is no doubt at all that pesticide-
+associated poisonings occur at a level which must give rise to
+concern. However accidental poisonings serious enough to cause
+hospitalisation are a relatively infrequent occurrence and are
+not generally regarded as a serious public health issue.   For
+example the National Institute of Hygiene in Bogota do not regard
+it as a high priority matter in the context of other public
+health problems.
+The paraquat user survey30 found that some 10-20% of farmers
+reported ill effects from mixing or spraying paraquat. However
+in 80% of these cases the effects were minor (not serious enough
+to cause cessation of work) and only 12% visited a doctor. Three
+individual cases were hospitalised for on average two days, and
+all i-dividuals recovered.
+it should be said that the Coffee Federation (Fedecafe), and the
+Centro Internacional de Agricultura Tropical (CIAT) are very
+concerned about the threat to human health of pesticide use.
+CIAT have highlighted two incidents in three years with paraquat
+which they consider serious. However neither of these was fatal
+and indeed such reports tend to confirm that the overall problem,
+while definitely a matter for concern, is not as great as some
+would make out. Nevertheless much more attention should be paid
+to farmer training in the safe and effective use of pesticides
+and in the use of suitable protective clothing"a11,n,,n
+
+
+﻿2.3.4.4. Pesticide Resistance
+Insecticides
+Resistance has been most notable as a problem with the cotton
+bollworm Heliothis virescens.    Resistance to organophcsphate
+compounds had been present a long time, leading farmers to use
+"cocktails- of products such as the widely-used mixture DDT-
+methyl parathion-toxaphene.   The pyrethroid insecticides were
+first introduced in Colombia in 1977 and quickly achieved a wide
+and heavy usage. The pyrethroid manufacturers were well aware
+of the need to have sound pesticide management programmes to
+preserve the life of these important compounds but by 1985 it was
+clear that resistance was present in certain parts of the cotton
+area.   It spread and intensified rapidly and is now a major
+influence on pesticide selection by farmers.
+Dealing with this problem is very difficult, especially in a
+marketplace like Colombia, .ut industry and government bodies are
+working together to develop and implement a strategy for
+resistance management. Growers a.e well aware of the problem and
+its dangers and this has led to gradual recognition that
+management of cotton pests needs to be on a more integrated basis
+than just the use of pesticides.    In practice the problem is
+being solved passively: pyrethroids are now very little used on
+their own and their share of the market has declined
+considerably. Compourds such as thiodicarb (Larvin) and insect
+growth regulators such as chlorfluazurcn (Atabron) are increasing
+greatly in usage. Nevertheless, if further resistance develop-
+ment is Lo be prevented, and the risk of major crop losses
+avoided, then a sound pesticide management programme must be
+adopted in Colombia.
+Fungicides
+There is widespread resistance to the group of compounds which
+includes benomyl, carbendazim and thiophanate-m-ethyl among the
+following diseases:
+Venturia inaequalis      apple scab
+Cercospora spp.          leaf   spot  diseases   on  e.g.
+groundnuts
+Penicillium spF.         blue  and   green  moulds  which
+damage citrus etc. in store and
+where funicides are used as a
+post-harvest treatment
+In addition to the above group of comrpoands, thiabendazole is
+used extensively as a post-harvest treatment to prevent fruit rot
+and there are concerns about its continuing efficacy.
+
+
+﻿Herbicides
+There is no significant problem of herbicide resistance in
+Colombia.
+2.3.4.5. Use of Undesirable Pesticides
+On the lists of "Main PestLcides Used- there are no products that
+should be regarded as unacceptable to the Bank. However a minor
+product whichi falls into this category is the insecticide mirex,
+used mainly for control of ants (especially fire ants).
+There is one pesticide apparently registered in Colombia of which
+no trace can be found in the literature: xobetrinil. Unless
+this product can be identified the Bank should not allow its
+funds to be used for its procurement.
+2.3.4.6. Misuse & Mishandling of Pesticides
+While misuse and mishandling of pesticides are commonplace, the
+sie-ia:ion is not quite as bad as might be supposed, even among
+smallholders.   The paraquat handling survey" produced the
+following valuable information which shows that some of the most
+dangerous practices are rare or do not occur at all. There is
+of course no room for complacency in this area on anyone's part,
+and as noted earlier the survey highlighted the urgent need for
+more farmer training in the safe and effective use of pesticides.
+The survey found that 90% or more of smallholders recognise the
+risks from oral toxicity of paraquat. However the remainder were
+unaware.
+Many farmers wrongly believe the risks in spraying paraquat to
+be greater than the risks from handling concentrate.
+Nearly all mixing and spraying of paraquat is done by adult
+males. Male children under the age of 18 years were found to be
+used in less than 2% of cases. Use of wife or daughter was never
+recorded.
+Other than in the coffee sector, few smallholders measure out
+paraquat using calibrated containers.
+There ;ere no reports of the use of the hand/forearm to stir
+paraquat spray solution.    A stick, or the dilution process
+itself, was commonly used.
+Contamination of the hands, body and/or eyes occurs in 30-50% of
+smallhclders during product mixing. Up to about 20% of them take
+no action.
+
+
+﻿Gloves are eye protection are very rarely worn during mixing:
+from 3-19% (gloves) and 2-11% (goggles) according to the crop
+sector.
+Only 10-17% wash their hands after mixing and before starting to
+spray.  A sizeable minority of farmers undertake no cleanup
+activities if they stcp to eat, drink, smoke or urinate during
+spraying.   However   for the most part they wear adequate
+protective clothing for paraquat spraying. Most use general farm
+clothing, but many (42%) keep a special set of clothing, and some
+have two or even three. Most farmers wash and dry their clothes
+before re-use, although in coffee, maize and potatoes many do not
+do so.   Most change their clothes and wash completely before
+doing other work or recreational activity, amd only a small
+minority in each crop sector undertake no personal cleanup.
+Most smallholders own their own sprayers, except in rice. The
+sprayers are often quite old, e.g. up to 12 years among potato
+farmers, and 30-40% of them leak. Plastic bags and shaeting are
+commonly used to minimise contamination from this source.
+Some 20% of smallholders clear blocked spray nozzles by blowing
+through them.
+Most smallholders simply throw used pesticide containers away.
+Some, mainly in rice areas, resell them and many reuse them; for
+the most part this is not for the storage of food or drinking
+water though this does occur. The re-use of larger pesticide
+containers for such purposes as water transportation is
+commonplace.
+On the larger farms the containers purchased are the biggest, and
+therefore the cheapest, possible. These are then handled and the
+pouring, mixing etc. of the products is done by labourers with
+no formal training and virtually no protective clothing.
+The common practice to mark fields for aerial spraying, e.g. in
+cotton, is to use flagmen. Considering the highly toxic nature
+of some of the products used this is very dangerous and poisoning
+incidents among such labourers occur often.
+For good practice to prevent problems due to the misuse and
+mishandling of pesticides r-e references 10,11,15,18,19 & 32.
+
+
+﻿2.3.5- Conclusions on Pesticide Usage
+*    With  only  one  exception, pesticides    which  pose
+unacceptable risks to human health or the environment
+have now been banned.
+*    Pesticide poisonings due zo misuse or mishandling are
+known to occur among farmers and labourers.     While
+serious cases leading to hospitalisation or death are
+relatively rare the incidence is still far too high.
+*    The standards of pesticide usage range from poor to
+very bad, though farmer practice is on average better
+than might be feared. The most dangerous practices
+either do not occur at all or are extremely rare.
+*    Pesticide application generally is poor. This is true
+not only for farmers but also for aerial applicators.
+*    To overcome the problems of poisonings and poor effect
+of products there is a need for farmer training in the
+safe and effective use of pesticides.   This need is
+urgent and considerable resources will be required.
+Although training programmes run by the agrochemical
+industry, both for farmers and for aerial applicators,
+are excellent, outside support is needed to complement
+this effort.
+*    Residues on fresh produce occur because farmers ignore
+PHI 's.  However the most dangerous products have
+recently been restricted and it is unlikely that
+residues are a significant threat to public health.
+*    Environmental pollution has been very serious in the
+past and still continues, though with the banning of
+the worst compounds the problem is decreasing rapidly.
+*    Pesticide resistance is a serious problem, especially
+in cotton.
+
+
+﻿2.4. Pesticide Regulation
+2.4.1. The Existing System
+Pesticides are regulated under Decree No. 1843 of 1991 of the
+Ministry of Health.
+Pesticide registration is the responsibility of the Instituto
+Colombiana Agropecuario, ICA. On March 25 1992 ICA promulgated
+Resolution No. 992, in implementation of Decree No 1843.
+The resolution contains the following main provisions.
+Producers/Importers/Exporters
+Producers, importers and exporters of pesticides must be
+registered with ICA.   To gain registration they must produce
+various government certifications and information.   Producers
+must have a quality control laboratory, and requirements for the
+professional qualification of their management and technicians
+are set out. Company registration is for five years renewable
+for equal periods, but may be cancelled for non-compliance.
+Various obligations on producers and importers are set out, to
+ensure supervision of the industry and the quality of products,
+including packaging and labelling.   Naming and description of
+products is also covered to prevent confusion of end-users.
+Obligations on exporters are also set out, though these are
+brief.
+Licence for Sale
+All pesticides sold, produced or imported to Colombia must hold
+a Licence for Sale. To obtain this a registered company must
+provide information to ICA covering description of the product,
+efficacy data, residue data, toxicology data, analytical methods,
+information on breakdown in plants, soil and water among others.
+The toxicology data are used to obtain the "Toxicological
+Concept" of the product. The efficacy data, which must include
+trials in Colombia, are used to obtain the 'Efficacy Concept".
+A certificate of free sale in the country of origin is required,
+or failir], that a certificate of registration or free sale in
+other countries.
+Various other requirements are set out to ensure adequate control
+of Licences for Sale of pesticides.
+A licence for Sale is valid for five years, renewable for equal
+periods. It can be cancelled if it is judged the product poses
+a serious risk to human, plant or animal health or to the
+environment, or if it has not demonstrated its efficacy.
+
+
+﻿Distribution & Storage
+Pesticide distribution warehouses/stores must be registered with
+ICA. The certifications and other requirements to obtain such
+registration are set out, as are the obligations on the sellers.
+Experimental & Other Materials
+Importation of experimental materials and ingredients for
+pesticide production are covered.
+Registration
+The process of registration of a pesticide has three main steps:
+1.   Toxicological evaluation data for the product are
+submitted to the Ministry of Health, to obtain the
+Toxicological Concept.
+2.   Efficacy data from in-country field evaluation are
+submitted to ICA, to obtain the Efficacy Concept.
+3.   Once the Toxicological and Efficacy Concepts have been
+obtained, application is made to ICA for the Licence
+for Sale.
+Private Importation
+Private associations of growers, such as bananeros, flori-
+cultores, tabacaleros and others, are allowed under "Plan
+Vallejo" to import pesticides for their own use. They are not
+allowed to sell them. The main tonnage import by this means is
+mineral oil, but leaving that product out the total tonnage of
+imports under Plan Vallejo is under 4% of the country's annual
+usage.
+2.4.2. Restricted or Banned Products
+Certain pesticides or usages have in recent years been restricted
+or prohibited:
+*    DDT was banned in 1986.     The other organochlorine
+insecticides aldrin, heptachlor, dieldrin, chlordane
+and camphechlor were all banned in 1988.
+*    The insecticide chlordimeform was banned in 1988.
+*    The fungicide captafol was banned in 1989, dinoseb in
+1987 and tebuconazole in 1990.
+
+
+﻿*    Aerial application of the herbicide paraquat was
+banned in 1989.   The purpose of this is to prevent
+damage from herbicide drift.
+*    In 1991 the Licence to Sell WP and EC formulations of
+Lindane (gamma-HCH) was cancelled.    The purpose of
+this was to prevent smaliholder 1armers using these
+formulations illegally on the foliage of plants in
+liquid sprays, since use of gamma-HCH is restricted to
+soil  application  only.    The  granular  and  dust
+formulations remain licensed, as these cannot be used
+other than as soil appplications.
+*    In 1991 the uses of parathion products were restricted
+on the grounds that their high toxicity, high doses
+and frequent applications close to harvest posed a
+serious hazard to public and animal health and the
+environment; they were being used by non-technified
+farmers on a wide range of fruit and vegetable crops
+and  tobacco.    It was considered    that   suitable
+alternatives were available. Use of parathion-ethyl
+was restricted to cotton and pasture and that of
+parathion-methyl to cotton and technified rice.
+*    Products containing the insecticide fonofos were
+banned in 1992 on the grounds that they are extremely
+toxic and were being used in enclosed spaces in
+ornamental flower production.
+*    The  fungicide  binapacryl and   the  soil  fumigant
+dichloropropene have recently been banned.
+2.4.3. Issues Concerning Pesticide Regulation
+With the promulgation of Resolution No. 992 in 1992 Colombia
+finally has an excellent, all-embracing law to regulate
+pesticides. The Resolution has been drawn up with regard to the
+regional programme to harmonise pesticide regulations.      The
+essential thing is that the new Resolution should be implemented
+fully in practice.
+Most of the undesirable pesticides or usages have now been
+banned. There remains only one X-rated product, mirex, on the
+list of registered pesticides, and this should banned as soon as
+possible.
+
+
+﻿2.5. Pesticide Production
+The development of production sites within Colombia has
+significantly altered the position regarding trade in agro-
+chemicals.  As usual, however, conflicting figures are to be
+found.  Colombia has traditionally been a net importer but,
+according to one source, in 1990 exports rose to $47m, up 16% on
+1989, and for the first time exceeded imports at $41m, down 5%.
+Another source claims that the 1989 export figure was $90 m.
+These pesZicide exports go to over 24 countries around the world,
+including USA, Japan and West European countries.     In Latin
+America, Ecuador, Paraguay, Bolivia, Peru, El Salvador, Chile,
+Venezuela and Costa Rica import from Colombia. The main exporter
+is the American-based multinational DowElanco, which accounts for
+over one third of pesticide exports.
+The Colombian market is supplied by around 16 companies, of which
+four are Colombian-owned. The leading five companies (Hoechst,
+DowElanco, Ciba-Geigy, Proficol and Rohm & Haas) account for
+around half of the market. Proficol is the only Colombian-owned
+company in the above group;    the other three are small and
+together account for only 2% of the market.
+2.5.1. Producers' Association
+The Asociacion Nationale dei Industria (ANDI) is a very strong
+organisation and it has its own Agrochemicals Committee. This
+is composed of the top managers of all the main pesticide
+companies in Colombia, both local and multinational.       The
+Committee is thus able to take decisions and to take immediate
+action to enforce them.    This Committee does what it can to
+maintain high standards of pesticide manufacture and formulation
+in the country, and to raise the standards of transportation,
+storage, handling and use in the farming community.
+There are 14 companies involved in the manufacture or formulation
+of pesticides, and five of these are synthesising ai's. Another
+31 companies market finished products only.
+2.5.2. Manufacture of Active Ingredients
+This began in 1964 with synthesis of the fungicides maneb and
+mancozeb by Dupont and Rohm & Haas in Baranquilla. In 1973 these
+companies began synthesis of the herbicides diuron and propanil.
+It was only in 1985 that a Colombian company, Proficol, began
+synthesis of propanil.
+The following is a list of ai synthesis facilities and their
+products in Colombia.
+
+
+﻿Company        Ownership        Location         Main Products
+Rohm & Haas    Multinational    Baranquilla     mancozeb
+propani1
+Dupont        Multinational    Baranquilla    diuron, propanil
+mancozeb
+Proficol      Colombian        Bogota         propanil, 2,4-D,
+metham-sodium
+DowElanco     Multinational    Cartagena      2,4-D, cymoxanil
+Invequimica    Colombian        Medellin         2,4-D
+2.5.3. Problems with Manufacture of Active Ingredients
+Some 80% of the Colombian pesticide market is in the hands of
+multinational comianies who, generally speaking, operate to the
+highest standards . They are able to influence the operating
+standards of the entire market via the Agrochemicals Committee
+of ANDI. Thus the Colombian company Proficol is said to operate
+to the same standards as the multinationals.
+Overall it appears that there is nowadays no special cause Ior
+concern over the operation of ai manufacturing plants in
+Colombia.
+2.5.4. Formulation of Products
+This began in Colombia in 1963. Today, all ai's manufactured in
+Colombia are formulated locally, normally by the original
+manufacturer. There is also a certain amount of formulation of
+ai's which have been imported.
+There is also a system known as "La Maquila", whereby farmer
+associations or firms which do not have their own formulation
+facilities import ai's and contract to have them formulated.
+The installed formulation capacity of Colombia is estimated at
+34,800,000 kg of solid products aid 55,800,000 1 of liquids.
+Plant utilisation is believed to Ie around 60% of capacity.
+In all 13 companies are formulating their own or other
+manufacturers' products in Colombia. The following list includes
+the main ones additional to the ai manufacturers listed in
+Section 2.5.2:
+
+
+﻿Company        Ownership        Location         Main Products
+BASF           Multinational    Medellin         paraquat
+pyrethroid
+insecticides
+Rhone Poulenc  multinational    Bog-:ta          oxadiazon
+Proficol       Colombian        Bogota           glyphosate
+methamidophos
+and others
+Beosan        Colombian       Bogota          A wide range of
+products for
+othercompanies
+Bayer          Multinational    Baranquilla     Granules
+Invequimica    Colombian       Medellin        paraquat, 2,4-D
+and others
+DowElanco      Multinational    Cartagena
+Ciba-Geigy     Multinational    Cartagena        metalaxyl
+Hoechst        Multinational    Baranquilla     chlorfluazuron
+Cali             flutriafol
+Shell          Multinational    Baranquilla      DDVP
+paraquat
+ICI            Multinational    Medellin         brodifacoum
+2.5.5. Problems with Formulation of Products
+Pesticide formulation, like ai manufacture, is regulated by ICA.
+Their standards differ in some respects from those operated by
+GIFAPu,22 but they are not necessarily lower and in some cases
+they are more restrictive.
+One problem area has been pesticide packaging3. The local
+packaging industry has not kept up with new developments and this
+has led to difficulties with the production of modern pesticide
+containers and anti-tamper devices such as seals. In some cases
+this has led companies to sell their products in containers
+recognised to be unsatisfactory, e.g. paraquat in glass bottles.
+However, like many other sectors in Colombia, matters are
+improving and a new plant is being installed in 1992 to make PET
+(polyethylene tetraphthalate) bottles. PET is one of the major
+modern systems of pesticide packaging.
+
+
+﻿Up until the recent past (in some cases the very recent past)
+waste management in many formulation plants has been well below
+acceptable standards'-.   In the worst cases, which were not
+uncommon, waste disposal systems consisted of pipes to the river
+or holes in the ground.      This situation has been largely
+rectified and most formulation plants now have proper waste
+management facilities of incineration and effluent treatment.
+However it is rumoured that some of the Colombian-owned
+formulators (not Prof icol) are still operating well below modern
+international standards and this is an area which would repay
+closer inspection to ensure compliance.
+2.5.6. Adulteration and False Labelling
+These practices are always present to some extent and from time
+to time there is an "outbreak" involving the products of
+multinational companies, who take what action they can to stop
+them.
+The problem is aggravated by the fact that the border with
+Venezuela is very open and many Venezuelan products come in to
+Colombia.   People sell pesticides on the black market as
+Venezualan product when in fact it is adulterated Colombian
+material. Venezuelan product has also been found to have been
+adulterated: there was a recent case of a pyrethroid insecticide
+havinq been reduced from 5% to 4% ai.
+The largely illiterate and unsophisticated small-scale peasant
+farmers are a particular prey to this activity. The same thing
+applies to the large number of cocanistas buying pesticides,
+though whether their deception in this regard is a good or a bad
+thing is arguable.
+
+
+﻿2.6. Distribution, Transportation & Storage of Pesticides
+The national growers' associations provide a distribution service
+for each of their particular crops. The associations include
+Fedecafe (coffee), Federalgodon (cotton) and Fedearroz (rice).
+The multinational pesticide companies do a good jcb of
+transporting   their   products   from   their   premises   to
+distributors,". However from distributor level downwards and in
+the shops the level of practice is often bad. For example it is
+not uncommon to find highly toxic pesticides being transported,
+stored and offered for sale next to foodstuffs. Naturally the
+multinationals do what they can to ensure that their products are
+transported, handled and stored as safely as possble but they
+cannot control the further ends of the distribution chain8.
+Storage of pesticides on farms is in general reasonable.
+Pesticides are a tradeable commodity and consequently, for sake
+of their value not for safety reasons, larger farms tend to keep
+them in lockable stores.
+Most smallholders buy the smallest bottles available, e.g. 100-
+250 ml bottles of insecticide, and thus do not store large
+quantities;   this is fortunate because many such farmers have
+little idea of safe storage conditions.   Furthermore they buy
+pesticides as needed and do not keep stock. Among those that do,
+especially in the coffee and potato sectors, quite a high
+proportion store pesticides in an outside shed or store which is
+locked.
+
+
+﻿2.7. Crop/Pest/Pesticide Analysis
+For the meaning of the symbols "!" and -X" see Section 3.3.3.
+Dollar values are at first distributor buying level, i.e. ex-
+manufacturer price for local production, CIF for imports.
+2.7.1. Potatoes
+Area fluctuates, about 115,000 ha.
+A wide range of cultivars is grown, and the yield varies greatly
+according to the cultivar. However, figures of 14-15 te/ha are
+quoted.
+1990 value all pesticides $25.7m.
+Potato Insecticides
+Foliar feeding insects affect the whole area.   110,000 ha are
+treated with 4-5 spray rounds.
+"White grub", Premnotrypes vorax, is treated on 110,000 ha with
+2 applications. Other soil insects are treated on around 32,000
+ha with I application.
+1990 value $10.7m.
+Main Insect Pests                 Insecticides Used
+Myzus persicae                         chlorpyrifos
+Thrips tabaci                          cyfluthrin
+Liriowyza spp.                         cypermethrin
+deltamethrin
+Epitrix spp.                           diazinon
+dimethoate
+! fenitrothion
+lamdacyhalothrin
+! methamidophos
+I methomyl
+! monocrotophos
+! parathion-ethyl
+! parathion-methyl
+phosphamidon
+profenofos
+trichlorfon
+Agrotis spp.                           chlorpyrifos
+Ancognatha scarabaeioides            I gamma-HCH
+trichlorfon
+Premnotrypes vorax                   ! aldicarb
+! carbofuran
+! phorate
+
+
+﻿Main products and formulations:
+ai             Main Formulation     te ai Cum. Area (ha)
+! methamidophos           Monitor 60 EC     103      140,000
+! carbofuran              Furadan 33 SC     117       124,000
+dimethoate             Systemin 40 EC      36        89,000
+! methomyl                Lannate 90 SP      18       80,000
+deltamethrin             Decis 2.5 EC       0.54     67,000
+! parathion-methyl        various 48 EC      31       66,000
+! parathion-ethyl         various 48 EC      29       40,000
+profenofos             Curacron 50 EC      23        36,000
+Potato Fungicides
+Bacterial and fungal diseases affect the whole area. Most of it
+is treated, up to 14 times.
+1990 value $15m.
+Main Diseases                    Pesticides Used
+Phytophthora infestans             benomy1
+Alternaria solani                  copper
+copper oxychloride
+cymoxanil
+fentin hydroxide
+ferric ferrous cyanide
+mancozeb
+maneb
+meta.laxyl
+propineb
+Puccinia pitteriana                copper oxychloride
+oxycarboxin
+propiconazole
+continued....
+
+
+﻿Main products and formulations:
+ai              Main Formulation    te ai Cum. Area (ha)
+mancozeb            Manzate 200 80 WP     2,799    1,166,000
+maneb              Dithane M-22 80 WP       657      274,000
+fentin hydroxide      Brestanid 50 SC       31      123,000
+cymoxanil +           Curzate M 72 WP       96       67,000
+mancozeb
+copper oxychloride      various 40 WP        57       57,000
+Potato Herbicides
+Weeds affect around 60,000 ha.   Most of this is treatable but
+only some 10,000 ha are treated, with on average 1.5
+applications.
+1990 value around $0.25m.
+Main Weeds                     Herbicides Used
+Brachiaria spp.                         linuron
+Digitaria spp.                         metribuzin
+Echinochloa crus-galli                 paraquat
+Panicum spp.                            prometryn
+Setaria spp.
+Ama-ranthus spp.
+Brassica spp.
+Chenopodi um spp.
+Galium aparine
+Portulaca oleracea
+Raphanus spp.
+Main products and formulations:
+ai              Main Formulation    te ai Cum. Area (ha)
+prometryn              Gesagard 50 FL      6.3      5,000
+paraquat              Gramoxone 20 SL      1.0      5,000
+linuron                  Afalon 47 WP      2.4      2,500
+metribuzin               Sencor 35 WP      1.7      2,500
+
+
+﻿2.7.2. Various Vegetables
+Area about 110,000 ha, including tomatoes.
+On the wide range of vegetable crops there is a very wide range
+of pests, and the individual species are therefore not listed
+here.
+1990 value all pesticides $10.5m.
+Vegetable Insecticides
+1990 value $4.1m.
+Insecticides Used
+abamectin                           lamdacyhalothrin
+Bacillus thuringiensis             ! malathion
+! carbaryl                          ! methamidophos
+! carbofuran                        ! methomvl
+chlorpyrifos                       ! monocrotophos
+cyfluthrin                         ! parathion-ethyl
+cypermethrin                       ! parathion-methyl
+deltamethrin                         phosalone
+diazinon                           ! phospnamidon
+diflubenzuron                        phoxim
+dimethoate                           profenofos
+endosulfan                           thiocyclam.
+fluvalinate                         thiometon
+! gamma-HCH                           trichlorfon
+Main products and formulations:
+ai             Main Formulation     te ai Cum. Area (ha)
+! methamidophos           1amaron 60 EC      38        --
+dimethoate              various 40 EC      23         --
+! malathion               various 60 EC      20         --
+! carbaryl                  Sevin 80 WP      20         --
+trichlorfon             various 80 SP      19
+parathion-methyl        various 48 EC      16         --
+carbofuran              Furadan 33 SC      11         --
+profenofos             Curacron 50 EC      10         --
+! methomyl               various EC, SP       8         --
+! gamma-HCH                   various D       7         --
+
+
+﻿Vegetable Fungicides
+1990 value S5m.
+Pungicides Used
+benomyl                          fentin hydroxide
+bitertanol                       mancozeb
+carbendazim                      metalaxyl
+chlorothalonil                   oxycarboxin
+copper hydroxide                 propamocarb
+copper oxychloride               propineb
+cymoxanil                        sulphur
+dichlof luanid                    thiophenate-methyl
+Main products and formulations:
+ai             Main Formulation     te ai Cum. Area (ha)
+mancozeb            Manzate 200 80 WP      672
+propineb               Antracol 70 WP       56       --
+Vegetable Herbicides
+1990 value $1.4m.
+Herbicides Used
+diuron                               metribuzin
+fluazifop-p-butyl                    oxyfluorfen
+glyphosate                           paraquat
+linuron                              prometryn
+Main products and formulations:
+ai             Main Formulation     te ai Cum. Area (ha)
+paraquat              Gramoxone 20 SL      34         --
+glyphosate              Roundup 36 SL      12         --
+Vegetable Seed Dressings
+The main proauct used is Vitavax 300 40 WP (captan + carboxin)
+to a value of some $50,000 per annum.
+
+
+﻿2.7.3. Maize
+Area around 700,000 ha, including 80,000 ha of commercially grown
+maize. Yield on smallholdings about 1.4 te/ha;    yield on the
+commercially grown maize 2.8 te/ha.
+There is no significant usage of fungicides in maize.
+1990 value all pesticides $3.fm.
+Maize Insecticides
+Insects affect 44,000 ha of the commercially grown maize, which
+is treated on average once.
+1990 value $450,000.
+Main Insect Pests                 Insecticides Used
+Spodoptera spp.                     chlorpyrifos
+Agrotis ipsilon
+Spodoptera spp.                     acephate
+Mocis spp.                        ! carbaryl
+Heliothis zea                       chlorpyrifos
+Diatraea spp.                     ! methomyl
+Epitrix spp.                      I monocrotophos
+triazophos
+trichlorfon
+Main products and formulations:
+ai              Main Formulation    te ai Cum. Area (ha)
+methomyl               Nudrin 21.6 EC      4.5      17,000
+chlorpyrifos +     Hostathion 38.4 EC      3.5       9,000
+triazophos
+chlorpyrifos            Lorsban 48 EC      3.6       6,000
+
+
+﻿Maize Weeds
+Weeds affect all 80,000 ha of the commercially grown maize. All
+treatable, ali treated with on average about 2 applications.
+1990 value $1.3m.
+Main Weeds                     Herbicides Used
+Brachiaria spp.                        2,4-D
+Cynodon dactylon                     ! atrazine
+Cyperus spp.                          dichlormid
+Digitaria spp.                         EPTC
+Eleusine indica                      ! paraquat
+Paspalum spp.                          pendimethalin
+Rottboellia exaltata
+Setaria geniculata
+Sorghum halepense
+Amaranthus spp.
+Ipomoea spp.
+Portulaca oleracea
+Raphanus sativus
+Solanum nigrum
+Main products and formulations:
+ai             Main Formulation     te ai Cum. Area (hal
+2,4-D                     Ankil 40 EC      40       90,000
+! atrazine          various EC, FL, WP       73      46,000
+! paraquat             Graimoxone 20 SL      11      27,000
+Maize Seed Dressings
+Around 1,500 te of maize seed seed treated annually. The range
+of diseases is the same as that for wheat and barley (see Section
+2.7.6) with the addition of Rhyncosporium spp.).
+1990 value $17,000.
+The product used is captan + carboxin (Vitavax 300 40 WP): 0.9
+te ai.
+
+
+﻿2.7.4. Rice
+Area 350,000 ha. Yields have risen steadiy to around 4.9 te/ha.
+1990 value all pesticides $60m.
+Rice Insecticides
+Insects affect all 350,000 ha. Most of it is treatable and most
+is treated with 3-4 applications.
+1990 value $1Lm.
+Main Insect Pests                 Insecticides Used
+Agrotis ipsilon                       acephate
+Eutheola bidentata                   ! carbofuran
+Gryllotalpa hexadactyla               chlorpyrifos
+Spodoptera frugiperda                 cypermethrin
+diazinon
+fenvalerate
+! gamma-HCH
+lamdacyhalothrin
+! parathion-methyl
+triazophos
+trichlorfon
+Sogatodes oryzicola                  ! carberyl
+Blissus leucopterus                  ! dicrotophos
+dimethoate
+! monocrotophos
+! phosphamidon
+thiometon
+triclorfon
+Spodoptera frugiperda                 acephate
+Hydrellia griseola                   ! carbofuran
+Diatraea spp.                          chlorpyrifos
+cyfluthrin
+cypermethrin
+deltamethrin
+! dicrotophos
+diflubenzuron
+fenthion
+fenvalerate
+lamdacyhalothrin
+! methamidophos
+! methomyl
+! monocrotophos
+triflumuron
+triazophos
+In addition to the above pests the rice water weevil, Lissor-
+rhoptrus oryzophilus, occurs in some areas. There is very little
+usage of insecticides in its control, which is done by raising
+water levels.
+
+
+﻿Main products and formulations:
+ai             Main Formulation     te ai Cum. Area (ha)
+! monocrotophos          various 60 EC     192        320,000
+chlorpyrifos           Lorsban 48 EC      87        162,000
+cypermethrin               various EC      8.4       117,000
+dimethoate              various 40 EC      66        111,000
+! phosphamidon        Dimecron 96.5 EC      48         71,000
+! carbofuran             various G, SC      41         64,000
+! parathion-     Metil Parathion 48 EC      25         50,000
+methyl
+! methomyl              Methavim 90 SP      10.3       43,000
+! gamma-HCH                  various D      15.7       31,000
+
+
+﻿Rice Fungicides
+Fungal and bacterial diseases affect the whole 350,000 ha and it
+is all treatable. The number of applications varies with the
+disease problem but all the rice is treated several times.
+1990 value ci2m.
+Main Diseases                   Pesticides Used
+Pyricularia oryzae                  benomyl
+! blasticidin-S
+diniconazole
+edifenphos
+fthalide
+iprobenfos
+isoprothiolane
+I kasugamycin
+mancozeb
+phosdiphen
+prochloraz
+pyroquilon
+tricyclazole
+Rhizoctonia solani                  carbendazim
+propineb
+thiabendazole
+I validamycin
+Cercospora oryzae                   benomyl
+Helmin thospori um oryzae           carbendazim
+Rhynchosporium spp.                 diclofluanid
+fentin hydroxide
+iprodione
+mancozeb
+propicona zole
+.thiophanate-methyl
+triadimefon
+Note:     Importation of the "X-rated* fungicide captafol was
+banned in 1989.   In 1990 it was being used up from
+stock and when this is finished its use will cease.
+The 1990 usage was 16 te ai over 13,000 ha.
+continued... .
+
+
+﻿Main products and formulations:
+ai              Main Formulation    te ai Cum. Area (ha)
+mancozeb               various WP, FL     724      380,000
+tricyclazole                Bio 75 WP     24      128,000
+carbendazim            various WP, SC      32      124,000
+edifenphos              Hinosan 50 EC      77      103,000
+benomy!                 Benlate 50 WP      11       70,000
+iprobenfos              Kitazin 48 EC      49       69,000
+validamycin            Validacin 3 LS       2       35,000
+Rice Herbicides
+Weeds affect the whole rice area; all treatable, all treated.
+Each hectare receives on average nearly 2.5 appplications.
+1990 value $37m.
+Main Weeds                     Herbicides Used
+Echinochloa spp.                     2,4-D
+Eleusine indica                      bentazone
+Leptochloa spp.                      bifenox
+Panicum spp.                         butachlor
+Cyperus spp.                         dimethametryn
+fenoxaprop-ethyl
+Aneilema nadiflorum                 flurecol-butyl
+Cassia tora                          glyphosate
+Desmodium tortuosum                ! haloxyfop-
+Euphorbia spp.                             ethoxyethyl
+Ipomoea sPP.                         ioxynil
+Mimosa pudi ca                       linuron
+MCPA
+metsulfuron-methyl
+molinate
+MSMA
+oxadiazon
+oxyfluorfen
+I paraquat
+pendimethalin
+picloram
+piperophos
+propanil
+quinclorac
+quizalofop-ethyl
+thiobencarb
+trifluralin
+continued....
+
+
+﻿Main products and formulations:
+ai              Main Formulation     te ai Cum. Area (hal
+propanil                    various EC     1,082      283,000
+2,4-D                       various EC        99      256,000
+2,4-D + ioxynil           Actril 70 DS        54      185,000
+butachlor                Machete 60 EC       377      177,000
+oxadiazon                Ronstar 40 FL       107      120,000
+fenoxaprop-ethyl          Furore 12 EC        14      100,000
+pendimethalin              Prowl 33 EC       126       94,000
+paraquat               Gramoxone 20 SL        60       75,000
+bentazone               Basagran 48 EC        69       72,000
+glyphosate             Roundup 35.9 SL        98       68,000
+metsulfuron-methyl          Ally 60 DF         0.54    60,000
+
+
+﻿2.7.5. Sorghum
+Area around 200,000 ha.   Average yields have been gradually
+increasing, from 2.5 te/ha in 1985 to 2.9 te/ha in 1990.
+1990 value all pesticides S11m.
+Sorghum Insecticides
+Soil insects affect about 150,000 ha;   100,000 ha of this is
+treatable but only 9,000 ha are treated, with one application.
+Foliage and seed-head pests affect the whole area;    most is
+treatable and al1 this treatable area receives on average 2.5
+applications.
+Sucking pests (aphids) affect only about 70,000 ha. Some 50,000
+ha of this is treatable and 30,000 ha are treated, once.
+1990 value about $5m.
+Main Insect Pests                Insecticides Used
+Spodoptera spp.                       chlorpyrifos
+Agrotis ipsilon                     ! gamma-HCH
+! mephosfolan
+trichlorfon
+Spodoptera spp.                      acephate
+Contarinia sorghicola               ! carbaryl
+Heliothis zea                         chlorpyrifos
+cypermethrin
+diazinon
+diflubenzuron
+dimethoate
+deltamethrin
+fenvalerate
+lamdacyhalothrin
+! methamidophos
+! methomyl
+! monocrotophos
+! parathion-ethyl
+profenofos
+thiodicarb
+triazophos
+trichlorfon
+triflumuron
+Aphids                                dimethoate
+! monocrotophos
+continued....
+
+
+﻿Sorghum Herbicides
+Weeds affect the whole area; all treatable, all treated with at
+least one application (the average is 1.6 applications).
+1990 value $5m.
+Main Weeds                     Herbicides Used
+Brachiaria spp.                       2,4-D
+Cyperus rotundus                    ! atrazine
+Cynodon dactylon                     metolachlor
+Digitaria spp.                      ! paraquat
+Echinochloa colonum                 pendimethalin
+Eleusine indica
+Paspal um spp.
+Amaranthus spp.
+Ipomoea spp.
+Portulaca oleracea
+Main products and formulations:
+ai             Main Formulation     te ai Cum. Area (ha)
+atrazine               various WP, FL      340       212,000
+metolachlor                Dual 96 EC      125        65,000
+pendimethalin             Prowl 33 EC       30        26,000
+Sorghum Seed Treatments
+Around 4,500 of sorghum seed are treated annually. The range of
+diseases is the same as that for wheat and barley (see Section
+2.7.6) with the addition of Rhyncosporium spp.).
+1990 value $17,000.
+The product used is captan + carboxin as Vitavax 300 40 WP: 2.7
+te ai.
+
+
+﻿Main products and formulations:
+ai              Main Formulation    te ai Cum. Area (ha)
+methomyl               various EC, SP      51       197,000
+chlorpyrifos            Lorstan 48 EC      94       156,000
+dimethoate              various 40 EC      13        32,000
+monocrotophos           various 60 EC      18        30,000
+Sorghum Fungicides
+Diseases affect 110,000 ha. All of this is treatable but only
+about 70,000 ha are treated, with just under 2 applications on
+average.
+1990 value $1.5-.
+Main Diseases                    Pesticides Used
+Colletotrichum spp.                   benomyl
+Gloeocercospora spp.                X captafol
+Puccinia spp.                         carbendazim.
+mancozeb
+propineb
+thiabendazole
+triadimefon
+Main products and formulations:
+ai              Main Formulation    te ai Cum. Area (ha)
+mancozeb                various 80 WP       92       46,000
+carbendazim         various 50 WP, SC       10       40,000
+thiabendazole           Mertect 60 WP        5       30,000
+
+
+﻿2.7.6. Cereals
+This category includes:
+Wheat area 40,000 ha; yield 1.7-1.9 te/ha.
+Barley area 40-50,000 ha; yield around 1.9 te/ha.
+1990 value all pesticides $1.6m.
+Cereal Insecticides
+Aphids (Myzus spp.) affect about half the cereal area.    Some
+30,000 ha area treatable, 18,000 ha treated with one application,
+though a small proportion may be treated twice.
+1990 value $222,000.
+The main insecticides used are dimethoate 40 EC and ! metham-
+idophos 60 EC, with a small amount of ! phosphamidon 96.5 EC.
+Cereal Fungicides
+Fungal diseases affect 60,000 ha;    42,005 ha treatable, all
+treated.
+1990 value $786,000.
+Main Diseases                    Fungicides Used
+Puccinia recondita                     flusilazol
+Puccinia striiformis                  mancozeb
+Puccinia hordei                        propiconazole
+Rhynchosporium spp.                    triadimefon
+Main products and formulations:
+ai             Main Formulation     te ai Cam. Area (hal
+mancozeb           Dithane M-45 80 WP     66         41,000
+propiconazole              Tilt 25 EC      1.8       14,000
+
+
+﻿Cereal Herbicides
+Weeds affect virtually the whole area of both wheat and barley
+and it is all treatable.    However only about 29,000 ha are
+treated at all;   most of this receives just one application,
+though a small proportion is treated twice.
+1990 value $604,000.
+Main Weeds                     Herbicides Used
+Various grasses                        2,4-D
+dicamba
+plus:                           diclofop-methyl
+metribuzin
+Solanum torvum                        pendimethalin
+Raphanus raphanistrum
+Brassica spp.
+Chenopodiun paniculatum
+Galinsoga ciliata
+Main products and formulations:
+ai             Main Formulation     te ai Cum. Area (ha)
+2,4-D                   various 48 EC    15          21,000
+metribuzin               Sencor 35 WP      1.4        7,000
+Cereal Seed Dressings
+About 1,300 te of wheat and 1,000 te of barley are treated with
+seed dressings against bacterial and fungal diseases.
+1990 value $25,000.
+Main Diseases                    Pesticides Used
+Helminthosporium spp.                     captan
+Puccinia spp.                           carboxin
+Rhizoctonia spp.
+Tilletia spp.
+Ustilago spp.
+The product used is a mixture of captan + carboxin (Vitavax 300
+40 WP): 1.4 te ai.
+
+
+﻿Cereal Storage Insecticides
+Harvested cereals are protected from insect attack with
+insecticides.
+1990 value $800,000.
+Main Insect Pests                 Insecticides Used
+Araecerus fasciculatus              ! aluminium phosphide
+Cryptolestes ferrugineus           ! dichlorvos
+Oryzaephilus surinamensis            pirimiphos-methyl
+Plodia interpunctella                pyrethrum
+Rhizopertha dominica
+Sitophilus oryzae
+Sitophilus granarius
+Sitotroga cerealella
+Tribolium confusum
+The products and formulations used are:
+ai                      Main Formulation
+! aluminium phosphide        Phostoxin 57.3 T
+pyrethrum                     Pibutrin 600 D
+! dichlorvos                       Nogos 50 EC
+pirimiphos-methyl             Actellic 50 EC
+
+
+﻿2.7.7. Bananas
+Area 25,000 ha. Yield around 45 te/ha.
+1990 value all pesticides $10m.
+There is no significant usage of insecticides.
+Banana Nematicides
+Nematodes (eelworms) affect 5,000 ha. All treatable, around
+1,300 ha treated, with 1 application.
+1990 value around $220,000.
+Main Nematode Pests                Nematicides Used
+Radopholus similis                   ! aldicarb
+Pratylenchus sp.                     ! carbofuran
+Heloidogyne spp.
+Helicotylenchus sp.                  ! ethoprofos
+The main product used is aldicarb as Temik 15 G: 3 te at over
+1,000 ha.
+Banana Fungicides
+Fungal diseases affect the whole area;     all treatable, all
+treated, with about 20 applications.
+By far the most important disease is Sigatoka, caused by
+Mycospbaerella spp.
+1990 value $7.3m. This figure excludes the value of products
+imported directly by the banana companies and which do not
+therefore enter the domestic Colombian pesticide market.
+Main Diseases                    Fungicides Used
+Cercospora musae                       benomyl
+Mycosphaerella fijiensis               chlorothalonil
+Mycosphaerella musicola                mancozeb
+var. diff or-mis             mineral oil
+propiconazole
+thiabendazole
+thiophanate-methyl
+tridemorph
+continued....
+
+
+﻿Main products and formulations:
+ai              Main Formulation    te ai Cum. Area (haI
+mancozeb                various FL, WP        754     387,000
+mineral oil                     80 Oil      1,248     208,000
+propiconazole               Tilt 25 EC         18     176,000
+benomvl             Benlate 50 FL & WP         22     158,000
+tridemorph               Calixin 75 EC        64     143,000
+chlorothalonil             Bravo 50 FL       100      57,000
+Banana Herbicides
+Weeds affect the whole area; all treatable, all treated, with
+5-6 applications.
+1990 value $3m.
+Main Weeds                      Herbicides Used
+Digitaria sanguinalis                    ametryn
+Eleusine indica                          diuron
+Echinochloa crus-g3lli                   glyphosate
+Paspalu fasciculatum                   ! paraquat
+Setaria geniculata
+Bidens pilosa
+Commelina diffusa
+Ipomoea hirta
+Portulaca oleracea
+Scleria pterota
+Sida acuta
+Main products and formulations:
+ai              Main Formulation     te ai Cum. Area (ha)
+paraquat              Gramoxone 20 SL        48       120,000
+glyphosate            Roundup 35.9 SL        34        27,000
+
+
+﻿2.7.8. Various Fruit Crops
+There are nearly 50,000 ha of fruits such as grapes, citrus,
+mangoes, guavas, avocados etc.
+1990 value all pesticides $1.8m.
+Fruit Insecticides
+Various insect pests affect around 34,000 ha.
+1990 value $689,000.
+Insecticides Used
+! carbaryl
+diazinon
+! malathion
+! methomyl
+mineral oil
+phosalone
+Pruit Fungicides
+Various diseases affect around 20,000 ha.
+1990 value $400,000
+Fungicides Used
+benomyl
+carbendazim
+copper oxychloride
+fosetyl-aluminium
+mancozeb
+metalaxyl
+thiophanate-methyl
+Fruit Herbicides
+Weeds affect most of the area: around 40,000 ha.
+1990 value $690,000.
+Herbicides Used
+ametryn
+bromacil
+diuron
+glufosinate-ammonium
+glyphosate
+paraquat
+
+
+﻿2-7.9. Coffee
+Area around 1. lm ha.  Yield 0.7-0.8 te/ha.
+1990 value all pesticides S6.6m.
+Coffee Nematicides & Insecticides
+Nematodes (Meloidogyne spp.) affect a small proportion of the
+area and are treated on only about 1,000 ha.
+Leaf cutting ants (Atta spp.) are treated on 11,000 ha and other
+insects on about 20,000 ha.
+1990 value $m.
+Main Pests                      Pesticides Used
+Meloidogyne incognita                ! carbofuran
+Meloidogyne javanica
+Atta spp.                             ! carbaryl
+chlorpyrifos
+phoxim
+Leucoptera coffeella                  ! dicrotophos
+dimethoate
+! disulfoton
+fenthion
+! phosphamidon
+Main products and formulations:
+ai              Main Formulation     te ai Cum. Area (ha)
+dimethoate              various 40 EC       7.8       13,000
+chlorpyrifos            Lorsban 2.5 D      10         10,000
+phosphamidon         Dimecron 96.5 EC       4.6        6,000
+
+
+﻿Coffee Fungicides
+Rust disease, Hemileia vastatrix, affects 630,000 ha;  550,000
+treatable, 510,000 treated, mostly with 2-3 applications.
+Coffee berry disease, Cercospora coffeicola, affects 100,000 ha;
+all treatable, 70,000 ha tzeated, with nearly 2 applications on
+average.
+1990 value $1.4m.
+Main Diseases                    Fungicides Used
+Hemileia vastatrix                  copper hydroxide
+copper oxychloride
+propiconazole
+triadimefon
+Cercospora coffeicola               benomyl
+carbendazim
+dichlofluanid
+mancozeb
+Main products and formulations:
+ai             Main Formulation     te ai Cum. Area (ha)
+copper oxychloride         various WP    2,283      1,522,000
+mancozeb                various 80 WP       112        70,000
+benomyl                 Benlate 50 WP         5        32,000
+carbendazim             Derosal 50 WP         4        26,000
+Note: Copper oxychloride was formerly supplied free of charge
+to growers by the Coffee Federation. This subsidy has now been
+withdrawn and a survey has shown that 86% of coffee growers use
+less as a result; 8% claimed to use more and 6% said they used
+about the same. This diminution has significant implications for
+environmental contamination (see Section 2.3.4.2).
+
+
+﻿Coffee Herbicides
+Weeds affect 600,000 ha; 450,000 treatable, only 75,000 treated,
+with a little over I application on average.
+1990 value $4m.
+Main Weeds                     Herbicides Used
+Digitaria sanguinalis                   diuron
+Cyperus rotundus                        glyphosate
+Echinochloa crus-galli                  oxyfluorfen
+Paspalum fasciculatum                 ! paraquat
+Setaria geniculata
+Main products and formulations:
+ai              Main Formulation    te ai Cum. Area (ha)
+glyphosate            Roundup 35.9 SL      80       50,000
+paraquat              Gramoxone 20 SL      28       35,000
+diuron                   Karmex 80 WP       14       9,000
+oxyfluorfen                Goal 24 EC        3       8,000
+diuron + paraquat      Gramocil 30 EC        5       5,000
+
+
+﻿2.7.10. Oil Palm
+The area has been increasing in recent years, to around 105,000
+ha. Yields have also risen, to a little over 3 te/ha.
+1990 value all pesticides $1.4m.
+There is no significant usage of fungicides in oil palm.
+Oil Palm Insecticides
+Insects affect 60,000 ha and it is all treatable. Broad spectrum
+insecticides are generally applied as spot tzeatments or through
+injection to the roots and consequently the treated area cannot
+be calculated accurately, but about half the affected area is
+treated.
+1990 value $418,000.
+Main Insect Pests                 Insecticides Used
+Leptopharsa gibbicarina             Bacillus thuringiensis
+diflubenzuron
+! monocrotophos
+triflumuron
+Rhyncophorus palmarum               Bacillus thuringiensis
+! methomyl
+trichlorfon
+Main products and formulations:
+ai              Main Formulation    te ai Cum. Area (ha)
+monocrotophos           various 60 EC      15        N/A
+trichlorfon            Dipterex 80 SP       3        N/A
+Bacillus thuringiensis        various       ?       9,000
+
+
+﻿Oil Palm Herbicides
+Weeds affect the whole area; all treatable, about half treated,
+with on average 1.5 applications.
+1990 value $lm.
+Main Weeds                     Herbicides Used
+Brachiaria decumbens                 ametryn
+Cyperus rotundus                     diuron
+Panicum maximum                      glyphosate
+Paspalum fasciculatum               ! haloxyfop-methyl
+Rottboellia exaltata                 MSMA
+Sorghum halepense                    oxyfluorfen
+paraquat
+Main products and formulations:
+ai              Main Formulation    te ai Cum. Area (ha)
+paraquat              Gramoxone 20 SL      14       18,000
+glyphosate            Roundup 35.9 SL      15       14,000
+diuron                   Karmex 80 WP      24        7,400
+
+
+﻿2.7.11. Cotton
+The productivity and profitability of the cotton crop are rather
+variable, being influenced by problems in controlling pests.
+Area up to about 240,000 though it can be 15-25,000 ha less than
+ttis in some years. Yield 1.5-1.8 te seed cotton per hectre.
+There is no usage of foliar fungicides in cotton.
+1990 value all pesticides $43m.
+Cotton Insecticides
+Insects and mites affect the whole area;    all treatable, all
+treated, with an average 15 applications.
+The most serious pests are the boll weevil Anthonomus grandis,
+which spread into Colombia in 1946, and the bollworm Heliothis
+virescens, which has developed resistance to the pyrethroid
+insecticides (see Section 2.3.4.4). An average 3.3 applications
+are made against Heliothis alone.
+1990 value $33m.
+Main Insect & Mite Pests              Pesticides Used
+Agrotis ipsilon                     acephate
+Fel tia subterranea               ! carbofuran
+Gryllotalpa hexadactyla             chlorpyrifos
+Spodoptera frugiperda             ! ganma-HCH
+trichlorfon
+Tetranychus spp.                   abamectin
+Mononychellus planki                propargite
+tetradifon
+Aphis gossypii                      dimethoate
+! monocrotophos
+! phosphamidon
+thiometon
+Alabama argillacea                  Bacillus thuringiensis
+diflubenzuron
+! phosphanidon
+teflubenzuron
+trichlorfon
+triflumuron
+continued....
+
+
+﻿Main Insect & Mite Pests             Pesticides Used
+... cont-inued
+Anthonomus grandis                     cyfluthrin
+! dicrotophos
+endosulfan
+! malathion
+! monocrotophos
+! parathion-methyl
+Sacadodes pyralis                      acephate
+Pectinophora gossypiella             ! carbaryl
+Heliothis virescens                    chlorpyrifos
+Spodcptera frugiperda                  cyfluthrin
+cypermethtrin
+diflubenzuron
+dimethoate
+fenvalerate
+flucythrinate
+lamdacyhalothrin
+! malathion
+! methamidophos
+! methomyl
+! monocrotophos
+! parathion-methyl
+profenofos
+thiodicarb
+triazophos
+trichlorfon
+
+
+﻿Main products and formulations:
+ai             Main Formulation    te ai Cum. Area (ha)
+! parathion-methyl       various 48 EC     854      890,000
+endosulfan             various 35 EC     187       357,000
+! methomyl              various EC, SP      49      205,000
+cypermethrin              various EC      16.2     165,000
+! monocrotophos          various 60 EC      93      161,000
+thiodicarb            Larvin 37.5 EC      73       150,000
+fenvalerate               various EC       9.7      70,000
+profenofos            Curacron 50 EC      40        53,000
+cypermethrin +       Fenom C 42.5 EC      33        51,000
+profenofos
+diflubenzuron           Dim-ilin 25 WP     4        48,000
+! malathion                      60 EC      55       45,000
+! carbaryl              various WP, FL      76        39,000
+Note:    Usage of pyrethroids, e.g. cypermethrin, has been
+declining rapidly due to resistance in Heliothis virescens.
+Their usage is now largely in tank-mix with other insecticides
+such as profenofos.
+
+
+﻿Cotton Herbicides
+Weeds affect the whole area; all treatable, all treated with
+pre-emergence and post-emergence herbicides. In addition about
+30,000 ha are treated pre-planting with glyphosate and about
+90,000 ha receive a pre-planting incorporated treatment.
+1990 value $10m.
+Main Weeds                     Herbicides Used
+Cenchrus brownii                    alachlor
+Cenchrus echinatus                  cycloxydim
+Cyperus spp.                        diuron
+Eleusine indica                      fenoxaprop-ethyl
+Panicum maximum                      fluazifop-p-butyl
+Rottboelia exaltata                  fluometuron
+Setaria spp.                         glufosinate-ammonium
+glyphosate
+Amaranthus viridis                  metolachlor
+Boerhaavia erecta                   MSMA
+Cassia tora                        ! paraquat
+Desmodium tortuosum                  pendimethalin
+Euphorbia brasiliensis               prometryn
+Ipom<ea spp.                        quizalofop-ethyl
+Portulaca oleracea                   sethoxydim
+Tribulus cistoides                 ! trifluralin
+Main products and formulations:
+ai             Main Formulation     te ai Cum. Area (ha)
+diuron                   Karmex 80 WP       97      132,000
+! trifluralin             various 48 EC      118      71,000
+fluometuron             various 50 FL       68       68,000
+MSR4A              Ansar 529 HC 72 EC      130       60,000
+metolachlor                Dual 96 EC       86       45,000
+alachlor                   Lazo 48 EC       79       41,000
+glyphosate            Roundup 35.9 SL       39       31,000
+! paraquat              Gramoxone 20 SL       19       24,000
+
+
+﻿2.7.12. Ornamental Flowers
+Area 3,500 ha.
+1990 value all pesticides $8.8m.
+Ornamentals Insecticides, Acaricides & Nematicides
+Insects, mites & nematodes affect the whole area, which is all
+treated with numercus applications.
+1990 value $3.9m.
+Pesticides Used
+abamectin                        fluvalinata
+! aldicarb                       ! gamma-HCH
+amitraz                          lamdacyhalothrin
+bromopropylate                 ! malathion
+clofentezine                   ! methomyl
+cyfluthrin                     ! monocrotophos
+cypermethrin                   ! oxamyl
+cyromazine                       permethria
+deltamethrin                   ! phosphamidon
+diazinon                         pirimicarb
+! dicofol                          profenofos
+dienochlor                       propargite
+! disulfoton                       tetradifon
+endosulfan                       thiocyclam
+! ethoprofos                       thiometon
+fenvalerate
+
+
+﻿Ornamentals Fungicides
+Most of the area is affected by various diseases, and many of the
+crops are treated with numerous applications.
+1990 value $4.9m.
+Pesticides Used
+benomyl                           oxycarboxin
+bitertanol                        penconazole
+captan                            prochloraz
+carbendazim                       propamocarb
+chlorothalonil                    propineb
+dichlofluanid                     pyrazofos
+fosetyl-aluminium                 sulfur
+furalaxyl                         thiabendazole
+iprodione                         thiophanate-methyl
+mancozeb                          triadimef on
+metalaxyl                         triforine
+vinclozolin
+Ornamental Herbicides
+There is a small amount of herbicide use.
+1990 value $100,000.
+The main products used are oxadiazon and oxyfluorfen.
+
+
+﻿27.13. Pasture
+There are said to be 40 a ha of pasture but only abo- 5 m ha of
+this could be described as managed pasture.          lough no
+insecticides or fungicides are used chere is a larx   count of
+herbicide use on this managed area.
+Pasture Herbicides
+A wide range of grasses, sedges and broad-leaved weeds affect
+pasture on all 5 m ha.   Only about 2 in ha are treatable, and
+about 1.5 m ha are treated with herbicides, often as spot
+treatments-
+1990 value $20m.
+Main Weeds                     Herbicides Used
+Andropogon bicornis                  glyphosate
+Canchrus brownii                 ! paraquat
+Cyperus spp.
+Paspaluw virgatum
+Amaranthus spp.                      2 ,4-D
+Bidens pilosa                       dicamba
+Boerhaavia spp.                     dichlorprop
+Cassia tora                         hexazinone
+Cucumis melo                        metsulfuron-methyl
+Desmodiuum spp.                      picloram
+Eupatorium spp.
+Heliconia spp.
+Ipoaoea spp.
+Ma tra spp.
+Mormordica charantia
+Phaseolus lathyroides
+Portulaca cleracea
+Rumex crispus
+Main products and formulations:
+ai             Main Formulation     te ai Cum. Area (ha I
+2,4-D + picloram           various EC      781      693,000
+2,4-D                      various EC      495      304,000
+2,4-D + dichlorprop        various EC      124       70,000
+metsulfuron-methyl         Ally 60 DF        1       50,000
+
+
+﻿2.7.14. Soya
+1990 area 120.009 ha but after the withdrawal of tariff
+protection in 1990 the area shrank to 35,000 ha by 1992. Yield
+1.9-2.0 te/ha.
+1990 value all pesticides $8m.
+Soya Insecticides
+Insects affect the whole area; all treatable, and most of it is
+treated, with two or more applications.
+1990 value $1.7m.
+Main Insect Pests                 Ins2cticides Used
+Agrotis ipsilon                    trichlorfon
+Spodoptera frugiperda
+Anticarsia gemmatalis              Bacillus thuringiensis
+Spodoptera frugiperda              chlorpyrifos
+Heliothis virescens                cypermethrin
+Maruca testulalis                  deltamethrin
+diflubenzuron
+dimethoate
+endosulfan
+lamdacyhalothrin
+! methamidophos
+! methomyl
+! monocrotophos
+! parathion-methyl
+profenofos
+thiodicarb
+Cerotoma ruflicornis             ! parathion-methyl
+Diabrotica sp.                     trichlorfon
+Nezaxa viridula                    dimethoate
+Piezodorus guildingi               endosulfan
+Thyanta spp.                     ! methamidophos
+! monocrotophos
+I phosphamidon
+continued....
+
+
+﻿Main products and formulations:
+ai              Main Formulation     te ai Cum. Area (ha)
+endosulfan              Thiodan 35 EC       20        37,000
+! monocrotophos           various 60 EC      21        35,000
+dimethoate              various 40 EC        7        18,000
+! methamidophos    various 60 EC, 60 SL      10        17,000
+! methomyl               various EC, SP       5        17,000
+trichlorfon             various 80 SP       9        11,000
+chlorpyrifos         Lorsban 4E 48 EC       5         10,000
+Soya Fungicides
+Diseases affect about half the area; around 35,000 ha treatable,
+around 20,000 ha treated, some of it more than once.
+1990 value $310,000.
+Main Diseases                    Fungicides Used
+Colletotrichum spp.                benomyl
+Cercospora spp.                    mancozeb
+thiophanate-methyl
+By far the most widely used product is benomyl:     10 te ai as
+Benlate 50 WP over 20,000 ha.
+
+
+﻿Soya Herbicides
+Weeds affect the whole area;  all treatable, all treated, with
+nearly three applications on average.
+1990 value $6m.
+Main Weeds                     Herbicides Used
+Brachiaria spp.                   acifluorfen
+Cynodon dactylon                  alachlor
+Digitaria spp.                    bentazone
+Eleusine indica                   butachlor
+Echinochloa spp.                  fenoxaprop-ethyl
+Panicum spp.                      fluazifop-p-butyl
+Setaria spp.                     ! haloxyfop-methyl
+Sorghum halepense                 linuron
+metolachlor
+Amaranthus spp.                   metribuzin
+Chenopodium spp.                 ! paraquat
+Polygonum aviculare               pendimethalin
+Portulaca oleracea                prometryn
+Solanum nigrum                    sethoxydim
+! trifluralin
+vernolate
+Main products and formulations:
+ai             Main Formulation     te ai Cum. Area (ha)
+metribuzin              Senchor 35 WP       14       50,000
+metolachlor                Dual 96 EC      134       48,000
+! trifluralin             various 48 EC       74       44,000
+alachlor                   Lazo 48 EC       36       19,000
+! paraquat                various 20 SL        5       13,000
+! haloxyfop-methyl       Verdict 7.5 EC        1       12,000
+
+
+﻿2.7.15. Sugar Cane
+The area increased steadily from 1980 to the 1989 figure of
+322,000 ha. In 1990 the area fell back to 304,000 ha but it is
+now expanding again as the soya area declines.
+There is no significant usage of insecticides or fungicides.
+Herbicides
+Weeds affect the whole area.
+1990 value $9m.
+Main Weeds                     Herbicides Used
+Cynodon dactylon                      2,4-D
+Cyperus spp.                          ametryn
+Digitaria horizontalis              ! atrazine
+Eleusine indica                      dimethametryn
+Leptochloa filiformis                 diuron
+Rottboellia exaltata                  metolachlor
+Setaria geniculata                    metribuzin
+metsulfuron-methyl
+Amaranthus spinosus                   MSMA
+Cassia spp.                           terbutryn
+Desmodium intortum
+Ipomoea congesta
+Mimosa pudi ca
+Portulaca oleracea
+Solanum nigrum
+Main products and formulations:
+ai              Main Formulation    te ai Cum. Area (haA
+2,4-D                      various EC      207       189,000
+ametryn                various FL, WP      217       143,000
+diuron                   Karmex 80 WP      160        67,000
+Notes:    1.   About 10 te ai of dalapon are used annually for
+roadside weed control.
+2.   Two herbicides are used to increase the sugar
+content of the cane: 0.4 te ai of fluazifop-p-
+butyl over 10,000 ha, and 22 te ai of glyphosate
+over 61,000 ha.
+
+
+﻿2.7.16. Tobacco
+Area 16-20,000 ha. Yield 1.5-1.8 te/ha depending upon the year
+and the type of tobacco.
+There is no significant usage of herbicides.
+1990 value all pesticides $690,000.
+Tobacco Insecticides
+Insects affect the whole area; all treatable, all treated, with
+about three applications.
+1990 value $350,000.
+Main Insect Pests                 Insecticides Used
+Spodoptera spp.                       trichlorfon
+Agrotis ipsilon
+Gryllus assimilis
+Epitrix spp.                          acephate
+Heliothis spp.                      ! methomyl
+Spodoptera spp.                     ! monocrotophos
+Manduca sexta                       ! parathion-methyl
+Systena spp.
+Phthorimaea operculelia
+Bemisia tabaci                        dimethoate
+Myzus persicae                       ! monocrotophos
+Thrips tabaci
+Main products and formulations:
+ai              Main Formulation     te ai Cum. Area (ha)
+dimethoate              various 40 EC        6        15,000
+! methomyl              various 21.6 EC       2.5       12,000
+trichlorfon              Profitox 3 G        6        10,000
+
+
+﻿Tobacco Fungicides
+Diseases affect a small proportion only of the area:    around
+2,000 ha. Where they occur they are always treatable and are
+treated with multiple applications.
+1990 value $200,000.
+Main Diseases                    Fungicides Used
+Cercospora nicotianae               benomyl
+Peronospora tabacina                copper oxychloride
+Phytophthora nicotianae             mancozeb
+metalaxyl
+propamocarb
+Main products and formulations:
+ai              Main Formulation    te ai Cum. Area (ha)
+mancozeb                various 80 WP      20        9,000
+copper oxychloride         various WP       5        3,000
+Sucker Control
+Two plant growth regulators are used for sucker control.    The
+main one is maleic hydrazide at about 25 te ai. A very small
+amount of fluometralin is also used.
+1990 value $140,000.
+
+
+﻿2.7.17. Cocoa
+Area around 120,000 ha. Yield 0.46-0.49 te/ha.
+1990 value all pesticides $1.4m.
+Cocoa Insecticides
+Two pests, Monalonia spp. and Xyleborus spp., affect 20,000 ha.
+About 10,000 ha of this is treatable but only 5,000 ha are
+treated, with one application.
+1990 value $25,000.
+Two main insecticides are used: about 1 te ai of ! dichlorvos
+as Vapona 24 EC, and the same amount of trichlorfon as Dipterex
+80 WP.
+Cocoa Fungicides
+Two fungal diseases, Phytophthora palmivora and Monilia roreri,
+affect 20,000 ha. About 15,000 ha treatable, 10,000 ha treated
+with two applications.
+1990 value $250,000.
+The main product used is copper oxychloride: 35 te ai as a 35
+WP over 20,000 ha.   A small amount of a mancozeb + metalaxyl
+mixture (Ridonil MZ 58 WP) is also used.
+Cocoa Herbicides
+Weeds affect 30,000 ha. About 15,000 ha of this is treatable and
+some 10,000 ha are treated, with 1-2 applications.
+1990 value $410,000.
+The main product used is ! paraquat: 12 te ai as Gramoxone 20
+SL over 15,000 ha. A small area is treated with glyphosate.
+
+
+﻿2.7.18. Industrial & Roadside
+Herbicides are used for total weed control in industrial and
+roadside situations.
+1990 value around $4m.
+Herbicides Used
+bromacil
+dalapon
+diuron
+glyphosate
+hexazinone
+paraquat
+Main products and formulations:
+ai             Main Formulation    te ai Cum. Area (ha)
+paraquat              Gramoxone 20 SL     80        N/A
+glyphosate            Roundup 35.9 SL     34        N/A
+dalapon                Basfapon 85 WP     18        N/A
+diuron                   Karmex 80 WP     18        N/A
+
+
+﻿2.7.19. Additional Crops
+The majority of this sector is accounted for by coca.
+1990 value all pesticides S3m.
+Insecticides
+1990 value $1.4m.
+Main Insecticides Used
+! carbaryl
+! chlorfenvinphos
+chlorpyrifos
+deltamethrin
+! dicrotophos
+endosulfan
+trichlorfon
+Herbicides
+1990 value $1.6m.
+Main Herbicides Used
+fluazifop-p-butyl
+I paraquat
+Usage of paraquat is believed to be in the region of 60 te ai per
+year.
+
+
