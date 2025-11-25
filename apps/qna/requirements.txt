@@ -5,3 +5,4 @@ faiss-cpu
 pypdf
 pymupdf
 weaviate-client
+sentence_transformers
