@@ -1,0 +1,8 @@
+# Use this "web/simple_web" reader for your data corpus
+# You just need to pass the url in the section urls
+  - source: web/simple_web
+    description: "https://llamahub.ai/l/web-simple_web?from=loaders"
+    inputs:
+      data_args:
+        urls: 
+        - 'https://abc.com'

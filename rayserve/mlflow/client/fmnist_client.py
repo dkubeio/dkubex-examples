@@ -58,4 +58,31 @@ headers={'Authorization': SERVING_TOKEN}
 resp = requests.post(SERVING_ENDPOINT, data=image_bytes, headers=headers, verify=False)
 print (resp.json())
 
-
+result = resp.json()
+result = result["class_index"]
+print("*"*20)
+print(":output:")
+print("*"*20)
+if result == 8:
+    print("predicted output: bag")
+elif result == 1:
+    print("predicted output: Trouser")
+elif result == 2:
+    print("pullover")
+elif result == 0:
+    print("predicted output: T-shirt/Top")
+elif result == 3:
+    print("predicted output: Dress")
+elif result == 4:
+    print("predicted output: Hoodie")
+elif result == 5:
+    print("predicted output: sandal")
+elif result == 6:
+    print("predicted output: shirt")
+elif result == 7:
+    print("predicted output: Sneaker")
+elif result == 9:
+    print("predicted output: Ankel-boat")
+else:
+    print("Not found")
+print("*"*20)

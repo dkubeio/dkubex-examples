@@ -1,0 +1,16 @@
+# Use this "github reader" to export the data from the github"
+reader:
+  - source: github_repo
+    description: https://llamahub.ai/l/file?from=loaders
+    inputs:
+      loader_args:
+        github_token: "**"
+        owner: "**"
+        repo: "**"
+        include_dir:
+          - tools
+        include_file_ext: 
+          - .json
+      data_args:
+        branch: #branch name of the respective repo
+    pyloader: ./document_loaders/github.py

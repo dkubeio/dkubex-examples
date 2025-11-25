@@ -1,0 +1,116 @@
+# Choose your preferred text splitter. Once done, provide details in the appropriate section below.
+splitter: sentence_text_splitter                                    # OPTIONS: sentence_text_splitter, sentence_text_splitter_LC, token_text_splitter
+
+sentence_text_splitter:
+  chunk_size: 256
+  chunk_overlap: 0
+
+sentence_text_splitter_LC:
+  chunk_size: 256
+  chunk_overlap: 0
+
+token_text_splitter:
+  chunk_size: 256
+  chunk_overlap: 0
+
+# Enable or disable use of previous and next chunks while storing current chunk
+adjacent_chunks: true                                               # OPTIONS: true/false
+
+# Choose embedding model type to be used in ingestion. Once done, provide details in the appropriate section below.
+embedding: dkubex                                                   # OPTIONS: dkubex, sky, openai
+
+dkubex:
+  embedding_url: http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/              # Provide serving url of local deployment in DKubeX
+  embedding_key: eyJhbGc**************V5s3b0                        # Provide service token of local deployment in DKubeX
+  batch_size: 10
+
+sky:
+  embedding_url: http://xxx.xxx.xxx.xxx:xxxxx/xxx/xxx/              # Provide service endpoint of Skypilot deployment
+  embedding_key: eyJhbGc**************V5s3b0                        # Provide serving token of SkyPilot deployment
+  batch_size: 10
+
+openai:
+  model: "text-embedding-ada-002"                                   # Provide OpenAI Embedding Model Name
+  embedding_model: "text-embedding-ada-002"                         # Provide OpenAI Embedding Model Name
+  llmkey: sk-TM6c9*****************EPnG                             # Provide OpenAI API key
+
+# Uncomment the Llamaindex data reader that you want to be used to extract data from your files and comment the other ones. Once done, provide details in the appropriate section below.
+reader:
+  - file
+  # - scrapeddatareader
+  # - confluence
+  # - scrapyreader
+  # - sharepointreader
+
+file:
+  inputs:
+    loader_args:
+      input_dir: <path to directory containing docs>                # Provide absolute path to the folder containing documents to be ingested
+      recursive: true 
+      exclude_hidden: true 
+      raise_on_error: true 
+
+scrapeddatareader:
+  inputs:
+    loader_args:
+      input_dir: <path to directory containing docs>                # Provide absolute path to the folder containing documents to be ingested. Make sure the folder has a mapping file named "url_file_name_map.json" for links of pdf files.
+      exclude_hidden: true 
+      raise_on_error: true 
+    data_args:
+      doc_source: 
+      state_category:  
+      designation_category:  
+      topic_category:  
+      num_workers: 
+
+confluence:
+  inputs:
+    loader_args:
+      base_url: <confluence page URL>                               # Provide Confluence URL
+      # api_token: ATATT3*********************3EA                   # Provide API token for Confluence
+      user_name: demo@dkube.io                                      # Provide Confluence user ID
+      password: Abc@123                                             # Provide Confluence Password
+    data_args:
+      include_attachments: True                                     # 'True' if attachments in the Confluence site needs to be downloaded, else 'false'
+      space_key: llamaindex
+
+scrapyreader:
+  inputs:
+    loader_args:
+      test1: ""
+    data_args:
+      spiders:
+        myspider:
+        - path: /home/configs/spiders/quotess.py
+          url: 
+            - "https://example.com/page/1/"
+            - "https://example.com/page/2/"
+
+sharepointreader:
+  inputs:
+    loader_args:
+      client_id: 
+      client_secret: 
+      tenant_id: 
+      sharepoint_site_id: 
+      drive_id: 
+      sharepoint_site_name: ""
+      sharepoint_folder_path: ""
+    data_args:     
+      doc_source: 
+      state_category: 
+      designation_category: 
+      topic_category:
+
+# Uncomment 'custom' and comment out 'default' here if you want to provide additional metadata. Once done, provide details in the 'custom' section below.
+metadata:
+  - default
+#   - custom
+
+custom:                                                             # Provide absolute path of custom script to add additional metadata
+  adjacent_chunks: False                                            # OPTIONS: True/False
+  extractor_path: <absolute path to .py file>
+
+# Provide MLFlow Experiment Name
+mlflow:
+  experiment: demo-ingestion
